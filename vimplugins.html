@@ -1,0 +1,1242 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vim plugins &#8212; hokorobi.github.io  ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/tiny_segmenter.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Excel で調べこと色々" href="excel.html" />
+    <link rel="prev" title="Vivaldi" href="vivaldi.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="excel.html" title="Excel で調べこと色々"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="vivaldi.html" title="Vivaldi"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="ols.html" accesskey="U">OLS</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">目次</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ols.html">OLS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ols_using.html">使用ソフトとその用途</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vivaldi.html">Vivaldi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vim plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="excel.html">Excel で調べこと色々</a></li>
+<li class="toctree-l1"><a class="reference internal" href="win10.html">Windows10 もろもろ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vim-plugins">
+<h1>Vim plugins<a class="headerlink" href="#vim-plugins" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">plugin manager</span><a class="headerlink" href="#id1" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Shougo/dein.vim</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">プラグインマネージャ。高速。</div>
+<div class="line">遅延読み込みが一番カスタマイズできる（はず）</div>
+<div class="line">自動キャッシュ更新が無効にできるようになったので、最近は困ることがない。</div>
+</div>
+</td>
+<td><p>2020-02-22</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">completion</span><a class="headerlink" href="#id2" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>prabirshrestha/asyncomplete.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>prabirshrestha/asyncomplete-buffer.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>prabirshrestha/asyncomplete-necosyntax.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Shougo/neco-syntax</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>prabirshrestha/asyncomplete-necovim.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Shougo/neco-vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>prabirshrestha/asyncomplete-neosnippet.vim</p></td>
+<td><p>delete</p></td>
+<td><p>neosnippet を asyncomplete で使う。日本語の後ろで補完候補がずらっと出てきてしまうので削除。 [2020-05-23]</p></td>
+<td><p>2020-05-23</p></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/asyncomplete-neosnippet.vim</p></td>
+<td><p>using</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">l:kw</span> <span class="pre">=</span> <span class="pre">matchstr(l:typed,</span> <span class="pre">'\w\+$')</span></code> の <code class="docutils literal notranslate"><span class="pre">\w</span></code> を <code class="docutils literal notranslate"><span class="pre">\k</span></code> に変更してみた。大丈夫そう？</p></td>
+<td><p>2020-05-23</p></td>
+</tr>
+<tr class="row-even"><td><p>prabirshrestha/vim-lsp</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/vim-lsp-settings</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">vim-lsp の設定をよしなにやってくれる</div>
+<div class="line">install gopls:</div>
+</div>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>パスの通ったディレクトリに gopls が入っていたら削除</p></li>
+<li><p>set ft=go の状態で :LspInstallServer を実行して gopls をインストール</p></li>
+</ol>
+</div></blockquote>
+</td>
+<td><p>2020-02-18</p></td>
+</tr>
+<tr class="row-even"><td><p>prabirshrestha/asyncomplete-lsp.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>high-moctane/asyncomplete-nextword.vim</p></td>
+<td><p>todo</p></td>
+<td><p>単語の補完</p></td>
+<td><p>2020-03-22</p></td>
+</tr>
+<tr class="row-even"><td><p>thomasfaingnaert/vim-lsp-snippets</p></td>
+<td><p>delete</p></td>
+<td><p>LSP で snippet。動かせなかった。</p></td>
+<td><p>2020-01-19</p></td>
+</tr>
+<tr class="row-odd"><td><p>thomasfaingnaert/vim-lsp-neosnippet</p></td>
+<td><p>delete</p></td>
+<td><p>LSP で neosnippet。動かせなかった。</p></td>
+<td><p>2020-01-19</p></td>
+</tr>
+<tr class="row-even"><td><p>Shougo/neosnippet.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Shougo/neosnippet-snippets</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>honza/vim-snippets</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>coc.nvim</p></td>
+<td><p>delete</p></td>
+<td><p>補完速度が比較的遅いので asyncomplete.vim に移行。</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">REPL?</span><a class="headerlink" href="#id3" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>thinca/vim-quickrun</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>osyo-manga/shabadou.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>rhysd/reply.vim</p></td>
+<td><p>using</p></td>
+<td><p>REPL。ほとんど使っていない。</p></td>
+<td><p>2020-03-22</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Text Object</span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>kana/vim-textobj-user</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/vim-textobj-url</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>machakann/vim-sandwich</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>machakann/vim-textobj-delimited</p></td>
+<td><p>delete</p></td>
+<td><p>, 区切りの文字の textobj として使っていたけど、vim-swap で代用できることがわかったので削除。</p></td>
+<td><p>2020-05-17</p></td>
+</tr>
+<tr class="row-even"><td><p>tommcdo/vim-exchange</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>kana/vim-textobj-indent</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>glts/vim-textobj-comment</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Julian/vim-textobj-variable-segment</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">filetype</span><a class="headerlink" href="#id5" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AndrewRadev/linediff.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>lambdalisue/vim-diffa</p></td>
+<td><p>delete</p></td>
+<td><p>diff を賢くする＋自動アップデートなど。
+Vim 本体だけでも diffopt+=algorithm:histogram,indent-heuristic で賢くなるらしい。自動アップデートは使っていないので削除。</p></td>
+<td><p>2020-03-31</p></td>
+</tr>
+<tr class="row-even"><td><p>hdima/python-syntax</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>hynek/vim-python-pep8-indent</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>previm/previm</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>plasticboy/vim-markdown</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/vim-restructuredtext</p></td>
+<td><p>using</p></td>
+<td><p>marshallward/vim-restructuredtext を Fork。
+Syntax やコマンドを少し追加。</p></td>
+<td><p>2020-01-18</p></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/riv.vim</p></td>
+<td><p>delete</p></td>
+<td><p>gu-fan/riv.vim を Fork。
+restructuredtext を書くのに使っていたけど、色々と気に入らないところがあったので vim-restructuredtext へ移行。</p></td>
+<td><p>2020-01-18</p></td>
+</tr>
+<tr class="row-even"><td><p>lambdalisue/qfloc.vim</p></td>
+<td><p>using</p></td>
+<td><p>quickfix を少し便利にする。無効にしているマッピングもそれなりにある。</p></td>
+<td><p>2020-03-15</p></td>
+</tr>
+<tr class="row-odd"><td><p>romainl/vim-qf</p></td>
+<td><p>todo</p></td>
+<td><p>quickfix を便利に使えるようになるみたい。qfloc.vim より多機能？</p></td>
+<td><p>2020-03-15</p></td>
+</tr>
+<tr class="row-even"><td><p>AndrewRadev/quickpeek.vim</p></td>
+<td><p>using</p></td>
+<td><p>Quickfix をポップアップウィンドウでプレビュー</p></td>
+<td><p>2020-03-22</p></td>
+</tr>
+<tr class="row-odd"><td><p>ronakg/quickr-preview.vim</p></td>
+<td><p>todo</p></td>
+<td><p>Quickfix を別ウィンドウでプレビュー</p></td>
+<td><p>2020-05-31</p></td>
+</tr>
+<tr class="row-even"><td><p>vim-jp/syntax-vim-ex</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>pangloss/vim-javascript</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>PProvost/vim-ps1</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/plantuml-syntax</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">aklt/plantuml-syntax の fork。</div>
+<div class="line">色々といじって PR を送っている。</div>
+</div>
+</td>
+<td><p>2020-05-23</p></td>
+</tr>
+<tr class="row-even"><td><p>tsuyoshicho/plantuml-previewer.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>cespare/vim-toml</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>osyo-manga/vim-precious</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Shougo/context_filetype.vim</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hnamikaw/vim-autohotkey</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mechatroner/rainbow_csv</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>mattn/emmet-vim</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/vim-changelog-alt</p></td>
+<td><p>delete</p></td>
+<td><p>本体同梱の changelog プラグインを自分好みにしようとしたけど、大して帰るところがなかったので削除。</p></td>
+<td><p>2020-05-11</p></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/vim-howm-syntax-mini</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Colorscheme</span><a class="headerlink" href="#id6" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>rhysd/vim-color-spring-night</p></td>
+<td><p>using</p></td>
+<td><p>colorscheme. iceberg -&gt; spring-night
+italic, bold は無効にしている。</p></td>
+<td><p>2020-05-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>yasukotelin/shirotelin</p></td>
+<td><p>delete</p></td>
+<td><p>ネタとしては好きだけど、常用するにはちょっと辛く感じた。</p></td>
+<td><p>2019-11-30</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Look</span><a class="headerlink" href="#id7" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>itchyny/lightline.vim</p></td>
+<td><p>using</p></td>
+<td><p>statusline に色々表示。
+tabline は非表示にしている。</p></td>
+<td><p>2020-05-11</p></td>
+</tr>
+<tr class="row-odd"><td><p>taohexxx/lightline-buffer</p></td>
+<td><p>delete</p></td>
+<td><p>必要な時だけ :. 相当の表示になるのが好みなので buftabline を使うように戻した。</p></td>
+<td><p>2019-10-26</p></td>
+</tr>
+<tr class="row-even"><td><p>mengelbrecht/lightline-bufferline</p></td>
+<td><p>delete</p></td>
+<td><p>こちらも buftabline の方が好みだった。</p></td>
+<td><p>2019-10-24</p></td>
+</tr>
+<tr class="row-odd"><td><p>osyo-manga/vim-anzu</p></td>
+<td><p>using</p></td>
+<td><p>incremental search の現在のマッチ位置を表示。</p></td>
+<td><p>2020-05-11</p></td>
+</tr>
+<tr class="row-even"><td><p>MattesGroeger/vim-bookmarks</p></td>
+<td><p>using</p></td>
+<td><p>ファイルの位置をブックマークしてくれる
+vim-signature へ移行。 [2019-08-04]
+やっぱり使い始めた。 [2020-05-31]</p></td>
+<td><p>2020-05-31</p></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/vim-bookmarks</p></td>
+<td><p>using</p></td>
+<td><p>CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></td>
+<td><p>2020-05-24</p></td>
+</tr>
+<tr class="row-even"><td><p>kshenoy/vim-signature</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">ファイルの位置を Vim の mark に追加してくれる</div>
+<div class="line">mark を使ってくれるのが良さそうに思えたので vim-bookmarks から移行。 [2019-08-04]</div>
+<div class="line">使わないので削除。 [2020-02-18]</div>
+<div class="line">やはり使いたくなった。</div>
+<div class="line">:SignatureListGlobalMarks でマークの復元がうまくいかないみたい。</div>
+<div class="line">vim-bookmarks へ戻る。 [2020-05-24]</div>
+</div>
+</td>
+<td><p>2020-05-24</p></td>
+</tr>
+<tr class="row-odd"><td><p>itchyny/vim-cursorword</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>andymass/vim-matchup</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>t9md/vim-quickhl</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>markonm/traces.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>liuchengxu/vista.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Edit</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cohama/lexima.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>machakann/vim-highlightedyank</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>kana/vim-operator-replace</p></td>
+<td><p>delete</p></td>
+<td><p>選択してペーストができるようになると思っていたけど、標準でもできていた。レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。</p></td>
+<td><p>2020-04-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>uplus/vim-clurin</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>tpope/vim-speeddating</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Motion</span><a class="headerlink" href="#id9" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>junegunn/vim-easy-align</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mbbill/undotree</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>osyo-manga/vim-jplus</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/yankround.vim</p></td>
+<td><p>using</p></td>
+<td><p>vim-submode を使って p, P を連続して押して次々過去のレジスタうから貼り付けできるようにしている。</p></td>
+<td><p>2020-04-02</p></td>
+</tr>
+<tr class="row-even"><td><p>svermeulen/vim-yoink</p></td>
+<td><p>todo</p></td>
+<td><p>xmap では使えない？試していないからわからないけれど yankroud.vim で満足している。
+yankround.vim + sub-mode で実現していることが単体でできそう。</p></td>
+<td><p>2020-04-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>deris/vim-rengbang</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ntpeters/vim-better-whitespace</p></td>
+<td><p>using</p></td>
+<td><p>末尾スペースを探すときに実行。</p></td>
+<td><p>2020-05-17</p></td>
+</tr>
+<tr class="row-odd"><td><p>thinca/vim-template</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>mattn/vim-sonictemplate</p></td>
+<td><p>using</p></td>
+<td><p>ファイルの新規作成時にテンプレートを挿入。
+snippet のようにテンプレートを展開。</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>deris/vim-pasta</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>nocd5/ExpandSerialNumber.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>lambdalisue/vim-findent</p></td>
+<td><p>using</p></td>
+<td><p>開いたファイルのインデントに従って Vim のインデントを設定する</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-even"><td><p>machakann/vim-swap</p></td>
+<td><p>using</p></td>
+<td><p>, 区切りの要素の入れ替え、ソート、textobj</p></td>
+<td><p>2020-05-17</p></td>
+</tr>
+<tr class="row-odd"><td><p>kana/vim-niceblock</p></td>
+<td><p>using</p></td>
+<td><p>選択した行すべてに対して I, A を反映させる。</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-even"><td><p>da-x/name-assign.vim</p></td>
+<td><p>todo</p></td>
+<td><p>選択した範囲を変数に変えて、その変数の定義を追加する。</p></td>
+<td><p>2020-05-23</p></td>
+</tr>
+<tr class="row-odd"><td><p>chrisbra/NrrwRgn</p></td>
+<td><p>delete</p></td>
+<td><p>選択した範囲だけ編集対象とする。
+Vim だと標準で同じようなことができるのでいらなさそう。便利な場合もあるんだろうな。</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-even"><td><p>unblevable/quick-scope</p></td>
+<td><p>delete</p></td>
+<td><p>f, F, t, T でハイライトしてくれる。ルールがよくわからなくて、まともに使っていない。</p></td>
+<td><p>2020-02-20</p></td>
+</tr>
+<tr class="row-odd"><td><p>easymotion/vim-easymotion</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>haya14busa/vim-edgemotion</p></td>
+<td><p>using</p></td>
+<td><p>縦方向の端に移動</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-odd"><td><p>tyru/columnskip.vim</p></td>
+<td><p>delete</p></td>
+<td><p>edgemotion に近いけど、空白に対してだけスキップ。インデントの途中なら、インデントの区切りの位置に移動するのかと思ったけど、違うみたい。
+Vim の設定のせい？これなら edgemotion の方が好み。</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-even"><td><p>machakann/vim-columnmove</p></td>
+<td><p>using</p></td>
+<td><p>f t F T ; , w b e ge W B E gE を縦方向に使える。</p></td>
+<td><p>2020-04-18</p></td>
+</tr>
+<tr class="row-odd"><td><p>pechorin/any-jump.vim</p></td>
+<td><p>todo</p></td>
+<td><p>定義にジャンプできるらしい。
+Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラーが出る。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="o">&lt;</span><span class="n">SNR</span><span class="o">&gt;</span><span class="mi">17</span><span class="n">_Jump</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">..</span><span class="n">search</span><span class="c1">#SearchUsages[4]..&lt;SNR&gt;144_RunRgUsagesSearch の処理中にエラーが検出されました:</span>
+<span class="n">行</span>   <span class="mi">14</span><span class="p">:</span>
+<span class="n">E484</span><span class="p">:</span> <span class="n">ファイル</span> <span class="s2">&quot;C:\Users\hokorobi\AppData\Local\Temp\VIo33AC.tmp&quot;</span> <span class="n">を開けません</span>
+</pre></div>
+</div>
+</td>
+<td><p>2020-04-07</p></td>
+</tr>
+<tr class="row-even"><td><p>haya14busa/vim-asterisk</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>osyo-manga/vim-milfeulle</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/vim-smarthome</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>osyo-manga/vim-operator-stay-cursor</p></td>
+<td><p>using</p></td>
+<td><p>yank でカーソル移動をさせない。
+<code class="docutils literal notranslate"><span class="pre">nnoremap</span> <span class="pre">y</span> <span class="pre">y`&gt;</span></code> だと不十分なことがあったので。</p></td>
+<td><p>2020-04-14</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Buffer</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mhinz/vim-sayonara</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">いい感じにバッファを閉じてくれる。</div>
+<div class="line">filetype に応じた閉じるコマンドの指定もできる。</div>
+<div class="line">直前のバッファも一緒に閉じる場合がある。自分の誤操作が原因か？</div>
+<div class="line">すべてのバッファを閉じると CtrlP で開いたバッファが vsplit される。CtrlP の問題か？</div>
+</div>
+</td>
+<td><p>2020-06-07</p></td>
+</tr>
+<tr class="row-odd"><td><p>tyru/capture.vim</p></td>
+<td><p>using</p></td>
+<td><p>コマンドの実行結果などをバッファに取り込んでくれる。
+[nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ap/vim-buftabline</p></td>
+<td><p>using</p></td>
+<td><p>tabline にバッファを羅列する。タブがある場合はタブを表示。同名のバッファがある場合は親ディレクトリも表示。</p></td>
+<td><p>2020-05-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>mg979/vim-xtabline</p></td>
+<td><p>delete</p></td>
+<td><p>タブを扱えるのは良いけれど、それ以外は buftabline の方がよさそう。機能過剰。</p></td>
+<td><p>2019-12-02</p></td>
+</tr>
+<tr class="row-even"><td><p>tyru/closesubwin.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">File</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>kana/vim-gf-user</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>kana/vim-gf-diff</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>justinmk/vim-dirvish</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>lambdalisue/vim-protocol</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>mattn/vim-findroot</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Selector</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>itchyny/vim-gof</p></td>
+<td><p>delete</p></td>
+<td><p>mattn/gof を呼び出してファイル表示など。
+tapi を使っていたので Windows では NG</p></td>
+<td><p>2020-02-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>ctrlpvim/ctrlp.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/ctrlp-sessions</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/ctrlp-launcher</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>zeero/vim-ctrlp-help</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ivalkeen/vim-ctrlp-tjump</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ompugao/ctrlp-locate</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>tacahiroy/ctrlp-funky</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>printesoi/ctrlp-filetype.vim</p></td>
+<td><p>using</p></td>
+<td><p>CtrlP で filetype を指定</p></td>
+<td><p>2020-06-07</p></td>
+</tr>
+<tr class="row-odd"><td><p>christoomey/ctrlp-generic</p></td>
+<td><p>using</p></td>
+<td><p>外部コマンドの結果を CtrlP で選択して入力する CtrlPCmdPaste を作成。使っていない…</p></td>
+<td><p>2020-06-07</p></td>
+</tr>
+<tr class="row-even"><td><p>suy/vim-ctrlp-commandline</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">コマンドラインの履歴を CtrlP で使う。</div>
+<div class="line">直接実行だけでなく &lt;C-t&gt; でコマンドラインに表示することができるので、ちょっと変更して再実行も可能。</div>
+</div>
+</td>
+<td><p>2020-06-07</p></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/vim-fz</p></td>
+<td><p>delete</p></td>
+<td><p>gof を呼び出してファイルを開く
+Gvim が固まることがあったので、ひとまず使うのをやめた。</p></td>
+<td><p>2020-04-16</p></td>
+</tr>
+<tr class="row-even"><td><p>liuchengxu/vim-clap</p></td>
+<td><p>delete</p></td>
+<td><p>更新すると、まだよく動かなくなることがあるので CtrlP へ戻った。
+CtrlP より若干起動が遅い。</p></td>
+<td><p>2020-01-03</p></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/vim-clap-sessions</p></td>
+<td><p>delete</p></td>
+<td><p>vim-clap を削除したので一緒に削除。</p></td>
+<td><p>2020-01-03</p></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/vim-clap-launcher</p></td>
+<td><p>delete</p></td>
+<td><p>vim-clap を削除したので一緒に削除。</p></td>
+<td><p>2020-01-03</p></td>
+</tr>
+<tr class="row-odd"><td><p>hokorobi/vim-clap-filelist</p></td>
+<td><p>delete</p></td>
+<td><p>vim-clap でファイル一覧を含んだファイルを候補に使用する provider。
+<code class="docutils literal notranslate"><span class="pre">g:clap_provider_mru</span></code> などを定義して source にファイルを読み込めばよいと分かったので使わなくなった。</p></td>
+<td><p>2019-11-13</p></td>
+</tr>
+<tr class="row-even"><td><p>Yggdroot/LeaderF</p></td>
+<td><p>todo</p></td>
+<td><p>フィルタリングプラグイン。
+Python を使用しているため、 Windows では起動がちょっと遅そうでまだ試していない。</p></td>
+<td><p>2020-04-12</p></td>
+</tr>
+<tr class="row-odd"><td><p>prabirshrestha/quickpick.vim</p></td>
+<td><p>todo</p></td>
+<td><p>フィルタリングプラグイン。
+vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があるみたい。</p></td>
+<td><p>2020-05-24</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Utility</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tyru/vim-altercmd</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>kana/vim-altr</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>thinca/vim-prettyprint</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>tpope/vim-repeat</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>mattn/webapi-vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ynkdir/vim-vimlparser</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>kana/vim-operator-user</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>tweekmonster/helpful.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>lilydjwg/colorizer</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>tyru/open-browser.vim</p></td>
+<td><p>using</p></td>
+<td><p>URL を Web ブラウザで開く。
+'username/repogitory' を Github で開くコマンドを定義している。</p></td>
+<td><p>2020-02-09</p></td>
+</tr>
+<tr class="row-even"><td><p>rhysd/wandbox-vim</p></td>
+<td><p>delete</p></td>
+<td><p>wandbox を Vim から使う。使うことがなかったので削除。</p></td>
+<td><p>2019-09-28</p></td>
+</tr>
+<tr class="row-odd"><td><p>tyru/open-browser-unicode.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Web Service</span><a class="headerlink" href="#id14" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>lambdalisue/vim-gista</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/qiita-vim</p></td>
+<td><p>delete</p></td>
+<td><p>Qiita に記事を書く。
+Qiita に書くことがほとんどなく、書く時も Web ブラウザを使うことが多いので削除。</p></td>
+<td><p>2019-09-28</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Others</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>repogitory</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>comment</p></th>
+<th class="head"><p>date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fedorenchik/VimCalc3</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>thinca/vim-submode</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>lambdalisue/gina.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>iberianpig/tig-explorer.vim</p></td>
+<td><p>delete</p></td>
+<td><p>シェルスクリプトを実行するみたいなので Windows では使えなかった。</p></td>
+<td><p>2020-05-23</p></td>
+</tr>
+<tr class="row-even"><td><p>vim-jp/vital.vim</p></td>
+<td><p>delete</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>lambdalisue/vital-Whisky</p></td>
+<td><p>delete</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vim-jp/vimdoc-ja</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>tyru/empty-prompt.vim</p></td>
+<td><p>using</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LeafCage/vimhelpgenerator</p></td>
+<td><p>todo</p></td>
+<td><p>ヘルプのひな型を生成</p></td>
+<td><p>2020-02-08</p></td>
+</tr>
+<tr class="row-odd"><td><p>rbtnn/vim-mrw</p></td>
+<td><p>todo</p></td>
+<td><p>MRU の書き込み版。出来上がるファイルを vim-fz から開いてみたい。</p></td>
+<td><p>2020-02-08</p></td>
+</tr>
+<tr class="row-even"><td><p>tamago324/LeaderF-filer</p></td>
+<td><p>todo</p></td>
+<td><p>CtrlP 的なもの</p></td>
+<td><p>2020-02-08</p></td>
+</tr>
+<tr class="row-odd"><td><p>dhruvasagar/vim-table-mode</p></td>
+<td><p>delete</p></td>
+<td><p>restructuredtext のテーブルが手軽に書けるはず。やはり list-table が便利なので使わなかった。</p></td>
+<td><p>2020-02-08</p></td>
+</tr>
+<tr class="row-even"><td><p>vim-voom/VOoM</p></td>
+<td><p>delete</p></td>
+<td><p>restructuredtext のアウトライン表示に使っていた。
+hokorobi/vim-restructuredtext の fold で良さそうなので削除。</p></td>
+<td><p>2020-02-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>w0rp/ale</p></td>
+<td><p>delete</p></td>
+<td><p>Linter として使っていたけど coc.nvim に移行。</p></td>
+<td><p>2019-12-08</p></td>
+</tr>
+<tr class="row-even"><td><p>hokorobi/cmdlineplus.vim</p></td>
+<td><p>delete</p></td>
+<td><p>LeafCage/cmdlineplus.vim を Fork。バグ修正の PR がマージされなかったので Fork して使っていた。コマンドラインウィンドウを使うことにしたので削除。</p></td>
+<td><p>2019-12-08</p></td>
+</tr>
+<tr class="row-odd"><td><p>tsuyoshicho/vim-fg</p></td>
+<td><p>delete</p></td>
+<td><p>pt を使って grep を実行。
+grepprg に pt を設定した場合に比べての利点がわからないので一旦削除</p></td>
+<td><p>2020-02-11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="excel.html" title="Excel で調べこと色々"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="vivaldi.html" title="Vivaldi"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="ols.html" >OLS</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, hokorobi.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4 で生成しました。
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Excel で調べこと色々 &#8212; hokorobi.github.io  ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/tiny_segmenter.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Windows10 もろもろ" href="win10.html" />
+    <link rel="prev" title="Vim plugins" href="vimplugins.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="win10.html" title="Windows10 もろもろ"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="vimplugins.html" title="Vim plugins"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">目次</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ols.html">OLS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Excel で調べこと色々</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">入力データの指定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">範囲から指定した行、列の値を取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">セルに入力した値を数式に使う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">条件に合致した値を空白なしで取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">条件に合致する複数の行から最大の値を取得する</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="win10.html">Windows10 もろもろ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="excel">
+<h1>Excel で調べこと色々<a class="headerlink" href="#excel" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>入力データの指定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>データが増減しても入力データを自動で指定。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=OFFSET($E$2,0,0,COUNTA(E:E)-1)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$E$2</span></code>: 開始セル。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COUNTA(E:E)-1</span></code>: 入力データの行数。開始セルの行にあるデータとしない値の入ったセルの数（ここではヘッダだけを想定して 1）を引く</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>範囲から指定した行、列の値を取得<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=INDEX(A1:D5, 3, 2)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A1:D5</span></code>: 範囲</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code>: 行</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code>: 列</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>セルに入力した値を数式に使う<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\filename.xlsx</span></code> の <code class="docutils literal notranslate"><span class="pre">sheetName</span></code> シートの <code class="docutils literal notranslate"><span class="pre">A:B</span></code> 行から A 列が <code class="docutils literal notranslate"><span class="pre">hoge</span></code> になる B 列の値を取得。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A1</span></code>: <code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A2</span></code>: <code class="docutils literal notranslate"><span class="pre">filename.xlsx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A3</span></code>: <code class="docutils literal notranslate"><span class="pre">sheetName</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A4</span></code>: <code class="docutils literal notranslate"><span class="pre">=&quot;'&quot;&amp;A$1&amp;&quot;[&quot;&amp;$A$2&amp;&quot;]&quot;&amp;$A$4&amp;&quot;'!A:B&quot;</span></code></p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=VLOOKUP(&quot;hoge&quot;, INDIRECT($A$4), 2, FALSE)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>条件に合致した値を空白なしで取得<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">$A$47:$C$55</span></code> から C 列が 1 になる B 列の値を47行目のセルから空白なく下方向に並べる。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{=IFERROR(INDEX($A$47:$C$55,SMALL(IF($C$47:$C$55=1,ROW($C$47:$C$55)),ROW()-ROW($A$47)+1)-ROW($A$47)+1,2),&quot;&quot;)}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>配列数式を使うので、<code class="docutils literal notranslate"><span class="pre">{}</span></code> の中の数式を入力した後 CTRL+SHIFT+ENTER で確定</p></li>
+<li><p>セルを下方向にコピペ</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SMALL(IF($C$47:$C$55=1,ROW($C$47:$C$55)),ROW()-ROW($C$47)+1)</span></code>: C 列が 1 の行を求めて順番に取得している</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>条件に合致する複数の行から最大の値を取得する<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のような表から 1 列目が <code class="docutils literal notranslate"><span class="pre">a01</span></code> になる行のうち 2 列目の値が最大となる 3列目の値（ <code class="docutils literal notranslate"><span class="pre">20</span></code> ）を取得したい。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 44%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>a01</p></td>
+<td><p>000000</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>a02</p></td>
+<td><p>190425</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-odd"><td><p>a01</p></td>
+<td><p>190401</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>a03</p></td>
+<td><p>190426</p></td>
+<td><p>150</p></td>
+</tr>
+<tr class="row-odd"><td><p>a01</p></td>
+<td><p>190421</p></td>
+<td><p>25</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>表の座標は <code class="docutils literal notranslate"><span class="pre">A1:C5</span></code> とする</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">D1</span> <span class="pre">-</span> <span class="pre">D3</span></code>: <code class="docutils literal notranslate"><span class="pre">a01</span> <span class="pre">-</span> <span class="pre">a03</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">E1</span></code>: <code class="docutils literal notranslate"><span class="pre">{=MAX(IF($A$1:$A$5=D1,VALUE($B$1:$B$5),0))}</span></code> 1 列目が <code class="docutils literal notranslate"><span class="pre">a01</span></code> になる位置の値以外は 0 になる配列を取得して、その最大値（ <code class="docutils literal notranslate"><span class="pre">190421</span></code> ）を求める</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F1</span></code>: <code class="docutils literal notranslate"><span class="pre">=D1&amp;TEXT(E1,&quot;000000&quot;)</span></code> 比較用の文字列（ <code class="docutils literal notranslate"><span class="pre">a01190421</span></code> ）生成</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G1</span></code>: <code class="docutils literal notranslate"><span class="pre">{=MAX(IF(A1:A5&amp;B1:B5=F1,C1:C5,0))}</span></code> 1 列目と 2 列目の結合した文字列が <code class="docutils literal notranslate"><span class="pre">a01190421</span></code> と同一の位置の値は 3 列目の値、それ以外は 0 の配列を取得して、その最大値を取得することで <code class="docutils literal notranslate"><span class="pre">25</span></code> が取得できる</p></li>
+<li><p>もっとスマートにできると思う</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="win10.html" title="Windows10 もろもろ"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="vimplugins.html" title="Vim plugins"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, hokorobi.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4 で生成しました。
+    </div>
+  </body>
+</html>
