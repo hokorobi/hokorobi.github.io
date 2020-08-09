@@ -72,6 +72,14 @@ Windows10 もろもろ
 
   + 全般：すべてオフ
   + 診断＆フィードバック→フィードバックを求められる頻度：許可しない
+  + バックグラウンドアプリ
+
+    - | バックグラウンドで実行しないアプリをオフへ。 [2020-07-26]
+      | 「アプリのバックグラウンド実行を許可する」はオフにしない方がいいらしい。
+
+      .. image:: _image/setting-background-01.png
+      .. image:: _image/setting-background-02.png
+      .. image:: _image/setting-background-03.png
 
 * 更新とセキュリティ
 
@@ -250,7 +258,9 @@ Soft
 
 * デバイスマネージャー
 
-  + 不要なデバイスの無効化: オーディオ関連
+  + 不要なデバイスの無効化: 使わないデバイス。メイン以外のオーディオ関連、カメラ、Bluetooth、Fax
+
+    .. image:: _image/device-manager.png
 
 * デスクトップのアイコンを非表示
 

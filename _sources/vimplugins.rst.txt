@@ -212,6 +212,11 @@ Vim plugins
      - todo
      - quickfix を便利に使えるようになるみたい。qfloc.vim より多機能？
      - 2020-03-15
+   * - thinca/vim-qfreplace
+     - using
+     - quickfix の内容を編集して実ファイルに反映できる。
+       検索して、置換が見ながらできる。
+     - 2020-06-15
    * - AndrewRadev/quickpeek.vim
      - using
      - Quickfix をポップアップウィンドウでプレビュー
@@ -222,8 +227,13 @@ Vim plugins
      - 2020-05-31
    * - vim-jp/syntax-vim-ex
      - using
-     -
-     -
+     - Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。
+     - 2020-08-01
+   * - rbtnn/vim-vimscript_tagfunc
+     - using
+     - tags ファイルなしでもジャンプできるようになる
+       dein のキャッシュファイルに対してもジャンプ可能。
+     - 2020-08-01
    * - pangloss/vim-javascript
      - using
      -
@@ -262,9 +272,10 @@ Vim plugins
      -
      -
    * - mattn/emmet-vim
-     -
-     -
-     -
+     - delete
+     - HTML の入力を便利にしてくれるけど覚えられない。
+       機会も少ないので削除。
+     - 2020-06-14
    * - hokorobi/vim-changelog-alt
      - delete
      - 本体同梱の changelog プラグインを自分好みにしようとしたけど、大して帰るところがなかったので削除。
@@ -310,20 +321,36 @@ Vim plugins
      - delete
      - こちらも buftabline の方が好みだった。
      - 2019-10-24
+   * - pacha/vem-tabline
+     - delete
+     - バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。
+       もともとそういう機能なのか設定か環境が悪いのか…
+     - 2020-07-01
    * - osyo-manga/vim-anzu
      - using
      - incremental search の現在のマッチ位置を表示。
      - 2020-05-11
    * - MattesGroeger/vim-bookmarks
-     - using
+     - delete
      - ファイルの位置をブックマークしてくれる
        vim-signature へ移行。 [2019-08-04]
        やっぱり使い始めた。 [2020-05-31]
      - 2020-05-31
    * - hokorobi/vim-bookmarks
      - using
-     - CtrlP でファイル名を表示できるように変更。 [2020-05-24]
+     - MattesGroeger/vim-bookmarks を Fork.
+       CtrlP でファイル名を表示できるように変更。 [2020-05-24]
      - 2020-05-24
+   * - Yilin-Yang/vim-markbar
+     - delete
+     - mark を sidebar で表示。
+       フィルタリングで絞り込めないとちょっと辛いかな。
+     - 2020-07-14
+   * - junegunn/vim-peekaboo
+     - delete
+     - レジスタをサイドバーで表示。
+       レジスタをそんなに活用できていないので使わない。
+     - 2020-07-14
    * - kshenoy/vim-signature
      - delete
      - | ファイルの位置を Vim の mark に追加してくれる
@@ -478,9 +505,10 @@ Vim plugins
        これなら edgemotion の方が好み。
      - 2020-04-18
    * - machakann/vim-columnmove
-     - using
+     - delete
      - f t F T ; , w b e ge W B E gE を縦方向に使える。
-     - 2020-04-18
+       使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。
+     - 2020-06-08
    * - pechorin/any-jump.vim
      - todo
      - 定義にジャンプできるらしい。
@@ -508,6 +536,12 @@ Vim plugins
      - yank でカーソル移動をさせない。
        ``nnoremap y y`>`` だと不十分なことがあったので。
      - 2020-04-14
+   * - AlphaMycelium/pathfinder.vim
+     - delete
+     - カーソル移動の改善を提案してくれるみたい。
+       試してみたけどエラーが出る。
+       調べてもいない。
+     - 2020-06-10
 
 .. list-table:: Buffer
    :header-rows: 1
@@ -524,10 +558,11 @@ Vim plugins
        | すべてのバッファを閉じると CtrlP で開いたバッファが vsplit される。CtrlP の問題か？
      - 2020-06-07
    * - tyru/capture.vim
-     - using
+     - delete
      - コマンドの実行結果などをバッファに取り込んでくれる。
        [nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。
-     -
+       簡単なコマンドで代用できそうなのでそちらへ移行。
+     - 2020-06-20
    * - ap/vim-buftabline
      - using
      - tabline にバッファを羅列する。タブがある場合はタブを表示。
@@ -599,9 +634,10 @@ Vim plugins
      -
      -
    * - ivalkeen/vim-ctrlp-tjump
-     - using
-     -
-     -
+     - delete
+     - タグジャンプ先が複数ある場合に CtrlP で選択できるようになる。
+       そういった場合がほとんどなかったので削除
+     - 2020-08-01
    * - ompugao/ctrlp-locate
      - using
      -
@@ -700,6 +736,11 @@ Vim plugins
      - using
      -
      -
+   * - RRethy/vim-hexokinase
+     - todo
+     - colorizer が推奨している。
+       別途 CLI の hexokinase が必要みたい。
+     - 2020-07-24
    * - tyru/open-browser.vim
      - using
      - URL を Web ブラウザで開く。
@@ -714,6 +755,12 @@ Vim plugins
      - using
      -
      -
+   * - mhinz/vim-grepper
+     - delete
+     - 各 grep 系ツールをよしなに使えるみたい。
+       pt で使おうとしたけどエラーが出て動かなかった。
+       そんなに便利な感じもなさそうなので措いておこう。
+     - 2020-07-09
 
 .. list-table:: Web Service
    :header-rows: 1

@@ -5,6 +5,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windows10 もろもろ &#8212; hokorobi.github.io  ドキュメント</title>
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +25,7 @@
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="Trello" href="trello.html" />
     <link rel="prev" title="Excel で調べこと色々" href="excel.html" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
@@ -41,44 +42,10 @@
         <li class="right" >
           <a href="excel.html" title="Excel で調べこと色々"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Windows10 もろもろ</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h3><a href="index.html">目次</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ols.html">OLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="excel.html">Excel で調べこと色々</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows10 もろもろ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">設定</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#controlpanel">コントロールパネル ControlPanel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#registry">Registry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">フォルダオプション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">グループポリシー</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#soft">Soft</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">そのほか</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">エラー対応</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
-<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
-</ul>
-
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="検索" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -173,9 +140,21 @@
 </ul>
 </li>
 <li><p>プライバシー</p>
-<ul class="simple">
+<ul>
 <li><p>全般：すべてオフ</p></li>
 <li><p>診断＆フィードバック→フィードバックを求められる頻度：許可しない</p></li>
+<li><p>バックグラウンドアプリ</p>
+<ul>
+<li><div class="line-block">
+<div class="line">バックグラウンドで実行しないアプリをオフへ。 [2020-07-26]</div>
+<div class="line">「アプリのバックグラウンド実行を許可する」はオフにしない方がいいらしい。</div>
+</div>
+<img alt="_images/setting-background-01.png" src="_images/setting-background-01.png" />
+<img alt="_images/setting-background-02.png" src="_images/setting-background-02.png" />
+<img alt="_images/setting-background-03.png" src="_images/setting-background-03.png" />
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>更新とセキュリティ</p>
@@ -411,19 +390,21 @@
 </div>
 <div class="section" id="id6">
 <h2>そのほか<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<ul class="simple">
+<ul>
 <li><p>デバイスマネージャー</p>
 <ul>
-<li><p>不要なデバイスの無効化: オーディオ関連</p></li>
+<li><p>不要なデバイスの無効化: 使わないデバイス。メイン以外のオーディオ関連、カメラ、Bluetooth、Fax</p>
+<img alt="_images/device-manager.png" src="_images/device-manager.png" />
+</li>
 </ul>
 </li>
 <li><p>デスクトップのアイコンを非表示</p>
-<ul>
+<ul class="simple">
 <li><p>デスクトップで右クリック→表示→アイコンを非表示</p></li>
 </ul>
 </li>
 <li><p>環境変数</p>
-<ul>
+<ul class="simple">
 <li><p>PATH</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">path\to\msys64\usr\bin</span></code></p></li>
@@ -483,7 +464,43 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">目次</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ols.html">OLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="excel.html">Excel で調べこと色々</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows10 もろもろ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controlpanel">コントロールパネル ControlPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registry">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">フォルダオプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">グループポリシー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soft">Soft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">そのほか</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">エラー対応</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -500,12 +517,13 @@
         <li class="right" >
           <a href="excel.html" title="Excel で調べこと色々"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Windows10 もろもろ</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, hokorobi.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4 で生成しました。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

@@ -5,6 +5,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vim plugins &#8212; hokorobi.github.io  ドキュメント</title>
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +25,7 @@
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="Excel で調べこと色々" href="excel.html" />
     <link rel="prev" title="Vivaldi" href="vivaldi.html" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
@@ -42,39 +43,10 @@
           <a href="vivaldi.html" title="Vivaldi"
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="ols.html" accesskey="U">OLS</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="ols.html" accesskey="U">OLS</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Vim plugins</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h3><a href="index.html">目次</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="ols.html">OLS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ols_using.html">使用ソフトとその用途</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vivaldi.html">Vivaldi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Vim plugins</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="excel.html">Excel で調べこと色々</a></li>
-<li class="toctree-l1"><a class="reference internal" href="win10.html">Windows10 もろもろ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
-<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
-</ul>
-
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="検索" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -389,20 +361,31 @@ restructuredtext を書くのに使っていたけど、色々と気に入らな
 <td><p>quickfix を便利に使えるようになるみたい。qfloc.vim より多機能？</p></td>
 <td><p>2020-03-15</p></td>
 </tr>
-<tr class="row-even"><td><p>AndrewRadev/quickpeek.vim</p></td>
+<tr class="row-even"><td><p>thinca/vim-qfreplace</p></td>
+<td><p>using</p></td>
+<td><p>quickfix の内容を編集して実ファイルに反映できる。検索して、置換が見ながらできる。</p></td>
+<td><p>2020-06-15</p></td>
+</tr>
+<tr class="row-odd"><td><p>AndrewRadev/quickpeek.vim</p></td>
 <td><p>using</p></td>
 <td><p>Quickfix をポップアップウィンドウでプレビュー</p></td>
 <td><p>2020-03-22</p></td>
 </tr>
-<tr class="row-odd"><td><p>ronakg/quickr-preview.vim</p></td>
+<tr class="row-even"><td><p>ronakg/quickr-preview.vim</p></td>
 <td><p>todo</p></td>
 <td><p>Quickfix を別ウィンドウでプレビュー</p></td>
 <td><p>2020-05-31</p></td>
 </tr>
-<tr class="row-even"><td><p>vim-jp/syntax-vim-ex</p></td>
+<tr class="row-odd"><td><p>vim-jp/syntax-vim-ex</p></td>
 <td><p>using</p></td>
-<td></td>
-<td></td>
+<td><p>Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。</p></td>
+<td><p>2020-08-01</p></td>
+</tr>
+<tr class="row-even"><td><p>rbtnn/vim-vimscript_tagfunc</p></td>
+<td><p>using</p></td>
+<td><p>tags ファイルなしでもジャンプできるようになる
+dein のキャッシュファイルに対してもジャンプ可能。</p></td>
+<td><p>2020-08-01</p></td>
 </tr>
 <tr class="row-odd"><td><p>pangloss/vim-javascript</p></td>
 <td><p>using</p></td>
@@ -454,9 +437,9 @@ restructuredtext を書くのに使っていたけど、色々と気に入らな
 <td></td>
 </tr>
 <tr class="row-even"><td><p>mattn/emmet-vim</p></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p>delete</p></td>
+<td><p>HTML の入力を便利にしてくれるけど覚えられない。機会も少ないので削除。</p></td>
+<td><p>2020-06-14</p></td>
 </tr>
 <tr class="row-odd"><td><p>hokorobi/vim-changelog-alt</p></td>
 <td><p>delete</p></td>
@@ -531,24 +514,40 @@ tabline は非表示にしている。</p></td>
 <td><p>こちらも buftabline の方が好みだった。</p></td>
 <td><p>2019-10-24</p></td>
 </tr>
-<tr class="row-odd"><td><p>osyo-manga/vim-anzu</p></td>
+<tr class="row-odd"><td><p>pacha/vem-tabline</p></td>
+<td><p>delete</p></td>
+<td><p>バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。もともとそういう機能なのか設定か環境が悪いのか…</p></td>
+<td><p>2020-07-01</p></td>
+</tr>
+<tr class="row-even"><td><p>osyo-manga/vim-anzu</p></td>
 <td><p>using</p></td>
 <td><p>incremental search の現在のマッチ位置を表示。</p></td>
 <td><p>2020-05-11</p></td>
 </tr>
-<tr class="row-even"><td><p>MattesGroeger/vim-bookmarks</p></td>
-<td><p>using</p></td>
+<tr class="row-odd"><td><p>MattesGroeger/vim-bookmarks</p></td>
+<td><p>delete</p></td>
 <td><p>ファイルの位置をブックマークしてくれる
 vim-signature へ移行。 [2019-08-04]
 やっぱり使い始めた。 [2020-05-31]</p></td>
 <td><p>2020-05-31</p></td>
 </tr>
-<tr class="row-odd"><td><p>hokorobi/vim-bookmarks</p></td>
+<tr class="row-even"><td><p>hokorobi/vim-bookmarks</p></td>
 <td><p>using</p></td>
-<td><p>CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></td>
+<td><p>MattesGroeger/vim-bookmarks を Fork.
+CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></td>
 <td><p>2020-05-24</p></td>
 </tr>
-<tr class="row-even"><td><p>kshenoy/vim-signature</p></td>
+<tr class="row-odd"><td><p>Yilin-Yang/vim-markbar</p></td>
+<td><p>delete</p></td>
+<td><p>mark を sidebar で表示。フィルタリングで絞り込めないとちょっと辛いかな。</p></td>
+<td><p>2020-07-14</p></td>
+</tr>
+<tr class="row-even"><td><p>junegunn/vim-peekaboo</p></td>
+<td><p>delete</p></td>
+<td><p>レジスタをサイドバーで表示。レジスタをそんなに活用できていないので使わない。</p></td>
+<td><p>2020-07-14</p></td>
+</tr>
+<tr class="row-odd"><td><p>kshenoy/vim-signature</p></td>
 <td><p>delete</p></td>
 <td><div class="line-block">
 <div class="line">ファイルの位置を Vim の mark に追加してくれる</div>
@@ -561,27 +560,27 @@ vim-signature へ移行。 [2019-08-04]
 </td>
 <td><p>2020-05-24</p></td>
 </tr>
-<tr class="row-odd"><td><p>itchyny/vim-cursorword</p></td>
+<tr class="row-even"><td><p>itchyny/vim-cursorword</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>andymass/vim-matchup</p></td>
+<tr class="row-odd"><td><p>andymass/vim-matchup</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>t9md/vim-quickhl</p></td>
+<tr class="row-even"><td><p>t9md/vim-quickhl</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>markonm/traces.vim</p></td>
+<tr class="row-odd"><td><p>markonm/traces.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>liuchengxu/vista.vim</p></td>
+<tr class="row-even"><td><p>liuchengxu/vista.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
@@ -752,9 +751,9 @@ Vim の設定のせい？これなら edgemotion の方が好み。</p></td>
 <td><p>2020-04-18</p></td>
 </tr>
 <tr class="row-even"><td><p>machakann/vim-columnmove</p></td>
-<td><p>using</p></td>
-<td><p>f t F T ; , w b e ge W B E gE を縦方向に使える。</p></td>
-<td><p>2020-04-18</p></td>
+<td><p>delete</p></td>
+<td><p>f t F T ; , w b e ge W B E gE を縦方向に使える。使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。</p></td>
+<td><p>2020-06-08</p></td>
 </tr>
 <tr class="row-odd"><td><p>pechorin/any-jump.vim</p></td>
 <td><p>todo</p></td>
@@ -789,6 +788,11 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 <code class="docutils literal notranslate"><span class="pre">nnoremap</span> <span class="pre">y</span> <span class="pre">y`&gt;</span></code> だと不十分なことがあったので。</p></td>
 <td><p>2020-04-14</p></td>
 </tr>
+<tr class="row-even"><td><p>AlphaMycelium/pathfinder.vim</p></td>
+<td><p>delete</p></td>
+<td><p>カーソル移動の改善を提案してくれるみたい。試してみたけどエラーが出る。調べてもいない。</p></td>
+<td><p>2020-06-10</p></td>
+</tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id10">
@@ -819,10 +823,10 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 <td><p>2020-06-07</p></td>
 </tr>
 <tr class="row-odd"><td><p>tyru/capture.vim</p></td>
-<td><p>using</p></td>
+<td><p>delete</p></td>
 <td><p>コマンドの実行結果などをバッファに取り込んでくれる。
-[nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。</p></td>
-<td></td>
+[nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。簡単なコマンドで代用できそうなのでそちらへ移行。</p></td>
+<td><p>2020-06-20</p></td>
 </tr>
 <tr class="row-even"><td><p>ap/vim-buftabline</p></td>
 <td><p>using</p></td>
@@ -927,9 +931,9 @@ tapi を使っていたので Windows では NG</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>ivalkeen/vim-ctrlp-tjump</p></td>
-<td><p>using</p></td>
-<td></td>
-<td></td>
+<td><p>delete</p></td>
+<td><p>タグジャンプ先が複数ある場合に CtrlP で選択できるようになる。そういった場合がほとんどなかったので削除</p></td>
+<td><p>2020-08-01</p></td>
 </tr>
 <tr class="row-even"><td><p>ompugao/ctrlp-locate</p></td>
 <td><p>using</p></td>
@@ -1063,21 +1067,32 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>tyru/open-browser.vim</p></td>
+<tr class="row-odd"><td><p>RRethy/vim-hexokinase</p></td>
+<td><p>todo</p></td>
+<td><p>colorizer が推奨している。別途 CLI の hexokinase が必要みたい。</p></td>
+<td><p>2020-07-24</p></td>
+</tr>
+<tr class="row-even"><td><p>tyru/open-browser.vim</p></td>
 <td><p>using</p></td>
 <td><p>URL を Web ブラウザで開く。
 'username/repogitory' を Github で開くコマンドを定義している。</p></td>
 <td><p>2020-02-09</p></td>
 </tr>
-<tr class="row-even"><td><p>rhysd/wandbox-vim</p></td>
+<tr class="row-odd"><td><p>rhysd/wandbox-vim</p></td>
 <td><p>delete</p></td>
 <td><p>wandbox を Vim から使う。使うことがなかったので削除。</p></td>
 <td><p>2019-09-28</p></td>
 </tr>
-<tr class="row-odd"><td><p>tyru/open-browser-unicode.vim</p></td>
+<tr class="row-even"><td><p>tyru/open-browser-unicode.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
+</tr>
+<tr class="row-odd"><td><p>mhinz/vim-grepper</p></td>
+<td><p>delete</p></td>
+<td><p>各 grep 系ツールをよしなに使えるみたい。
+pt で使おうとしたけどエラーが出て動かなかった。そんなに便利な感じもなさそうなので措いておこう。</p></td>
+<td><p>2020-07-09</p></td>
 </tr>
 </tbody>
 </table>
@@ -1213,7 +1228,38 @@ grepprg に pt を設定した場合に比べての利点がわからないの�
 </div>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">目次</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_github.io.html">Sphinx で生成した html を github.io へ公開</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ols.html">OLS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ols_using.html">使用ソフトとその用途</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vivaldi.html">Vivaldi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vim plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="excel.html">Excel で調べこと色々</a></li>
+<li class="toctree-l1"><a class="reference internal" href="win10.html">Windows10 もろもろ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1231,12 +1277,13 @@ grepprg に pt を設定した場合に比べての利点がわからないの�
           <a href="vivaldi.html" title="Vivaldi"
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">hokorobi.github.io  ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="ols.html" >OLS</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="ols.html" >OLS</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Vim plugins</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, hokorobi.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4 で生成しました。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>
