@@ -86,7 +86,7 @@ Vim plugins
      - 2020-01-19
    * - Shougo/neosnippet.vim
      - using
-     -
+     - golang の iferr 補完がほかでも使えるなら移行してもいいかな。
      -
    * - Shougo/neosnippet-snippets
      - using
@@ -96,10 +96,17 @@ Vim plugins
      - using
      -
      -
-   * - coc.nvim
+   * - neoclide/coc.nvim
      - delete
      - 補完速度が比較的遅いので asyncomplete.vim に移行。
      -
+   * - gelguy/wilder.nvim
+     - using
+     - コマンドラインモードでの補完。
+       :, /, help, :s/ など
+       statusline がたまに元に戻らないのが気になる。
+       すごいけど、本当に便利なのかな？
+     - 2020-08-16
 
 .. list-table:: REPL?
    :header-rows: 1
@@ -156,10 +163,18 @@ Vim plugins
      - using
      -
      -
-   * - Julian/vim-textobj-variable-segment
+   * - kana/vim-textobj-line
      - using
+     - 行の textobj。
      -
-     -
+   * - romgrk/equal.operator
+     - using
+     - 左辺、右辺の textobj。
+     - 2020-11-08
+   * - Julian/vim-textobj-variable-segment
+     - delete
+     - vim-textobj-delimited が Camel case にも対応しているので、こちらはいらなそう。
+     - 2020-08-16
 
 .. list-table:: filetype
    :header-rows: 1
@@ -225,6 +240,11 @@ Vim plugins
      - todo
      - Quickfix を別ウィンドウでプレビュー
      - 2020-05-31
+   * - mattn/vim-qfnavigate
+     - using
+     - | 表示されている Quickfix または location-list の次の項目、前の項目を表示するマッピングを提供する。
+       | location-list をほとんど使わないので、cnext, cprevious をマッピングするだけで事足りている。
+     - 2020-12-15
    * - vim-jp/syntax-vim-ex
      - using
      - Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。
@@ -327,9 +347,14 @@ Vim plugins
        もともとそういう機能なのか設定か環境が悪いのか…
      - 2020-07-01
    * - osyo-manga/vim-anzu
-     - using
-     - incremental search の現在のマッチ位置を表示。
+     - delete
+     - | incremental search の現在のマッチ位置を表示。
+       | vim-hitspop へ移行。 [2020-12-02]
      - 2020-05-11
+   * - obcat/vim-hitspop
+     - using
+     - incremental search の現在のマッチ位置をポップアップで表示。
+     - 2020-12-02
    * - MattesGroeger/vim-bookmarks
      - delete
      - ファイルの位置をブックマークしてくれる
@@ -716,6 +741,10 @@ Vim plugins
      - using
      -
      -
+   * - sentriz/vim-print-debug
+     - using
+     - print debug 用のコードをそれぞれの言語の書式で挿入してくれる。
+     - 2020-08-25
    * - mattn/webapi-vim
      - using
      -
@@ -761,6 +790,15 @@ Vim plugins
        pt で使おうとしたけどエラーが出て動かなかった。
        そんなに便利な感じもなさそうなので措いておこう。
      - 2020-07-09
+   * - mattboehm/vim-unstack
+     - todo
+     - スタックトレースを追いかける
+     - 2020-11-22
+   * - mattboehm/vim-accordion
+     - todo
+     - Split で表示するウィンドウ数を制限する。
+       vim-unstack でどんどん開くときに使うみたい。
+     - 2020-11-22
 
 .. list-table:: Web Service
    :header-rows: 1
