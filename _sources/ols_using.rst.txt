@@ -29,13 +29,13 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | インスタントコマンドでランチャとしても使用。 [2019-09-01]
      - 2008-03-18
    * - `Paper Plane xUI <http://toro.d.dooo.jp/slppx.html>`_
-     - 1.73+6 x64
+     - 1.85+1 x64
      - DF 並に起動が速いけれど、カスタマイズが大変 (楽しい？) なファイラ。
-     - 2020-07-20
+     - 2022-05-29
    * - `Paper Plane xUI Window Module <http://toro.d.dooo.jp/slppx.html>`_
-     - R7
+     - R9
      - 指定したウィンドウの最大化を交互におこなうコマンドと、指定したウィンドウ位置・大きさを別のウィンドウに合わせるコマンドが入った PPx Module。
-     - 2016-09-03
+     - 2022-04-24
    * - `Paper Plane xUI Script Module <http://toro.d.dooo.jp/slppx.html>`_
      - R18
      - スクリプトを使えるようにするモジュール。
@@ -43,16 +43,16 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        `R17+2: リネーム用スクリプトで ESC を押すと環境依存文字が入力されるのでやめ`:strike: 本体側が原因 1.69+3 で修正
      - 2020-01-13
    * - `Paper Plane xUI Text Module <http://toro.d.dooo.jp/slppx.html>`_
-     - R4
+     - R6
      - テキスト関係のコマンドを使えるようにするモジュール。
-     - 2018-08-15
+     - 2022-01-11
    * - `7zca.dll <http://toro.d.dooo.jp/slplugin.html>`_
      - 0.4
      - 7-Zipに入っている7z.dllを使った 7z等の書庫の展開ライブラリ。
        PPx で使用する定義は書いている。実際に使われているかは不明。
        7-Zip の 7z.dll を 7z64.dll にしてアーカイバDLLのフォルダへコピーしている。
      - 2020-01-13
-   * - `bregonig.dll <http://homepage3.nifty.com/k-takata/>`_
+   * - `bregonig.dll <http://k-takata.o.oo7.jp/>`_
      - 4.20 x64
      - Paper Plane xUI で正規表現を使えるようにする。
      - 2019-02-02
@@ -61,14 +61,14 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Paper Plane xUI で Migemo を使うため。
      - 2011-12-24
    * - `FastCopy <http://www.ipmsg.org/tools/fastcopy.html>`_
-     - 3.90 x64
+     - 4.14 x64
      - | 大量ファイルの削除時に使用。
        | 削除確認は PPx 側でダイアログを出して、実行時には /no_confirm_del を指定。
-     - 2020-07-11
+     - 2022-03-30
    * - `FreeFileSync <http://freefilesync.sourceforge.net/>`_
-     - 10.25
+     - 11.21
      - ファイルのバックアップ。
-     - 2020-07-11
+     - 2022-05-29
    * - `FastHash <http://hp.vector.co.jp/authors/VA033110/>`_
      - 0.39β
      - | ファイルが同じものなのかどうか確認。
@@ -84,16 +84,16 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | バージョンは手動でインストールしたときのもの。随時、バージョンアップ中。
        | 自動起動する avgnt のコマンドラインに /nosplash というオプションを追加。
      - 2016-07-10
-   * - `WizTree <http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/>`_
-     - 3.28
+   * - `WizTree <https://diskanalyzer.com>`_
+     - 4.08
      - ディスク領域を多く使っているディレクトリを一覧表示する。MFT を使っているので高速。
-     - 2019-02-06
+     - 2022-02-16
    * - `SpaceSniffer <http://www.uderzo.it/main_products/space_sniffer/index.html>`_
      - 1.1.3.1
      - WindowsPCのハードディスクの占有状況を高速に分析するツール。
      - 2011-05-19
    * - `Everything <http://www.voidtools.com/>`_
-     - 1.4.1.935
+     - 1.4.1.1009
      - | NTFS change Journal を使って高速ファイル検索。
        | こちらも管理者権限が必要なのは同様だが、ETP というプロトコルでの通信ができるので PPx から使っている。
        | Command-line interface の es もインストール。パスの通っている cmd へ。[2013-05-27]
@@ -101,21 +101,32 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | そうしないと es からの検索も管理者権限が必要になるため。
        | `Everything の起動を hokorobi.ahk から bbKeys.rc へ移動。`:strike: hokorobi.ahk に起動ショートカットを登録（だいぶ前だけど）[2018-02-15]
        | PPx の現行のモジュールからは実行できなくなったので、そちらも使わないように変更。
-     - 2019-02-18
+     - 2021-06-09
    * - `es <http://www.voidtools.com/>`_
-     - 1.1.0.10
+     - 1.1.0.18
      - | コマンドラインからの Everything 実行。
        | vim の ctrlp-locate から実行する。
-     - 2018-08-16
+     - 2021-06-09
    * - `NTFSlinksView <http://www.nirsoft.net>`_
      - 1.12
      - ジャンクション、シンボリックリンクなどを表示する。
      - 2013-06-08
-   * - `ghq <https://github.com/motemen/ghq>`_
-     - v1.0.0
+   * - `ghq <https://github.com/x-motemen/ghq>`_
+     - v1.3.0
      - | peco と連携して vim プラグイン、golang リポジトリを検索、移動
-       | install: go get -u -ldflags -s github.com/motemen/ghq
-     - 2020-01-05
+       | install: go install -u -ldflags -s github.com/x-motemen/ghq@latest
+     - 2022-05-06
+   * - `rhq <https://github.com/ubnt-intrepid/rhq>`_
+     - 0.2.8
+     - ghq の Rust 版。
+       あるディレクトリ配下のリポジトリを追加しようと思ったら add --import をしないといけないみたい。
+       これもうまく動かなかった。::
+
+         $ rhq add --import ~/src
+         failed with: failed to get branch name
+         exit status 1
+
+     - 2021-06-27
 
 
 .. list-table:: デフラグ
@@ -145,23 +156,24 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Version
      - Comment
      - Update
-   * - `7-Zip <https://sourceforge.net/projects/sevenzip/files/>`_
-     - 19.00 x64
+   * - `7-Zip <https://www.7-zip.org>`_
+     - 21.07 x64
      - 7-zip アーカイバ。
        shell extensionが追加されるので、7zFMを管理者権限で起動してツール - オプション - 7-Zip タブから該当箇所のチェックを外す。
-     - 2019-03-08
+     - 2022-01-04
    * - `Universal Extractor <http://www.legroom.net/modules.php?op=modload&amp;name=Open_Source&amp;file=index&amp;page=software&amp;app=uniextract>`_
      - 1.6.1
-     - インストーラ形式のアーカイブからファイルを取り出す。
-       色々とアーカイブ用のバイナリを同梱している。
-       インストーラなしもあるので好感が持てる。
-       DF.INI の [CMD] へはこげな感じで。
+     - | インストーラ形式のアーカイブからファイルを取り出す。
+       | 色々とアーカイブ用のバイナリを同梱している。
+       | インストーラなしもあるので好感が持てる。
+       | DF.INI の [CMD] へはこげな感じで。
 
        .. code-block:: ini
 
          UniExtract=C:\bin\UniExtract.exe $MF C:\Temp\$X$R
 
-       innounp.exe http://innounp.sourceforge.net/ を 0.39 へ入れ替え。Monkey's Audio 4.12 のインストーラから抽出できなかったので。 [2013-08-13]
+       | innounp.exe http://innounp.sourceforge.net/ を 0.39 へ入れ替え。Monkey's Audio 4.12 のインストーラから抽出できなかったので。 [2013-08-13]
+       | `Github <https://github.com/Bioruebe/UniExtract2>`_
      - 2010-05-14
    * - `UNLHA32.DLL <http://www.csdinc.co.jp/archiver/lib/unlha32.html>`_
      - 3.00
@@ -211,7 +223,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `Git for Windows <https://gitforwindows.org/>`_
-     - 2.27.0
+     - 2.36.1
      - MSYS の Git は UNIX-like path を要求して https://github.com/rhysd/git-messenger.vim をうまく動かせなかったので MSYS からこちらに切り替えてみる。
 
        Install
@@ -225,23 +237,23 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        `git update-git-for-windows` でアップデートできる。
 
        `git config --global credential.helper wincred` で Windows の資格マネージャを使って認証ができるようになる。
-     - 2020-06-02
+     - 2022-05-11
    * - `Fork <https://git-fork.com/>`_
-     - 1.52.1.0
+     - 1.74.1
      - | Git の GUI クライアント
        | hank の一部を選択すると、そこだけ stage できるのがとても便利。
        | 認証情報は資格マネージャに格納される。
-     - 2020-07-26
+       | GitHub Desktop を使っていたけれどツリー表示がないのはやはり辛いので戻ってきた。 [2022-02-19]
+     - 2022-05-24
    * - `GitHub CLI <https://cli.github.com>`_
-     - 0.90
+     - 2.10.1
      - GitHub から PR を簡単にできないか試す。
-     - 2020-05-30
-   * - `TortoiseHg <https://bitbucket.org/tortoisehg/thg/downloads>`_
-     - 4.9.1 x64
-     - GUI の Workbench を使う。
-       Vim で python27.dll が認識されて gista が動かなくなるのでインストール後にパスから外している。
-       5.0.2 で hg-git が動かなかったので 4.9.1 へ戻した。
-     - 2019-09-01
+     - 2022-05-15
+   * - `GitHub Desktop <https://desktop.github.com>`_
+     - 2.9.15
+     - | Git の GUI クライアント
+       | MIT なので、使い勝手が良ければ Fork から移行しようかな。
+     - 2022-04-21
 
 
 システム関係
@@ -272,16 +284,16 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        StartupRun の後継ソフト。
      - 2013-06-26
    * - `Autoruns <http://technet.microsoft.com/ja-jp/sysinternals/bb963902(en-us).aspx>`_
-     - 13.95
+     - 14.06
      - スタートアップで実行されるプログラムやライブラリを減らしたり増やしたり。
        通常は StartupRun を使ってゴミ掃除にこっちを使う。
-     - 2019-06-15
-   * - `ConEmu <http://code.google.com/p/conemu-maximus5/>`_
-     - 190303
+     - 2021-11-28
+   * - `ConEmu <https://conemu.github.io>`_
+     - 20210912 stable
      - シェルラッパー
        Console2 だと外からタブを増やせなかったので、こちらを使っている。
-     - 2019-03-03
-   * - `startw <http://homepage3.nifty.com/k-takata/mysoft/startw.html>`_
+     - 2021-09-15
+   * - `startw <http://k-takata.o.oo7.jp/mysoft/startw.html>`_
      - 1.09
      - start の GUI 版。
        -wait -min なんかを使っている。
@@ -291,17 +303,17 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - 環境変数を書き換えるソフト。
      - 2018-07-08
    * - `JoyToKey <http://www.vector.co.jp/soft/win95/util/se101657.html>`_
-     - 6.3
+     - 6.6
      - ジョイパッドの操作をキーボードやマウスに割り当てる。
        動画を離れてみながら、操作するときに使っている。
        駄目人間化。
-     - 2019-07-24
+     - 2021-05-05
    * - `nyagos <https://github.com/zetamatta/nyagos/>`_
-     - 4.4.7_0 64bit
+     - 4.4.12_0 64bit
      - コマンドラインシェル。UNC が扱えるので、Mercurial と一緒に使えないか試してみる。
        最近は PowerShell を使い始めた。 [2016-03-12]
        nyagos に戻ってきた。 [2016-09-08]
-     - 2020-07-20
+     - 2022-04-30
    * - `TaskSchedulerView <http://www.nirsoft.net/utils/task_scheduler_view.html>`_
      - 1.30
      - タスクスケジューラの一覧表示
@@ -311,26 +323,29 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - 1.66
      - サービスの一覧。設定変更の差分確認をする際に使用する。
      - 2016-05-01
-   * - `RunKan <http://www2.osk.3web.ne.jp/~sm/besrk/besrk.html>`_
-     - 1.21
-     - コマンドプロンプトなどを管理者権限起動。
-     - 2017-08-25
    * - `ClockPod <http://toro.d.dooo.jp/index.html>`_
-     - 2.70
+     - 2.72
      - IME の状態を表示
-     - 2018-08-05
-   * - `sudo <https://github.com/mattn/sudo>`_
-     - 0.0.1
-     - sudo
-     - 2019-05-23
+     - 2021-11-28
+   * - `gsudo <https://github.com/gerardog/gsudo>`_
+     - 1.3.0
+     - | sudo
+       | UAC ポップアップ一度表示した後5分間（デフォルト）はUACポップアップを表示させないようなキャッシュが可能。
+       | ``gsudo config CacheMode auto`` で自動に設定。 ``gsudo cache on`` で明示的に実行。
+       | Install: winget install gsudo
+     - 2022-04-16
    * - `フォントインストーラー SAKURA <http://tam.vni.jp/soft/sakura/sakura.html>`_
      - 2.77
      - フォントの情報を表示。Fontlink を設定するため名前を調べた。
      - 2019-06-08
    * - `GeekUninstaller <https://www.geekuninstaller.com/>`_
-     - 1.4.7
+     - 1.4.9
      - AppStore アプリのアンインストール
-     - 2019-09-21
+     - 2022-04-06
+   * - `PowerToys <https://github.com/microsoft/PowerToys>`_
+     - 0.58.0
+     - FancyZones: 画面分割など。試しに入れてみてる。ほとんど動かしていない。
+     - 2022-05-07
 
 ネットワーク関係
 ~~~~~~~~~~~~~~~~
@@ -344,15 +359,15 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `Vivaldi <https://vivaldi.com/?lang=ja_JP>`_
-     - 3.0.1874.33 64bit
+     - 	5.2.2623.48 64bit
      - Chromium 派生 Web ブラウザ。
        Cyberfox から移行してきた。
-     - 2020-04-30
+     - 2022-05-19
    * - `Firefox <http://mozilla.jp/firefox/>`_
-     - 77.0.1
+     - 100.0.2
      - Web ブラウザ。
        サブブラウザを Firefox に戻した。 [2018-01-21]
-     - 2020-06-04
+     - 2022-05-22
    * - `WWWC <http://www.nakka.com/>`_
      - 1.1.2
      - Web ページの更新チェック。
@@ -363,10 +378,10 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        実行すると、問答無用で ``C:\Program Files\uTorrent`` へインストールされていたが、インストール先は選べるようになった。(1.8)
      - 2011-05-06
    * - `FileZilla <http://filezilla.sourceforge.net/>`_
-     - 3.44.2 x64
+     - 3.59.0 x64
      - FTP クライアント。
        多重接続できるのが嬉しい。
-     - 2019-06-29
+     - 2022-04-10
    * - `twicli <http://www.geocities.co.jp/twicli/>`_
      - 随時
      - JS 製クライアント。
@@ -389,13 +404,13 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Twitter のフォロー状態の確認。あんまりやらない方がいいよな～。
      - 2020-04-13
    * - `Jane Style <http://janesoft.net/janestyle/>`_
-     - 4.00
+     - 4.23
      - 5ch の閲覧
-     - 2017-11-09
+     - 2022-05-11
    * - `Slack <https://slack.com/intl/ja-jp/release-notes/windows>`_
-     - 4.00
+     - 4.26.2
      - Slack
-     - 2019-07-12
+     - 2022-05-18
 
 テキスト関係
 ~~~~~~~~~~~~
@@ -428,16 +443,16 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        WinMerge, Vim で使用中。
      - 2020-06-28
    * - `XpdfReadre <http://www.xpdfreader.com/>`_
-     - 4.0.1
+     - 4.0.3
      - PDF からテキストを抽出する pdftotext を使用。
        Vim で使えるかと思ったけど工夫がいりそう。
-     - 2019-03-04
+     - 2022-02-20
    * - `pdfcpu <https://github.com/pdfcpu/pdfcpu>`_
-     - 0.3.3
+     - 0.3.13
      - PDF の編集をするコマンドラインツール。
-     - 2020-05-27
+     - 2021-12-04
    * - `WinMerge <http://www.geocities.co.jp/SiliconValley-SanJose/8165/winmerge.html>`_
-     - 2.16.6+-jp-10 x64
+     - 2.16.18-jp-3 x64
      - | ファイルの比較。
        | 差分内容によって綺麗に色分けしてくれる。
        | こちらは文字コードの自動判別もしてくれる。
@@ -445,7 +460,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | 2.3.3.1-jp-1 からは、設定の「複数のインスタンスを起動しない」を選択することができるようになった。
        | MergePlugins から amb_xdocdiffPlugin.dll 以外を移動。プラグインが自動展開になっているので、色々と入っていると自動で動いてしまう。たまにエラーメッセージが出たりしていた。
        | MergePlugins の中身は移動せず xdocdiffPlugin.dll を追加する運用にしてみる。 [2019-11-02]
-     - 2020-06-29
+     - 2022-04-06
    * - `xdocdiff WinMerge Plugin 64bit <http://crus.mydns.jp/xdocdiffPlugin64/>`_
      - 1.0.6 64bit
      - Winmerge で Word, Excel, PowerPoint, pdf その他の比較が行えるようにするプラグイン。
@@ -473,14 +488,14 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | 文字コードが色々なファイルをまとめて grep はできないので pt に戻った。 [2019-09-11]
      - 2019-08-09
    * - `Sphinx <http://www.sphinx-doc.org/ja/master/index.html>`_
-     - 3.0.0
+     - 3.5.3
      - reStructuredText を HTML に変換
-     - 2020-04-07
+     - 2021-04-05
    * - `Pandoc <http://johnmacfarlane.net/pandoc/>`_
-     - 2.10
+     - 2.18
      - | 文書の変換
        | Sphinx の singlehtml から docx への変換（仮） [2018-06-09]
-     - 2020-07-11
+     - 2022-04-08
    * - `Evernote <https://evernote.com/intl/jp/download>`_
      - 6.17.6.8292
      - Web だけで使っていたけれど一括編集、一括移動などが使えないようなのでアプリをインストール
@@ -495,7 +510,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `Vim <https://github.com/vim/vim-win32-installer/releases>`_
-     - 8.2.1288
+     - 8.2.5037
      - | デフォルトエディタ。xyzzy から移行。
        | 7.3.1203はうまく動かなかった。Lingrが動かなかったのと、やっぱり色々と問題がありそう。
        | `8.0.0596-20170502 は gvim -c GrepWrap で <t_<fd>`> が入力されたので前のバージョンに戻した。 [2017-05-21]`:strike:
@@ -503,7 +518,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | 8.1.1234 から system() の結果がテンポラリファイルから取れない場合があるみたい。dein の自動リキャッシュ（？）時に発生 [2019-05-01]
        | この件 8.1.1350 でも解決しなかったので、自動リキャッシュが発生しないように dein に手を入れた。 [2019-05-19]
        | 8.2.0855 は C-s などが死んでた。 [2020-05-31]
-     - 2020-07-25
+     - 2022-05-29
    * - `cmigemo <https://www.kaoriya.net/software/cmigemo/>`_
      - 2011-02-27
      - Vim の easymotion で使用する。
@@ -514,6 +529,10 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Vim の +lua を有効にする。
        パスの通った場所に lua53.dll を格納。
      - 2018-08-19
+   * - `deno <https://github.com/denoland/deno>`_
+     - 1.22.0
+     - Vim の ddc.vim で使用。
+     - 2022-05-19
 
 .. list-table:: フォント
    :header-rows: 1
@@ -524,34 +543,30 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `白源 <https://github.com/yuru7/HackGen>`_
-     - Nerd 2020-04-24
-     - Vim で試しに使用。
-     - 2020-04-24
+     - Nerd, NerdConsole 2.6.3
+     - Conemu, PPx, Vim, Vivaldi で使用。
+     - 2022-04-24
    * - `Cica <https://github.com/miiton/Cica>`_
-     - 5.0.1 with emoji
-     - Conemu, Paper Plane xUI, Vim で使用。
-     - 2019-06-27
+     - 5.0.3 with emoji
+     - `Conemu, Paper Plane xUI, Vim で使用。`:strike:
+       白源 に移行。
+     - 2022-03-29
    * - `MyricaM <https://myrica.estable.jp/>`_
      - 2.012.20180119
-     - Conemu, Paper Plane xUI で使用。
+     - `Conemu, Paper Plane xUI で使用。`:strike:
        Cica へ変えてみている。 [2019-02-25]
      - 2018-09-08
    * - `BDF M+ <http://www1.kaoriya.net/>`_
      - 2.2.4p2
-     - Paper Plane xUI の等幅フォントに使用。
+     - `Paper Plane xUI の等幅フォントに使用。`:strike:
        Bold, Italic も使えるから替えてみたけど使ってないぞ？
        Cica へ変えてみている。 [2019-02-25]
      - 2010-04-25
    * - `Takaoゴシック <https://launchpad.net/takao-fonts>`_
      - 2015-03-04
-     - コマンドプロンプトで使用するフォント。
+     - `コマンドプロンプトで使用するフォント。`:strike:
        2017-11-16 に MyricaM M に変更した。
      - 2015-06-28
-   * - `kindlegen <https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211>`_
-     - 2.9
-     - epub から mobi への変換。
-       Calibre も試したけどイマイチ。
-     - 2019-04-20
 
 音楽関係
 ~~~~~~~~
@@ -591,31 +606,27 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `foobar2000 <http://foobar2000.hydrogenaudio.org/>`_
-     - 1.5.4
+     - 1.6.11
      - BGM として TAK, Ogg Vorbis, MP3, WMA などの再生をさせている。
        プレイリストが削除されることがある。最後の発生は 0.9.5.5。
-     - 2020-05-16
+     - 2022-05-08
    * - `foo_input_tak <http://www.foobar2000.org/components/view/foo_input_tak>`_
-     - 0.4.8
+     - 0.5.6
      - TAK の再生。
-     - 2018-03-01
+     - 2022-05-15
    * - `Playback statistics <http://www.foobar2000.org/components/view/foo_playcount>`_
-     - 3.02
+     - 3.0.4
      - 曲の演奏回数を保持する。
        最近演奏した一覧も表示してくれるので履歴の代わりに使っている。
-     - 2011-09-28
+     - 2020-09-08
    * - `Skip Track <http://www.foobar2000.org/components/view/foo_skip>`_
-     - 1.9.10
+     - 1.34
      - 再生をスキップする条件を指定
        聴きたくない曲は rating を 2 にしているので、::
 
          %rating% IS 2
 
-     - 2018-08-03
-   * - `foo_podcatcher <http://www.unkempt.co.uk/fb2k/foo_podcatcher.html>`_
-     - 0.25
-     - Podcast を聞く。NHKラジオニュースを登録。
-     - 2016-03-27
+     - 2022-05-15
 
 
 .. list-table:: 作成、編集
@@ -627,17 +638,17 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `Exact Audio Copy <http://www.exactaudiocopy.de/>`_
-     - 1.5
+     - 1.6
      - 音楽 CD からの wave 吸出し。
        CDImage を取り出して TAK へ。
        0.95 beta 4 だと TOC の取得はできなくなったんだっけ？
        CCCD などを使うときは前のバージョンを使おう。
-     - 2020-02-25
+     - 2021-05-16
    * - `TAK <http://www.thbeck.de/Tak/Tak.html>`_
-     - 2.3.0
+     - 2.3.1
      - 圧縮率とエンコード、デコード時間がそこそこに良いロスレスコーデック。
        ロスレスはこれ一本にした。
-     - 2013-06-30
+     - 2021-07-03
    * - `FLAC <http://xiph.org/flac/index.html>`_
      - 1.3.0 RareWares
      - FLAC のエンコード、デコード。
@@ -669,23 +680,11 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        たいてい OptiPNG よりも縮む。そのかわり時間もかかる。適当に比べてみたら -o7 の 5 倍くらい。
      - 2010-03-27
    * - `pingo <https://css-ig.net/pingo>`_
-     - 0.99 RC3 (2)
+     - 0.99 RC4 (14)
      - PNG のサイズを小さくする。
        PNGOUT ほどは縮まないみたい。（s9 で比べると違うのかも）
        かなり縮むしかなり高速。
-     - 2020-07-14
-   * - `Graphviz <http://www.graphviz.org/>`_
-     - 2.38
-     - | グラフ構造の整形、描画、編集システム。
-       | 依存関係のある何かを図示するのに使ったり。
-       | 2.30 を msi でインストールしたらシステムの PATH にパスが追加されたので削除した。
-       | zip を展開しただけだと dot.exe の実行で以下のエラーが表示された。
-
-       .. code-block:: none
-
-         (dot.exe:3928): Pango-WARNING **: `/target/lib/pango/1.6.0/modules/pango-basic-win32.dll': 指定されたモジュールが見つかりません。
-
-     - 2019-08-05
+     - 2021-02-04
    * - `AzPainter <http://hp.vector.co.jp/authors/VA033749/>`_
      - 2.09
      - シンプルで使いやすいような気がするペイントソフト。
@@ -726,7 +725,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - 画像の一括リサイズに使用。比較的高速なようなので。
      - 2014-04-04
    * - `Imagemagick <http://www.imagemagick.org/script/index.php>`_
-     - 7.0.7-11-portable-Q16-x64
+     - 7.1.0-portable-Q16-x64
      - | 画像の変換や切り出し。
        | 001.png の x=206, y=0 の位置から幅 1508 ピクセル、高さ 1080 ピクセルを切り出して crop/001.png へ保存。
 
@@ -743,7 +742,7 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        | 6.8.8-4-Q16-x64-dll などだと dll も必要だったが、static なら不要みたい。
        | `cmd へ convert.exe, mogrify.exe だけを格納。`:strike:
        | 7.0.7-11 では magic.xml が必要だと怒られたので普通にパスを通した。
-     - 2017-12-01
+     - 2022-01-27
    * - `WinShot <http://www.woodybells.com/winshot.html>`_
      - 1.53a
      - スクリーンショットを画像ファイルとして保存。
@@ -765,17 +764,17 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        zip ファイルを扱うために `axzipx.spi <http://www.geocities.jp/gis2lel/sw/index.html>`_ をインストール。
      - 2013-12-21
    * - `IrfanView <http://www.irfanview.com/>`_
-     - 4.54 64bit
+     - 4.60 32bit
      - 軽いグラフィックビューア。
        プラグインで色々なファイル形式に対応。
        `NKV よりもマシだけれど縮小が綺麗じゃない。`:strike: バージョン 4.00 で View - Display options (window mode) - Use "Resample" for fitting (better quality) を選択すると綺麗になった。前のバージョンでも設定していれば綺麗になったのかな？。
        `日本語モジュール <http://park15.wakwak.com/~yu-ki/>`_ 、 `日本語版 <http://www8.plala.or.jp/kusutaku/>`_
        最近は MassiGra しか使っていないけれど、サブとして入れている。
-     - 2019-12-25
+     - 2022-03-19
    * - `PlantUML <http://ja.plantuml.com/>`_
-     - 1.2020.12
+     - 1.2022.5
      - シーケンス図とかを描く。
-     - 2020-06-07
+     - 2022-05-06
 
 
 .. list-table:: Susie Plug-in
@@ -786,20 +785,28 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Version
      - Comment
      - Update
-   * - `ifgif.spi m0.1 <http://mij4x.datacompression.jp/text/ifgif_cmp.html>`_
-     - ifgif.spi m0.1
+   * - `ifgif.spi <http://mij4x.datacompression.jp/text/ifgif_cmp.html>`_
+     - m0.1
      - 標準の ifgif.spi よりも高速で、ちゃんと画像を表示してくれるみたいなので変更。
      - 2005-04-17
    * - `JPEG-turbo Susie Plug-in <http://toro.d.dooo.jp/slplugin.html#ifjpegt>`_
-     - 1.05
+     - 1.07
      - PPx で JPEG を表示。
        WIC を使うように変更 [2013-03-30]
        これを使うように変更。輪郭がくっきりしたイラストっぽい画像だと ifjpegt が圧倒的に早く、1Mbyte超のデジカメ画像だと iftwic がすこし早い傾向 [2017-09-02]
-     - 2018-11-15
+     - 2022-01-22
    * - `WIC Susie Plug-in <http://toro.d.dooo.jp/slplugin.html#iftwic>`_
-     - 1.7
-     - PPx で GIF 以外を表示。
-     - 2018-03-04
+     - 1.9 p4
+     - PPx で GIF, JPEG 以外を表示。
+     - 2021-06-19
+   * - `ifsvg.spi <http://mij4x.datacompression.jp/text/ifgif_cmp.html>`_
+     - 1.00
+     - svg 表示。UNBYPASS 経由で使用。
+     - 2021-07-18
+   * - `ifavif.spi <https://github.com/uyjulian/ifavif>`_
+     - 1.1.1
+     - avif 表示。MassiGra と UNBYPASS 経由で PPx で使用。
+     - 2022-01-27
    * - `spibench <http://hp.vector.co.jp/authors/VA010446/toolbox2/index.html#spibench>`_
      - 2004-10-15
      - Susie Plug-in のベンチマーク。
@@ -826,10 +833,10 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - デスクトップキャプチャ
      - 2014-07-30
    * - `LosslessCut <https://github.com/mifi/lossless-cut>`_
-     - 3.23.7
+     - 3.36.0
      - Youtube の動画の不要部分を無劣化で取り除く。
        シンプルなので Avidemux から移行。
-     - 2020-06-13
+     - 2021-05-05
    * - `ffmpeg <https://ffmpeg.zeranoe.com/builds/>`_
      - 4.2
      - 音声の抜き出しとか。
@@ -861,17 +868,23 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        Home Cinema x64 1.5.3.3704 henry は再生が遅くなったりしたので使うのやめ。
      - 2016-05-07 / 2012-12-17
    * - `mpv <https://sourceforge.net/projects/mpv-player-windows/files/>`_
-     - 0.32.0+ (77a74d9)
+     - 20220109-git-777628e
      - | 動画再生。mplayer から切り替え。
        | 2016-11-20 は WMV の再生がおかしかった。映像が出ない。 [2016-12-04]
        | バイナリ取得サイトを変更 http://mpv.srsfckn.biz/ -> https://sourceforge.net/projects/mpv-player-windows/files/ [2018-07-24]
-     - 2020-02-07
+     - 2022-01-10
+   * - `mpv-bookmark <https://github.com/NurioHin/mpv-bookmarker>`_
+     - aef6a1
+     - | 動画の再生位置をブックマークしてくれるスクリプト。
+       | 別ファイルでも開ける。
+       | ブックマークメニューを呼び出して DEL を押せば削除もできる。
+     - 2021-03-10
    * - `youtube-dl <https://rg3.github.io/youtube-dl/>`_
-     - 2020.03.24
+     - 2021.12.17
      - youtube を mpv で再生。
        youtube の動画を DL。
        Microsoft Visual C++ 2010 Redistributable Package (x86) （not x64）が必要。
-     - 2020-04-12
+     - 2021-12-25
    * - `MPC-BE <https://sourceforge.net/projects/mpcbe/>`_
      - 1.5.1 x64
      - MPCHC の改訂版。
@@ -905,30 +918,44 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - Comment
      - Update
    * - `Python <http://www.python.org/>`_
-     - 64 bit 3.8.5
+     - 3.10.4 64 bit
      - | メインの LL。
        | `Vim プラグインの Gista は 2.7 が入っていないと保存時にエラーになる。なぜだ？ [2017-05-14]`:strike:
        | TortoiseHg の python27.dll が Python 2.7 として認識されていた。TortoiseHg のパスをはずした。 [2018-02-03]
        | neovim が pynvim になって Windows の 3.7 でも使えるようになったので 3.6 は削除。 [2019-02-23]
        | 会社の PC が 64 bit になったので 32 bit は削除。 [2019-04-21]
-       | venv の upgrade: ``python -m venv path-to-venv --upgrade`` [2020-05-23]
-     - 2020-07-23
+       | ``python -m venv path-to-venv --upgrade`` は失敗することがあるのでバージョンアップしたら新しく作り直す。 [2021-04-05]
+       | 3.9.8 は駄目。 [2021-11-16]
+
+       .. code-block:: bat
+
+         path-to-venv\Scripts\activate.bat
+         pip freeze > requirements.txt
+         deactivate.bat
+         python -m venv new-path-to-venv
+         path-to-venv\Scripts\activate.bat
+         pip install -r requirements.txt
+
+     - 2022-03-25
    * - `go <http://golang.org/>`_
-     - 1.14.6 64bit
+     - 1.18.2 64bit
      - go
-     - 2020-07-18
+     - 2022-05-15
    * - `goimports <https://github.com/golang/tools/tree/master/cmd/goimports>`_
-     - 2019-12-17 621d4eef
-     - Fast gofmt
-       Install: go get -u -ldflags -s -v golang.org/x/tools/cmd/goimports
-     - 2020-01-03
-   * - `gopls <https://github.com/golang/tools/tree/master/gopls>`_
-     - v0.4.2
+     - 2021-10-13 0b930fba
+     - | Fast gofmt
+       | Install: go install -ldflags -s -v golang.org/x/tools/cmd/goimports@latest
+     - 2022-03-07
+   * - `gopls <https://pkg.go.dev/golang.org/x/tools/gopls>`_
+     - 0.8.4
      - | `coc.nvim から呼び出して使用。`:strike:
        | `Install: GO111MODULE=on go get -ldflags -s golang.org/x/tools/gopls@latest`:strike:
+       | Install: go install -ldflags -s golang.org/x/tools/gopls@latest
        | v0.2* はうまく動かなかった。 [2019-12-08]
        | vim-lsp-settings でインストールして使用。 [2020-05-24]
-     - 2020-07-02
+       | vim-lsp で :LspInstallServer でインストールした gopls が起動すると It looks like you have a bad gopls installation などと表示されるようになっていた。 go-diff@1.20 がまずいみたい。
+       | 一度 go get golang.org/x/tools/gopls を実行するとなぜか go-diff@1.10 が使われるようになったみたい。[2021-06-10]
+     - 2022-05-22
    * - `Node.js <https://nodejs.org/ja/>`_
      - 10.15.3 LTS
      - textlint や plantuml-syntax-test で使用。
@@ -938,9 +965,10 @@ Update はソフトウェアがバージョンアップされた日ではなく�
      - tags ファイルを作成して Vim で使用
      - 2019-12-13
    * - `efm-langserver <https://github.com/mattn/efm-langserver>`_
-     - 2020-03-11 90adbf
-     - Vim で vint を実行
-     - 2020-03-15
+     - 0.0.38
+     - | Vim で vint を実行など。
+       | go install -ldflags -s github.com/mattn/efm-langserver@lates
+     - 2021-12-04
 
 
 辞書
@@ -960,20 +988,20 @@ Update はソフトウェアがバージョンアップされた日ではなく�
        PDIC/Unicode の発音記号フォントは、 `Doulos SIL Font Home <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont>`_ を使う。
      - 2020-01-03
    * - `EBWin <http://www31.ocn.ne.jp/~h_ishida/EBPocket.html>`_
-     - 4.7.8 64bit / 3.06 Unicode
+     - 4.7.10 64bit / 3.06 Unicode
      - EPWING などの辞書データから辞書引きできるソフト。
        今は広辞苑のために使っている。
-     - 2020-07-11 / 2012-05-18
+     - 2022-03-12 / 2012-05-18
    * - `Lingoes <http://www.lingoes.net/en/>`_
      - 2.9.1
      - ポップアップ辞書。
        英辞郎とか明鏡とか、まずいんじゃないかと思うデータも無料で手に入る。
      - 2013-06-08
 
-kobo
+Kindle
 ~~~~~~
 
-.. list-table:: その他
+.. list-table:: Kindle
    :header-rows: 1
    :widths: 15 10 60 10
 
@@ -981,14 +1009,24 @@ kobo
      - Version
      - Comment
      - Update
-   * - `AozoraEpub3 <http://www18.atwiki.jp/hmdev/pages/21.html>`_
-     - 1.1.0b46
-     - 青空文庫形式を ePub3 へ変換。kobo 用。
-     - 2016-11-23
+   * - `AozoraEpub3 <https://github.com/kyukyunyorituryo/AozoraEpub3>`_
+     - 1.1.1b11Q
+     - | 青空文庫形式などを mobi へ変換。Kindle 用。
+       | オリジナル `hmdev/AozoraEpub3 <https://github.com/hmdev/AozoraEpub3>`_
+     - 2021-12-18
    * - `ChainLP <http://no722.cocolog-nifty.com/blog/>`_
      - 0.40-17
      - 画像 zip を変換。kobo 用。
      - 2013-02-05
+   * - `kindlegen <https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211>`_
+     - 2.9
+     - epub から mobi への変換。
+       Calibre も試したけどイマイチ。
+     - 2019-04-20
+   * - `Kindle Previewr <https://kdp.amazon.co.jp/ja_JP/help/topic/G202131170>`_
+     - 2021-01-06
+     - `%LOCALAPPDATA%\Amazon\Kindle Previewer 3\lib\fc\bin\kindlegen.exe` を使用。
+     - 2021-02-27
 
 
 その他
@@ -1013,27 +1051,27 @@ kobo
      - 接続している USB デバイスを取り外せるようにする。
      - 2013-06-15
    * - `KeePassXC <https://keepassxc.org/>`_
-     - 2.6.0 64bit
+     - 2.7.1 64bit
      - オープンソースでクロスプラットフォームのパスワード管理ソフト。
        KeePass のバージョン 2 への移行をしていなかったけど、こちらにしてみた。
-     - 2020-07-11
+     - 2022-04-08
    * - `家計簿，出納簿ひかる <http://www.kensoft.co.jp/>`_
      - 9.60
      - 家計簿。
        たまにグラフ表示をして生活を振り返ってみる。
      - 2017-12-13
    * - `JRE <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_
-     - 1.8.0.251
+     - 1.8.0.281
      - Java のランタイム。
        `インストール後に、コントロールパネルから Java を開いて、「アップデート」-「アップデートを自動的にチェック」のチェックを外す。`:strike:
        自動的にチェックはしてもらうように。
-     - 2020-04-22
-   * - `Freeplane <http://sourceforge.net/apps/mantisbt/freeplane/my_view_page.php>`_
-     - 1.8.7 pre03
+     - 2021-01-24
+   * - `Freeplane <https://sourceforge.net/projects/freeplane/>`_
+     - 1.9.15 pre01
      - マインドマップを書くためのツール。
        FreeMind の改造版。
        いくつか嬉しい機能がある。
-     - 2020-07-20
+     - 2022-03-29
    * - `conim <http://site-clue.statice.jp/>`_
      - 3.00
      - 16 進表記の色を作成したり、画面から取ってきたり。
@@ -1043,14 +1081,14 @@ kobo
      - 実行ファイルの中身を覗いてみる。
      - 2013-10-04
    * - `Process Monitor <http://technet.microsoft.com/ja-jp/sysinternals/bb896645(en-us).aspx>`_
-     - 3.50
+     - 3.86
      - ファイルシステム、レジストリ、プロセス（スレッド）のモニタリングソフト
-     - 2018-02-18
+     - 2021-11-28
    * - `Process Explorer <http://technet.microsoft.com/ja-jp/sysinternals/bb896653(en-us).aspx>`_
-     - 16.30
+     - 16.40
      - プロセスの詳細な情報を表示することができるタスクマネージャ。
        メニューの Find → Find Handle or DLL でプロセスが掴んでいる DLL を探すようなことができる。
-     - 2019-09-07
+     - 2021-08-20
    * - `LibreOffice <http://www.libreoffice.org/>`_
      - 6.2.2 64bit
      - オープンソースのオフィススイート。
@@ -1116,8 +1154,8 @@ kobo
      - 1.050
      - スタートアップの実行に使用。
      - 2011-03-07
-   * - `AutoHotkey <http://www.autohotkey.net/~Lexikos/AutoHotkey_L/>`_
-     - 1.1.31.0 x64
+   * - `AutoHotkey <https://www.autohotkey.com>`_
+     - 1.1.34.02 x64
      - キーの入れ替えに使用。
 
        管理者権限で実行されるプログラム（主に Everything）でも使えるように、AutoHotkey も管理者権限で実行する。
@@ -1140,7 +1178,7 @@ kobo
        | 1.1.21 系に変更してみた。大丈夫かな？ [2015-04-23]
        | 1.1.27.00 はやたらと落ちるので 1.1.26.01 に戻した。Windows Update が原因の可能性もあるので様子見。[2017-12-27]
        | 1.1.27.02 でマシになったみたい [2018-01-07]
-     - 2019-10-22
+     - 2022-05-15
    * - `Stickies <http://www.zhornsoftware.co.uk/stickies/>`_
      - 7.1e
      - 思いついたことを書き込んで画面に貼り付ける付箋。
@@ -1151,31 +1189,41 @@ kobo
        輝度、コントラスト、青ゲインを下げたり（ブルーライトカット）
      - 2016-05-01
    * - `Tascher <http://www16.atpages.jp/rayna/index.html>`_
-     - 1.62
+     - 1.64
      - タスクの切り替え。インクリメンタルサーチと絞込が一件になったら自動切り替えしてくれる機能が素晴らしい。
        Migemo 対応！ 1.5.6
-     - 2017-03-27
+     - 2021-05-08
    * - `MSYS2 <https://msys2.github.io/>`_
-     - msys2-i686-20150512.exe
+     - 20220128
      - | Git とか unix ツールとか
        | ``ssh -p portNumber username@hostname``
        | ``pacman -Syu``
        | Git for Windows だけで満足できるか試してみる [2020-04-12]
-     - 2015-07-13
+     - 2022-02-17
    * - `peco <https://github.com/peco/peco>`_
-     - 0.5.8
+     - 0.5.10
      - PPx のタブ切り替えのために 使用。
        Install: go get -u -ldflags -s github.com/peco/peco/cmd/peco [2018-03-18]
        Defender の例外にも登録。
-     - 2020-07-20
+       Install [2021-06-09]:
+
+         git clone --depth=1 https://github.com/peco
+         cd peco
+         go build -ldflags -s cmd/peco/peco.go
+
+     - 2021-06-09
    * - `Docker Toolbox <https://www.docker.com/products/docker-toolbox>`_
      - 17.03.1-ce
      - Docker
      - 2017-04-08
    * - `RelaxTools Addin <https://software.opensquare.net/relaxtools/>`_
-     - 4.25.2
+     - 4.27.5
      - Excel の操作を便利にしてくれるアドイン
-     - 2017-04-20
+     - 2021-04-14
+   * - `PsKill <https://docs.microsoft.com/en-us/sysinternals/downloads/pskill>`_
+     - 1.16
+     - fenrir のインスタントコマンドに登録して各プロセスを停止
+     - 2021-01-12
 
 削除済み
 --------
@@ -2182,12 +2230,6 @@ kobo
      - MS Project みたいなの
      - 使う機会がなくなった。
      - 2013-02-08
-   * - `PsKill <http://technet.microsoft.com/ja-jp/sysinternals/bb896683.aspx>`_
-     - 1.15
-     - プロセスの停止。
-       Mercurial 拡張 statdaemon で常駐する hg.exe を停止させる。
-     - 使う機会がなくなった。
-     - 2012-10-28
    * - `USB Oblivion <http://code.google.com/p/usboblivion/>`_
      - 1.9.0.0
      - USB の接続情報を削除する。
@@ -2312,11 +2354,6 @@ kobo
      - マウスカーソルに IME のオン状態を表示。
      - Vivaldi での状態表示がうまくいかない
      - 2019-06-27
-   * - `PowerToys <https://github.com/microsoft/PowerToys>`_
-     - 0.11.0
-     - FancyZones: 画面分割の利用
-     - 使わない。
-     - 2019-09-07
    * - `lazygit <https://github.com/jesseduffield/lazygit>`_
      - 0.8.1
      - Git の TUI クライアント
@@ -2340,4 +2377,39 @@ kobo
      - ソフトの起動や操作。
      - ランチャを fenrir へ変更。 [2019-09-01]
      -
+   * - `RunKan <http://www2.osk.3web.ne.jp/~sm/besrk/besrk.html>`_
+     - 1.21
+     - コマンドプロンプトなどを管理者権限起動。
+     - gsudo へ移行。 [2022-02-06]
+     - 2017-08-25
+   * - `sudo <https://github.com/mattn/sudo>`_
+     - 0.0.1
+     - sudo
+     - gsudo へ移行。 [2022-02-06]
+     - 2019-05-23
+   * - `TortoiseHg <https://bitbucket.org/tortoisehg/thg/downloads>`_
+     - 4.9.1 x64
+     - GUI の Workbench を使う。
+       Vim で python27.dll が認識されて gista が動かなくなるのでインストール後にパスから外している。
+       5.0.2 で hg-git が動かなかったので 4.9.1 へ戻した。
+     - 何年か前に Git へ移行。 [2022-03-14]
+     - 2019-09-01
+   * - `Graphviz <http://www.graphviz.org/>`_
+     - 2.38
+     - | グラフ構造の整形、描画、編集システム。
+       | 依存関係のある何かを図示するのに使ったり。
+       | 2.30 を msi でインストールしたらシステムの PATH にパスが追加されたので削除した。
+       | zip を展開しただけだと dot.exe の実行で以下のエラーが表示された。
 
+       .. code-block:: none
+
+         (dot.exe:3928): Pango-WARNING **: `/target/lib/pango/1.6.0/modules/pango-basic-win32.dll': 指定されたモジュールが見つかりません。
+
+     - | PlantUML 1.2020.21 以降で不要になったそうなので削除。 [2022-05-01]
+       | 環境変数 GRAPHVIZ_DOT も削除。
+     - 2019-08-05
+   * - `foo_podcatcher <http://www.unkempt.co.uk/fb2k/foo_podcatcher.html>`_
+     - 0.25
+     - Podcast を聞く。NHKラジオニュースを登録。
+     - いつだったかに削除。
+     - 2016-03-27

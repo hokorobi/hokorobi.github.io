@@ -180,6 +180,13 @@ Registry
     [HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
     "PaddedBorderWidth"="0"
 
+* | 起動したアプリにフォーカスを与える。
+  | フォーカスが当たらない場合があったため。::
+  | `起動したアプリがアクティブにならない - Letters from lanternj <https://lanternj.hatenablog.com/entry/2019/03/03/090309>_`::
+
+    [HKEY_CURRENT_USER\Control Panel\Desktop]
+    "ForegroundLockTimeout"=dword:00000000
+
 フォルダオプション
 ----------------------
 
@@ -258,7 +265,8 @@ Soft
 
 * デバイスマネージャー
 
-  + 不要なデバイスの無効化: 使わないデバイス。メイン以外のオーディオ関連、カメラ、Bluetooth、Fax
+  + | 不要なデバイスの無効化: 使わないデバイス。メイン以外のオーディオ関連、カメラ、Fax
+    | Bluetooth は有効化。 [2021-01-05]
 
     .. image:: _image/device-manager.png
 

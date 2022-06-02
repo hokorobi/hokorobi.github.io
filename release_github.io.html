@@ -5,15 +5,17 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Sphinx で生成した html を github.io へ公開 &#8212; hokorobi.github.io  ドキュメント</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -51,8 +53,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="sphinx-html-github-io">
-<h1>Sphinx で生成した html を github.io へ公開<a class="headerlink" href="#sphinx-html-github-io" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <section id="sphinx-html-github-io">
+<h1>Sphinx で生成した html を github.io へ公開<a class="headerlink" href="#sphinx-html-github-io" title="Permalink to this heading">¶</a></h1>
 <p>こんなんで。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart.exe
 <span class="c1"># githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: には y で回答</span>
@@ -79,11 +81,13 @@ $ git push -u origin master
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hokorobi.github.io</span></code> リポジトリだと master ブランチしか公開ができないみたい。そして .nojekyll があっても _static の css は公開してくれない様子。それ以外のリポジトリでも master で Github pages へ公開すると <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> があってもダメ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hokorobi.github.io</span></code> リポジトリだと master ブランチしか公開ができないみたい。
+そして .nojekyll があっても _static の css は公開してくれない様子。
+それ以外のリポジトリでも master で Github pages へ公開すると <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> があってもダメ。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span></code> は使わなかったけど、使ったら嬉しいことあるのかな？</p></li>
 <li><p>参考: <a class="reference external" href="http://tell-k.hatenablog.com/entry/2012/01/18/224126">github のプロジェクトにSphinxドキュメントを良さげな感じにおきたい 其の一 - Study08.net 対シンバシ殲滅用人型機動兵器</a></p></li>
 </ul>
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -107,12 +111,12 @@ $ git push -u origin master
   <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -135,7 +139,7 @@ $ git push -u origin master
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, hokorobi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
   </body>
 </html>

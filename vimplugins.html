@@ -5,15 +5,17 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Vim plugins &#8212; hokorobi.github.io  ドキュメント</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -52,16 +54,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="vim-plugins">
-<h1>Vim plugins<a class="headerlink" href="#vim-plugins" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <section id="vim-plugins">
+<h1>Vim plugins<a class="headerlink" href="#vim-plugins" title="Permalink to this heading">¶</a></h1>
 <table class="docutils align-default" id="id1">
-<caption><span class="caption-text">plugin manager</span><a class="headerlink" href="#id1" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
+<caption><span class="caption-text">Plugin Manager</span><a class="headerlink" href="#id1" title="このテーブルへのパーマリンク">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -80,16 +76,15 @@
 </td>
 <td><p>2020-02-22</p></td>
 </tr>
+<tr class="row-odd"><td><p>hokorobi/vim-templug</p></td>
+<td><p>using</p></td>
+<td><p>:Templug URL で git clone。packadd name で使用可になる。</p></td>
+<td><p>2020-10-04</p></td>
+</tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">completion</span><a class="headerlink" href="#id2" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -130,7 +125,8 @@
 </tr>
 <tr class="row-even"><td><p>prabirshrestha/asyncomplete-neosnippet.vim</p></td>
 <td><p>delete</p></td>
-<td><p>neosnippet を asyncomplete で使う。日本語の後ろで補完候補がずらっと出てきてしまうので削除。 [2020-05-23]</p></td>
+<td><p>neosnippet を asyncomplete で使う。
+日本語の後ろで補完候補がずらっと出てきてしまうので削除。 [2020-05-23]</p></td>
 <td><p>2020-05-23</p></td>
 </tr>
 <tr class="row-odd"><td><p>hokorobi/asyncomplete-neosnippet.vim</p></td>
@@ -143,7 +139,17 @@
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>mattn/vim-lsp-settings</p></td>
+<tr class="row-odd"><td><p>matsui54/denops-signature_help</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">denops を使った vim-lsp の関数表示。</div>
+<div class="line">自分の使い方だと vim-lsp に対しての利点がなさそう。</div>
+<div class="line">Vim だと内容が途中までしか表示できないバグがある？</div>
+</div>
+</td>
+<td><p>2022-02-06</p></td>
+</tr>
+<tr class="row-even"><td><p>mattn/vim-lsp-settings</p></td>
 <td><p>using</p></td>
 <td><div class="line-block">
 <div class="line">vim-lsp の設定をよしなにやってくれる</div>
@@ -158,6 +164,16 @@
 </td>
 <td><p>2020-02-18</p></td>
 </tr>
+<tr class="row-odd"><td><p>mattn/vim-lsp-icons</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">sign をアイコン表示してくれる。</div>
+<div class="line">アイコンの残骸が残ったりするので気持ち悪い。</div>
+<div class="line">別にいらんかな。</div>
+</div>
+</td>
+<td><p>2020-03-13</p></td>
+</tr>
 <tr class="row-even"><td><p>prabirshrestha/asyncomplete-lsp.vim</p></td>
 <td><p>using</p></td>
 <td></td>
@@ -168,53 +184,53 @@
 <td><p>単語の補完</p></td>
 <td><p>2020-03-22</p></td>
 </tr>
-<tr class="row-even"><td><p>thomasfaingnaert/vim-lsp-snippets</p></td>
+<tr class="row-even"><td><p>machakann/asyncomplete-ezfilter.vim</p></td>
+<td><p>todo</p></td>
+<td><p>各ソースに大文字小文字の無視や fuzzymatching などが可能</p></td>
+<td><p>2021-03-18</p></td>
+</tr>
+<tr class="row-odd"><td><p>thomasfaingnaert/vim-lsp-snippets</p></td>
 <td><p>delete</p></td>
 <td><p>LSP で snippet。動かせなかった。</p></td>
 <td><p>2020-01-19</p></td>
 </tr>
-<tr class="row-odd"><td><p>thomasfaingnaert/vim-lsp-neosnippet</p></td>
+<tr class="row-even"><td><p>thomasfaingnaert/vim-lsp-neosnippet</p></td>
 <td><p>delete</p></td>
 <td><p>LSP で neosnippet。動かせなかった。</p></td>
 <td><p>2020-01-19</p></td>
 </tr>
-<tr class="row-even"><td><p>Shougo/neosnippet.vim</p></td>
+<tr class="row-odd"><td><p>Shougo/neosnippet.vim</p></td>
 <td><p>using</p></td>
 <td><p>golang の iferr 補完がほかでも使えるなら移行してもいいかな。</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Shougo/neosnippet-snippets</p></td>
+<tr class="row-even"><td><p>Shougo/neosnippet-snippets</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>honza/vim-snippets</p></td>
+<tr class="row-odd"><td><p>honza/vim-snippets</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>neoclide/coc.nvim</p></td>
+<tr class="row-even"><td><p>neoclide/coc.nvim</p></td>
 <td><p>delete</p></td>
 <td><p>補完速度が比較的遅いので asyncomplete.vim に移行。</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>gelguy/wilder.nvim</p></td>
+<tr class="row-odd"><td><p>gelguy/wilder.nvim</p></td>
 <td><p>using</p></td>
 <td><p>コマンドラインモードでの補完。
 :, /, help, :s/ など
-statusline がたまに元に戻らないのが気になる。すごいけど、本当に便利なのかな？</p></td>
+statusline がたまに元に戻らないのが気になる。
+すごいけど、本当に便利なのかな？</p></td>
 <td><p>2020-08-16</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">REPL?</span><a class="headerlink" href="#id3" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -242,12 +258,6 @@ statusline がたまに元に戻らないのが気になる。すごいけど、
 </table>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Text Object</span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -310,12 +320,6 @@ statusline がたまに元に戻らないのが気になる。すごいけど、
 </table>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">filetype</span><a class="headerlink" href="#id5" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -332,7 +336,8 @@ statusline がたまに元に戻らないのが気になる。すごいけど、
 <tr class="row-odd"><td><p>lambdalisue/vim-diffa</p></td>
 <td><p>delete</p></td>
 <td><p>diff を賢くする＋自動アップデートなど。
-Vim 本体だけでも diffopt+=algorithm:histogram,indent-heuristic で賢くなるらしい。自動アップデートは使っていないので削除。</p></td>
+Vim 本体だけでも diffopt+=algorithm:histogram,indent-heuristic で賢くなるらしい。
+自動アップデートは使っていないので削除。</p></td>
 <td><p>2020-03-31</p></td>
 </tr>
 <tr class="row-even"><td><p>hdima/python-syntax</p></td>
@@ -379,7 +384,8 @@ restructuredtext を書くのに使っていたけど、色々と気に入らな
 </tr>
 <tr class="row-even"><td><p>thinca/vim-qfreplace</p></td>
 <td><p>using</p></td>
-<td><p>quickfix の内容を編集して実ファイルに反映できる。検索して、置換が見ながらできる。</p></td>
+<td><p>quickfix の内容を編集して実ファイルに反映できる。
+検索して、置換が見ながらできる。</p></td>
 <td><p>2020-06-15</p></td>
 </tr>
 <tr class="row-odd"><td><p>AndrewRadev/quickpeek.vim</p></td>
@@ -392,7 +398,12 @@ restructuredtext を書くのに使っていたけど、色々と気に入らな
 <td><p>Quickfix を別ウィンドウでプレビュー</p></td>
 <td><p>2020-05-31</p></td>
 </tr>
-<tr class="row-odd"><td><p>mattn/vim-qfnavigate</p></td>
+<tr class="row-odd"><td><p>yssl/QFEnter</p></td>
+<td><p>using</p></td>
+<td><p>QuickFixでジャンプするときに直前のWindowを使う</p></td>
+<td><p>2021-08-24</p></td>
+</tr>
+<tr class="row-even"><td><p>mattn/vim-qfnavigate</p></td>
 <td><p>using</p></td>
 <td><div class="line-block">
 <div class="line">表示されている Quickfix または location-list の次の項目、前の項目を表示するマッピングを提供する。</div>
@@ -401,28 +412,28 @@ restructuredtext を書くのに使っていたけど、色々と気に入らな
 </td>
 <td><p>2020-12-15</p></td>
 </tr>
-<tr class="row-even"><td><p>vim-jp/syntax-vim-ex</p></td>
+<tr class="row-odd"><td><p>vim-jp/syntax-vim-ex</p></td>
 <td><p>using</p></td>
 <td><p>Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。</p></td>
 <td><p>2020-08-01</p></td>
 </tr>
-<tr class="row-odd"><td><p>rbtnn/vim-vimscript_tagfunc</p></td>
+<tr class="row-even"><td><p>rbtnn/vim-vimscript_tagfunc</p></td>
 <td><p>using</p></td>
 <td><p>tags ファイルなしでもジャンプできるようになる
 dein のキャッシュファイルに対してもジャンプ可能。</p></td>
 <td><p>2020-08-01</p></td>
 </tr>
-<tr class="row-even"><td><p>pangloss/vim-javascript</p></td>
+<tr class="row-odd"><td><p>pangloss/vim-javascript</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>PProvost/vim-ps1</p></td>
+<tr class="row-even"><td><p>PProvost/vim-ps1</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>hokorobi/plantuml-syntax</p></td>
+<tr class="row-odd"><td><p>hokorobi/plantuml-syntax</p></td>
 <td><p>using</p></td>
 <td><div class="line-block">
 <div class="line">aklt/plantuml-syntax の fork。</div>
@@ -431,47 +442,48 @@ dein のキャッシュファイルに対してもジャンプ可能。</p></td>
 </td>
 <td><p>2020-05-23</p></td>
 </tr>
-<tr class="row-odd"><td><p>tsuyoshicho/plantuml-previewer.vim</p></td>
+<tr class="row-even"><td><p>tsuyoshicho/plantuml-previewer.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>cespare/vim-toml</p></td>
+<tr class="row-odd"><td><p>cespare/vim-toml</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>osyo-manga/vim-precious</p></td>
+<tr class="row-even"><td><p>osyo-manga/vim-precious</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Shougo/context_filetype.vim</p></td>
+<tr class="row-odd"><td><p>Shougo/context_filetype.vim</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>hnamikaw/vim-autohotkey</p></td>
+<tr class="row-even"><td><p>hnamikaw/vim-autohotkey</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>mechatroner/rainbow_csv</p></td>
+<tr class="row-odd"><td><p>mechatroner/rainbow_csv</p></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>mattn/emmet-vim</p></td>
+<tr class="row-even"><td><p>mattn/emmet-vim</p></td>
 <td><p>delete</p></td>
-<td><p>HTML の入力を便利にしてくれるけど覚えられない。機会も少ないので削除。</p></td>
+<td><p>HTML の入力を便利にしてくれるけど覚えられない。
+機会も少ないので削除。</p></td>
 <td><p>2020-06-14</p></td>
 </tr>
-<tr class="row-even"><td><p>hokorobi/vim-changelog-alt</p></td>
+<tr class="row-odd"><td><p>hokorobi/vim-changelog-alt</p></td>
 <td><p>delete</p></td>
 <td><p>本体同梱の changelog プラグインを自分好みにしようとしたけど、大して帰るところがなかったので削除。</p></td>
 <td><p>2020-05-11</p></td>
 </tr>
-<tr class="row-odd"><td><p>hokorobi/vim-howm-syntax-mini</p></td>
+<tr class="row-even"><td><p>hokorobi/vim-howm-syntax-mini</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
@@ -480,12 +492,6 @@ dein のキャッシュファイルに対してもジャンプ可能。</p></td>
 </table>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Colorscheme</span><a class="headerlink" href="#id6" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -509,12 +515,6 @@ italic, bold は無効にしている。</p></td>
 </table>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Look</span><a class="headerlink" href="#id7" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -541,7 +541,8 @@ tabline は非表示にしている。</p></td>
 </tr>
 <tr class="row-odd"><td><p>pacha/vem-tabline</p></td>
 <td><p>delete</p></td>
-<td><p>バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。もともとそういう機能なのか設定か環境が悪いのか…</p></td>
+<td><p>バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。
+もともとそういう機能なのか設定か環境が悪いのか…</p></td>
 <td><p>2020-07-01</p></td>
 </tr>
 <tr class="row-even"><td><p>osyo-manga/vim-anzu</p></td>
@@ -558,30 +559,41 @@ tabline は非表示にしている。</p></td>
 <td><p>incremental search の現在のマッチ位置をポップアップで表示。</p></td>
 <td><p>2020-12-02</p></td>
 </tr>
-<tr class="row-even"><td><p>MattesGroeger/vim-bookmarks</p></td>
+<tr class="row-even"><td><p>haya14busa/is.vim</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">vim-hitspop のポップアップ表示を消去するために使用。</div>
+<div class="line">自動のマッピング設定が N にはマッピングされるのに、なぜか n にマッピングされなかったので個別に設定。</div>
+</div>
+</td>
+<td><p>2020-12-25</p></td>
+</tr>
+<tr class="row-odd"><td><p>MattesGroeger/vim-bookmarks</p></td>
 <td><p>delete</p></td>
 <td><p>ファイルの位置をブックマークしてくれる
 vim-signature へ移行。 [2019-08-04]
 やっぱり使い始めた。 [2020-05-31]</p></td>
 <td><p>2020-05-31</p></td>
 </tr>
-<tr class="row-odd"><td><p>hokorobi/vim-bookmarks</p></td>
+<tr class="row-even"><td><p>hokorobi/vim-bookmarks</p></td>
 <td><p>using</p></td>
 <td><p>MattesGroeger/vim-bookmarks を Fork.
 CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></td>
 <td><p>2020-05-24</p></td>
 </tr>
-<tr class="row-even"><td><p>Yilin-Yang/vim-markbar</p></td>
+<tr class="row-odd"><td><p>Yilin-Yang/vim-markbar</p></td>
 <td><p>delete</p></td>
-<td><p>mark を sidebar で表示。フィルタリングで絞り込めないとちょっと辛いかな。</p></td>
+<td><p>mark を sidebar で表示。
+フィルタリングで絞り込めないとちょっと辛いかな。</p></td>
 <td><p>2020-07-14</p></td>
 </tr>
-<tr class="row-odd"><td><p>junegunn/vim-peekaboo</p></td>
+<tr class="row-even"><td><p>junegunn/vim-peekaboo</p></td>
 <td><p>delete</p></td>
-<td><p>レジスタをサイドバーで表示。レジスタをそんなに活用できていないので使わない。</p></td>
+<td><p>レジスタをサイドバーで表示。
+レジスタをそんなに活用できていないので使わない。</p></td>
 <td><p>2020-07-14</p></td>
 </tr>
-<tr class="row-even"><td><p>kshenoy/vim-signature</p></td>
+<tr class="row-odd"><td><p>kshenoy/vim-signature</p></td>
 <td><p>delete</p></td>
 <td><div class="line-block">
 <div class="line">ファイルの位置を Vim の mark に追加してくれる</div>
@@ -594,41 +606,58 @@ CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></t
 </td>
 <td><p>2020-05-24</p></td>
 </tr>
-<tr class="row-odd"><td><p>itchyny/vim-cursorword</p></td>
+<tr class="row-even"><td><p>itchyny/vim-cursorword</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>andymass/vim-matchup</p></td>
+<tr class="row-odd"><td><p>andymass/vim-matchup</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>t9md/vim-quickhl</p></td>
+<tr class="row-even"><td><p>t9md/vim-quickhl</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>markonm/traces.vim</p></td>
+<tr class="row-odd"><td><p>markonm/traces.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>liuchengxu/vista.vim</p></td>
+<tr class="row-even"><td><p>liuchengxu/vista.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
+</tr>
+<tr class="row-odd"><td><p>itchyny/vim-highlighturl</p></td>
+<td><p>delete</p></td>
+<td><p>Changelog の URL がすべてハイライトされるとカーソル移動が重くなるので外した。</p></td>
+<td><p>2021-05-29</p></td>
+</tr>
+<tr class="row-even"><td><p>thinca/vim-breadcrumbs</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">どの関数配下にいるかをタブバーに表示してくれるみたい。</div>
+<div class="line">とりあえず使わなくていいかな。</div>
+</div>
+</td>
+<td><p>2021-07-24</p></td>
+</tr>
+<tr class="row-odd"><td><p>thinca/vim-qfhl</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">quickfix , locationlist の位置をハイライト表示してくれる。</div>
+<div class="line">自分の用途で嬉しいところは LSP の表示が良くなるかもくらい？</div>
+</div>
+</td>
+<td><p>2021-08-01</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Edit</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -649,29 +678,82 @@ CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></t
 </tr>
 <tr class="row-even"><td><p>kana/vim-operator-replace</p></td>
 <td><p>delete</p></td>
-<td><p>選択してペーストができるようになると思っていたけど、標準でもできていた。レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。</p></td>
+<td><p>選択してペーストができるようになると思っていたけど、標準でもできていた。
+レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。</p></td>
 <td><p>2020-04-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>yuki-yano/vim-operator-replace</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">&quot;hoge&quot; とかを vibp で置換していたものを &lt;Space&gt;rib でできるように導入してみた。</div>
+<div class="line">kana/vim-operator-replace では使えないらしい yankround も使える。</div>
+<div class="line">vibp しか使わないので消した。 [2021-05-05]</div>
+</div>
+</td>
+<td><p>2021-02-20</p></td>
+</tr>
+<tr class="row-even"><td><p>monaqa/dps-dial.vim</p></td>
+<td><p>del</p></td>
+<td><div class="line-block">
+<div class="line">denops.vim で vim-clurin と同じようなことをしてくれる</div>
+<div class="line">初回動作は重いかと思ったけどそんなこともなかった。</div>
+<div class="line">dein で E670: 1つの言語のヘルプファイルに複数のエンコードが混在しています: C:Usershokorobi_vimdein.cachevimrc.deindocdps-dial.jax となる。なんでだろう？</div>
+<div class="line">'' と &quot;&quot; の切り替えはできなさそうだし、特に頻繁に使う機能ではないので clurin のままでいいか。</div>
+</div>
+</td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>uplus/vim-clurin</p></td>
 <td><p>using</p></td>
-<td></td>
+<td><div class="line-block">
+<div class="line">増加、減少、循環などをいい感じにやってくれる。</div>
+<div class="line">'' と &quot;&quot; の切り替えが一番使用頻度が高いかも。</div>
+<div class="line">それもsandwichで代用できるので、いったん消してみる。</div>
+<div class="line">true&lt;-&gt;false, yes&lt;-&gt;no などは必要だ。復活。</div>
+</div>
+</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>tpope/vim-speeddating</p></td>
+<td><p>del</p></td>
+<td><div class="line-block">
+<div class="line">vim-clurin と併用。</div>
+<div class="line">日付だけはこちらの機能を使えるようにしている。</div>
+<div class="line">使わないので削除。</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AndrewRadev/tagalong.vim</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">タグの片方を変更すると、もう片方も変更してくれる。</div>
+<div class="line">2021-02-14 時点では i, a の動作が何か変（？）。</div>
+</div>
+</td>
+<td><p>2021-02-14</p></td>
+</tr>
+<tr class="row-even"><td><p>tyru/caw.vim</p></td>
 <td><p>using</p></td>
-<td></td>
-<td></td>
+<td><div class="line-block">
+<div class="line">便利にコメントアウト</div>
+</div>
+</td>
+<td><p>ancient</p></td>
+</tr>
+<tr class="row-odd"><td><p>matze/vim-move</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">複数行をまとめて上下に移動できる。</div>
+<div class="line">インデントも考慮してくれる。</div>
+</div>
+</td>
+<td><p>2020-06-28</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Motion</span><a class="headerlink" href="#id9" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -702,7 +784,7 @@ CtrlP でファイル名を表示できるように変更。 [2020-05-24]</p></t
 </tr>
 <tr class="row-even"><td><p>svermeulen/vim-yoink</p></td>
 <td><p>todo</p></td>
-<td><p>xmap では使えない？試していないからわからないけれど yankroud.vim で満足している。
+<td><p>xmap では使えない？　試していないからわからないけれど yankroud.vim で満足している。
 yankround.vim + sub-mode で実現していることが単体でできそう。</p></td>
 <td><p>2020-04-02</p></td>
 </tr>
@@ -747,31 +829,50 @@ snippet のようにテンプレートを展開。</p></td>
 <td><p>, 区切りの要素の入れ替え、ソート、textobj</p></td>
 <td><p>2020-05-17</p></td>
 </tr>
-<tr class="row-odd"><td><p>kana/vim-niceblock</p></td>
+<tr class="row-odd"><td><p>christoomey/vim-sort-motion</p></td>
+<td><p>todo</p></td>
+<td><div class="line-block">
+<div class="line">textobj, motion に対してソートをする。</div>
+<div class="line">vim-swap でいいかな？</div>
+</div>
+</td>
+<td><p>2021-05-07</p></td>
+</tr>
+<tr class="row-even"><td><p>kana/vim-niceblock</p></td>
 <td><p>using</p></td>
 <td><p>選択した行すべてに対して I, A を反映させる。</p></td>
 <td><p>2020-04-18</p></td>
 </tr>
-<tr class="row-even"><td><p>da-x/name-assign.vim</p></td>
+<tr class="row-odd"><td><p>da-x/name-assign.vim</p></td>
 <td><p>todo</p></td>
 <td><p>選択した範囲を変数に変えて、その変数の定義を追加する。</p></td>
 <td><p>2020-05-23</p></td>
 </tr>
-<tr class="row-odd"><td><p>chrisbra/NrrwRgn</p></td>
+<tr class="row-even"><td><p>chrisbra/NrrwRgn</p></td>
 <td><p>delete</p></td>
 <td><p>選択した範囲だけ編集対象とする。
-Vim だと標準で同じようなことができるのでいらなさそう。便利な場合もあるんだろうな。</p></td>
+Vim だと標準で同じようなことができるのでいらなさそう。
+便利な場合もあるんだろうな。</p></td>
 <td><p>2020-04-18</p></td>
 </tr>
-<tr class="row-even"><td><p>unblevable/quick-scope</p></td>
+<tr class="row-odd"><td><p>unblevable/quick-scope</p></td>
 <td><p>delete</p></td>
 <td><p>f, F, t, T でハイライトしてくれる。ルールがよくわからなくて、まともに使っていない。</p></td>
 <td><p>2020-02-20</p></td>
 </tr>
-<tr class="row-odd"><td><p>easymotion/vim-easymotion</p></td>
+<tr class="row-even"><td><p>easymotion/vim-easymotion</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
+</tr>
+<tr class="row-odd"><td><p>monkoose/vim9-stargate</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">モダンな easymotion 代替。</div>
+<div class="line">候補選択時の画面が暗すぎる。Migemo がないのがちょっと辛い。自分で定義できるみたい。同行だけの移動はないみたい。機能が拡充されたらまた使ってみてもいいかも。</div>
+</div>
+</td>
+<td><p>2021-07-15</p></td>
 </tr>
 <tr class="row-even"><td><p>haya14busa/vim-edgemotion</p></td>
 <td><p>using</p></td>
@@ -780,13 +881,16 @@ Vim だと標準で同じようなことができるのでいらなさそう。�
 </tr>
 <tr class="row-odd"><td><p>tyru/columnskip.vim</p></td>
 <td><p>delete</p></td>
-<td><p>edgemotion に近いけど、空白に対してだけスキップ。インデントの途中なら、インデントの区切りの位置に移動するのかと思ったけど、違うみたい。
-Vim の設定のせい？これなら edgemotion の方が好み。</p></td>
+<td><p>edgemotion に近いけど、空白に対してだけスキップ。
+インデントの途中なら、インデントの区切りの位置に移動するのかと思ったけど、違うみたい。
+Vim の設定のせい？
+これなら edgemotion の方が好み。</p></td>
 <td><p>2020-04-18</p></td>
 </tr>
 <tr class="row-even"><td><p>machakann/vim-columnmove</p></td>
 <td><p>delete</p></td>
-<td><p>f t F T ; , w b e ge W B E gE を縦方向に使える。使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。</p></td>
+<td><p>f t F T ; , w b e ge W B E gE を縦方向に使える。
+使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。</p></td>
 <td><p>2020-06-08</p></td>
 </tr>
 <tr class="row-odd"><td><p>pechorin/any-jump.vim</p></td>
@@ -811,6 +915,17 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 <td></td>
 <td></td>
 </tr>
+<tr class="row-even"><td><p>thinca/vim-poslist</p></td>
+<td><p>todo</p></td>
+<td><p><a class="reference external" href="https://thinca.hatenablog.com/entry/20100124/1264343151">https://thinca.hatenablog.com/entry/20100124/1264343151</a>
+<a class="reference external" href="https://gist.github.com/thinca/259344">https://gist.github.com/thinca/259344</a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Bakudankun/BackAndForward.vim</p></td>
+<td><p>todo</p></td>
+<td><p>ファイル単位で &lt;C-O&gt; , &lt;C-I&gt;</p></td>
+<td></td>
+</tr>
 <tr class="row-even"><td><p>hokorobi/vim-smarthome</p></td>
 <td><p>using</p></td>
 <td></td>
@@ -824,19 +939,15 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 </tr>
 <tr class="row-even"><td><p>AlphaMycelium/pathfinder.vim</p></td>
 <td><p>delete</p></td>
-<td><p>カーソル移動の改善を提案してくれるみたい。試してみたけどエラーが出る。調べてもいない。</p></td>
+<td><p>カーソル移動の改善を提案してくれるみたい。
+試してみたけどエラーが出る。
+調べてもいない。</p></td>
 <td><p>2020-06-10</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Buffer</span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -859,12 +970,14 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 <tr class="row-odd"><td><p>tyru/capture.vim</p></td>
 <td><p>delete</p></td>
 <td><p>コマンドの実行結果などをバッファに取り込んでくれる。
-[nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。簡単なコマンドで代用できそうなのでそちらへ移行。</p></td>
+[nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。
+簡単なコマンドで代用できそうなのでそちらへ移行。</p></td>
 <td><p>2020-06-20</p></td>
 </tr>
 <tr class="row-even"><td><p>ap/vim-buftabline</p></td>
 <td><p>using</p></td>
-<td><p>tabline にバッファを羅列する。タブがある場合はタブを表示。同名のバッファがある場合は親ディレクトリも表示。</p></td>
+<td><p>tabline にバッファを羅列する。タブがある場合はタブを表示。
+同名のバッファがある場合は親ディレクトリも表示。</p></td>
 <td><p>2020-05-02</p></td>
 </tr>
 <tr class="row-odd"><td><p>mg979/vim-xtabline</p></td>
@@ -881,12 +994,6 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 </table>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">File</span><a class="headerlink" href="#id11" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -924,12 +1031,6 @@ Windows では動かない？　 <strong>:AnyJump</strong> でこんなエラー
 </table>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Selector</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -966,7 +1067,8 @@ tapi を使っていたので Windows では NG</p></td>
 </tr>
 <tr class="row-odd"><td><p>ivalkeen/vim-ctrlp-tjump</p></td>
 <td><p>delete</p></td>
-<td><p>タグジャンプ先が複数ある場合に CtrlP で選択できるようになる。そういった場合がほとんどなかったので削除</p></td>
+<td><p>タグジャンプ先が複数ある場合に CtrlP で選択できるようになる。
+そういった場合がほとんどなかったので削除</p></td>
 <td><p>2020-08-01</p></td>
 </tr>
 <tr class="row-even"><td><p>ompugao/ctrlp-locate</p></td>
@@ -998,56 +1100,80 @@ tapi を使っていたので Windows では NG</p></td>
 </td>
 <td><p>2020-06-07</p></td>
 </tr>
-<tr class="row-odd"><td><p>mattn/vim-fz</p></td>
+<tr class="row-odd"><td><p>kaneshin/ctrlp-git-log</p></td>
+<td><p>using</p></td>
+<td><div class="line-block">
+<div class="line">git log を CtrlP で表示</div>
+<div class="line">バッファを閉じずに次々見たいな。</div>
+</div>
+</td>
+<td><p>2021-09-26</p></td>
+</tr>
+<tr class="row-even"><td><p>tsuyoshicho/ctrlp-mr.vim</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">lambdalisue/mr.vim を使って MRU, MRW, MRR を開く。</div>
+<div class="line">MRU は CtrlP のものを使うので不要。</div>
+<div class="line">MRR は良さそうに思ったけれどホームディレクトリ配下のtempフォルダも出てきてしまうのでNG</div>
+</div>
+</td>
+<td><p>2021-09-26</p></td>
+</tr>
+<tr class="row-odd"><td><p>lambdalisue/mr.vim</p></td>
+<td><p>delete</p></td>
+<td><p>MRU, MRW, MRR を記録、一覧表示。</p></td>
+<td><p>2021-09-26</p></td>
+</tr>
+<tr class="row-even"><td><p>mattn/vim-fz</p></td>
 <td><p>delete</p></td>
 <td><p>gof を呼び出してファイルを開く
 Gvim が固まることがあったので、ひとまず使うのをやめた。</p></td>
 <td><p>2020-04-16</p></td>
 </tr>
-<tr class="row-even"><td><p>liuchengxu/vim-clap</p></td>
+<tr class="row-odd"><td><p>liuchengxu/vim-clap</p></td>
 <td><p>delete</p></td>
 <td><p>更新すると、まだよく動かなくなることがあるので CtrlP へ戻った。
 CtrlP より若干起動が遅い。</p></td>
 <td><p>2020-01-03</p></td>
 </tr>
-<tr class="row-odd"><td><p>hokorobi/vim-clap-sessions</p></td>
+<tr class="row-even"><td><p>hokorobi/vim-clap-sessions</p></td>
 <td><p>delete</p></td>
 <td><p>vim-clap を削除したので一緒に削除。</p></td>
 <td><p>2020-01-03</p></td>
 </tr>
-<tr class="row-even"><td><p>hokorobi/vim-clap-launcher</p></td>
+<tr class="row-odd"><td><p>hokorobi/vim-clap-launcher</p></td>
 <td><p>delete</p></td>
 <td><p>vim-clap を削除したので一緒に削除。</p></td>
 <td><p>2020-01-03</p></td>
 </tr>
-<tr class="row-odd"><td><p>hokorobi/vim-clap-filelist</p></td>
+<tr class="row-even"><td><p>hokorobi/vim-clap-filelist</p></td>
 <td><p>delete</p></td>
 <td><p>vim-clap でファイル一覧を含んだファイルを候補に使用する provider。
 <code class="docutils literal notranslate"><span class="pre">g:clap_provider_mru</span></code> などを定義して source にファイルを読み込めばよいと分かったので使わなくなった。</p></td>
 <td><p>2019-11-13</p></td>
 </tr>
-<tr class="row-even"><td><p>Yggdroot/LeaderF</p></td>
+<tr class="row-odd"><td><p>Yggdroot/LeaderF</p></td>
 <td><p>todo</p></td>
 <td><p>フィルタリングプラグイン。
 Python を使用しているため、 Windows では起動がちょっと遅そうでまだ試していない。</p></td>
 <td><p>2020-04-12</p></td>
 </tr>
-<tr class="row-odd"><td><p>prabirshrestha/quickpick.vim</p></td>
+<tr class="row-even"><td><p>prabirshrestha/quickpick.vim</p></td>
 <td><p>todo</p></td>
 <td><p>フィルタリングプラグイン。
 vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があるみたい。</p></td>
 <td><p>2020-05-24</p></td>
 </tr>
+<tr class="row-odd"><td><p>yegappan/fileselect</p></td>
+<td><p>todo</p></td>
+<td><p>フィルタリングプラグイン。
+ポップアップでファイルの選択。</p></td>
+<td><p>2021-05-24</p></td>
+</tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Utility</span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -1072,9 +1198,19 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>tpope/vim-repeat</p></td>
+<td><p>del</p></td>
+<td><p>&#64;&#64; や count&#64;q などた効かなくなる原因のようなので削除。easyalign, caw などで使っているけれど削除。</p></td>
+<td><p>2021-12-19</p></td>
+</tr>
+<tr class="row-even"><td><p>kana/vim-repeat</p></td>
 <td><p>using</p></td>
-<td></td>
-<td></td>
+<td><p>caw はこちらでいいみたい。ほかは試してない。</p></td>
+<td><p>2021-12-19</p></td>
+</tr>
+<tr class="row-odd"><td><p>haya14busa/vim-metarepeat</p></td>
+<td><p>todo</p></td>
+<td><p>/ で検索した値を元に繰り返し（選択範囲のすべての値なども）置換ができる？</p></td>
+<td><p>2021-01-03</p></td>
 </tr>
 <tr class="row-even"><td><p>sentriz/vim-print-debug</p></td>
 <td><p>using</p></td>
@@ -1098,7 +1234,7 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 </tr>
 <tr class="row-even"><td><p>tweekmonster/helpful.vim</p></td>
 <td><p>using</p></td>
-<td></td>
+<td><p>どの機能がVim のどのバージョンで増えたのか確認</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>lilydjwg/colorizer</p></td>
@@ -1108,7 +1244,8 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 </tr>
 <tr class="row-even"><td><p>RRethy/vim-hexokinase</p></td>
 <td><p>todo</p></td>
-<td><p>colorizer が推奨している。別途 CLI の hexokinase が必要みたい。</p></td>
+<td><p>colorizer が推奨している。
+別途 CLI の hexokinase が必要みたい。</p></td>
 <td><p>2020-07-24</p></td>
 </tr>
 <tr class="row-odd"><td><p>tyru/open-browser.vim</p></td>
@@ -1119,7 +1256,8 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 </tr>
 <tr class="row-even"><td><p>rhysd/wandbox-vim</p></td>
 <td><p>delete</p></td>
-<td><p>wandbox を Vim から使う。使うことがなかったので削除。</p></td>
+<td><p>wandbox を Vim から使う。
+使うことがなかったので削除。</p></td>
 <td><p>2019-09-28</p></td>
 </tr>
 <tr class="row-odd"><td><p>tyru/open-browser-unicode.vim</p></td>
@@ -1130,7 +1268,8 @@ vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があ�
 <tr class="row-even"><td><p>mhinz/vim-grepper</p></td>
 <td><p>delete</p></td>
 <td><p>各 grep 系ツールをよしなに使えるみたい。
-pt で使おうとしたけどエラーが出て動かなかった。そんなに便利な感じもなさそうなので措いておこう。</p></td>
+pt で使おうとしたけどエラーが出て動かなかった。
+そんなに便利な感じもなさそうなので措いておこう。</p></td>
 <td><p>2020-07-09</p></td>
 </tr>
 <tr class="row-odd"><td><p>mattboehm/vim-unstack</p></td>
@@ -1144,16 +1283,29 @@ pt で使おうとしたけどエラーが出て動かなかった。そんな�
 vim-unstack でどんどん開くときに使うみたい。</p></td>
 <td><p>2020-11-22</p></td>
 </tr>
+<tr class="row-odd"><td><p>skanehira/code2img.vim</p></td>
+<td><p>using</p></td>
+<td><p>選択したコードをクリップボードへ画像出力してくれる。</p></td>
+<td><p>2021-02-14</p></td>
+</tr>
+<tr class="row-even"><td><p>gamoutatsumi/dps-ghosttext.vim</p></td>
+<td><p>del</p></td>
+<td><p>GhostText との接続がうまくできなかった。</p></td>
+<td><p>2021-09-06</p></td>
+</tr>
+<tr class="row-odd"><td><p>mattn/vim-notification</p></td>
+<td><p>del</p></td>
+<td><div class="line-block">
+<div class="line">dein で let g:dein#enable_notification = v:true として通知が表示されるのは確認。</div>
+<div class="line">更新差分のURLを後から開きたかったりもするので <code class="docutils literal notranslate"><span class="pre">:messages</span></code> にすべて出力されるほうが好みだな。</div>
+</div>
+</td>
+<td><p>2022-04-21</p></td>
+</tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Web Service</span><a class="headerlink" href="#id14" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -1176,13 +1328,49 @@ Qiita に書くことがほとんどなく、書く時も Web ブラウザを使
 </tbody>
 </table>
 <table class="docutils align-default" id="id15">
-<caption><span class="caption-text">Others</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
+<caption><span class="caption-text">Git</span><a class="headerlink" href="#id15" title="このテーブルへのパーマリンク">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>lambdalisue/gina.vim</p></th>
+<th class="head"><p>using</p></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>kuuote/gina-preview.vim</p></td>
+<td><p>using</p></td>
+<td><p>Gina patch を使って Gina Status の状態をプレビュー</p></td>
+<td><p>2021-05-19</p></td>
+</tr>
+<tr class="row-odd"><td><p>rhysd/git-messenger.vim</p></td>
+<td><p>delete</p></td>
+<td><div class="line-block">
+<div class="line">git blame をポップアップで表示（Vim だと echo みたいに表示）。</div>
+<div class="line">Vim では過去への移動ができないようなので、イマイチ使いどころがなかった。</div>
+<div class="line">それをやるなら gina を使う。</div>
+</div>
+</td>
+<td><p>2021-02-11</p></td>
+</tr>
+<tr class="row-even"><td><p>cohama/agit.vim</p></td>
+<td><p>using</p></td>
+<td><p>git log を 3 画面表示。</p></td>
+<td><p>2021-02-20</p></td>
+</tr>
+<tr class="row-odd"><td><p>hotwatermorning/auto-git-diff</p></td>
+<td><p>using</p></td>
+<td><p>git rebase -i でコミットの差分をインタラクティブに表示。</p></td>
+<td><p>2022-02-06</p></td>
+</tr>
+<tr class="row-even"><td><p>iberianpig/tig-explorer.vim</p></td>
+<td><p>delete</p></td>
+<td><p>シェルスクリプトを実行するみたいなので Windows では使えなかった。</p></td>
+<td><p>2020-05-23</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Others</span><a class="headerlink" href="#id16" title="このテーブルへのパーマリンク">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>repogitory</p></th>
 <th class="head"><p>status</p></th>
@@ -1197,85 +1385,94 @@ Qiita に書くことがほとんどなく、書く時も Web ブラウザを使
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>thinca/vim-submode</p></td>
-<td><p>using</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>lambdalisue/gina.vim</p></td>
-<td><p>using</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>iberianpig/tig-explorer.vim</p></td>
 <td><p>delete</p></td>
-<td><p>シェルスクリプトを実行するみたいなので Windows では使えなかった。</p></td>
-<td><p>2020-05-23</p></td>
+<td><div class="line-block">
+<div class="line">kana/vim-submode の方が新しいようなので切り替えてみる。</div>
+<div class="line">{lhs} の長さ制限緩和のコミットは取り込もうかどうしようか…。</div>
+<div class="line">NG な設定が入るまではそのままにしよう。</div>
+<div class="line">PR は送ってるけど閉じてるのか。</div>
+</div>
+</td>
+<td><p>2021-05-06</p></td>
 </tr>
-<tr class="row-even"><td><p>vim-jp/vital.vim</p></td>
-<td><p>delete</p></td>
-<td></td>
-<td></td>
+<tr class="row-even"><td><p>kana/vim-submode</p></td>
+<td><p>using</p></td>
+<td><p>thinca/vim-submode から切り替え。</p></td>
+<td><p>2021-05-06</p></td>
 </tr>
-<tr class="row-odd"><td><p>lambdalisue/vital-Whisky</p></td>
+<tr class="row-odd"><td><p>vim-jp/vital.vim</p></td>
 <td><p>delete</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>vim-jp/vimdoc-ja</p></td>
+<tr class="row-even"><td><p>lambdalisue/vital-Whisky</p></td>
+<td><p>delete</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vim-jp/vimdoc-ja</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>tyru/empty-prompt.vim</p></td>
+<tr class="row-even"><td><p>tyru/empty-prompt.vim</p></td>
 <td><p>using</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>LeafCage/vimhelpgenerator</p></td>
+<tr class="row-odd"><td><p>LeafCage/vimhelpgenerator</p></td>
 <td><p>todo</p></td>
 <td><p>ヘルプのひな型を生成</p></td>
 <td><p>2020-02-08</p></td>
 </tr>
-<tr class="row-odd"><td><p>rbtnn/vim-mrw</p></td>
+<tr class="row-even"><td><p>rbtnn/vim-mrw</p></td>
 <td><p>todo</p></td>
 <td><p>MRU の書き込み版。出来上がるファイルを vim-fz から開いてみたい。</p></td>
 <td><p>2020-02-08</p></td>
 </tr>
-<tr class="row-even"><td><p>tamago324/LeaderF-filer</p></td>
+<tr class="row-odd"><td><p>tamago324/LeaderF-filer</p></td>
 <td><p>todo</p></td>
 <td><p>CtrlP 的なもの</p></td>
 <td><p>2020-02-08</p></td>
 </tr>
-<tr class="row-odd"><td><p>dhruvasagar/vim-table-mode</p></td>
+<tr class="row-even"><td><p>dhruvasagar/vim-table-mode</p></td>
 <td><p>delete</p></td>
-<td><p>restructuredtext のテーブルが手軽に書けるはず。やはり list-table が便利なので使わなかった。</p></td>
+<td><p>restructuredtext のテーブルが手軽に書けるはず。
+やはり list-table が便利なので使わなかった。</p></td>
 <td><p>2020-02-08</p></td>
 </tr>
-<tr class="row-even"><td><p>vim-voom/VOoM</p></td>
+<tr class="row-odd"><td><p>vim-voom/VOoM</p></td>
 <td><p>delete</p></td>
 <td><p>restructuredtext のアウトライン表示に使っていた。
 hokorobi/vim-restructuredtext の fold で良さそうなので削除。</p></td>
 <td><p>2020-02-01</p></td>
 </tr>
-<tr class="row-odd"><td><p>w0rp/ale</p></td>
+<tr class="row-even"><td><p>w0rp/ale</p></td>
 <td><p>delete</p></td>
 <td><p>Linter として使っていたけど coc.nvim に移行。</p></td>
 <td><p>2019-12-08</p></td>
 </tr>
-<tr class="row-even"><td><p>hokorobi/cmdlineplus.vim</p></td>
+<tr class="row-odd"><td><p>hokorobi/cmdlineplus.vim</p></td>
 <td><p>delete</p></td>
-<td><p>LeafCage/cmdlineplus.vim を Fork。バグ修正の PR がマージされなかったので Fork して使っていた。コマンドラインウィンドウを使うことにしたので削除。</p></td>
+<td><p>LeafCage/cmdlineplus.vim を Fork。
+バグ修正の PR がマージされなかったので Fork して使っていた。
+コマンドラインウィンドウを使うことにしたので削除。</p></td>
 <td><p>2019-12-08</p></td>
 </tr>
-<tr class="row-odd"><td><p>tsuyoshicho/vim-fg</p></td>
+<tr class="row-even"><td><p>tsuyoshicho/vim-fg</p></td>
 <td><p>delete</p></td>
 <td><p>pt を使って grep を実行。
 grepprg に pt を設定した場合に比べての利点がわからないので一旦削除</p></td>
 <td><p>2020-02-11</p></td>
 </tr>
+<tr class="row-odd"><td><p>voldikss/vim-floaterm</p></td>
+<td><p>using</p></td>
+<td><p>Terminal をポップアップウィンドウで表示。</p></td>
+<td><p>2021-0r-28</p></td>
+</tr>
 </tbody>
 </table>
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -1304,12 +1501,12 @@ grepprg に pt を設定した場合に比べての利点がわからないの�
   <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1333,7 +1530,7 @@ grepprg に pt を設定した場合に比べての利点がわからないの�
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, hokorobi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
   </body>
 </html>

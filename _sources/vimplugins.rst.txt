@@ -1,7 +1,7 @@
 Vim plugins
 ===========
 
-.. list-table:: plugin manager
+.. list-table:: Plugin Manager
    :header-rows: 1
 
    * - repogitory
@@ -14,6 +14,10 @@ Vim plugins
        | 遅延読み込みが一番カスタマイズできる（はず）
        | 自動キャッシュ更新が無効にできるようになったので、最近は困ることがない。
      - 2020-02-22
+   * - hokorobi/vim-templug
+     - using
+     - :Templug URL で git clone。packadd name で使用可になる。
+     - 2020-10-04
 
 .. list-table:: completion
    :header-rows: 1
@@ -59,6 +63,12 @@ Vim plugins
      - using
      -
      -
+   * - matsui54/denops-signature_help
+     - delete
+     - | denops を使った vim-lsp の関数表示。
+       | 自分の使い方だと vim-lsp に対しての利点がなさそう。
+       | Vim だと内容が途中までしか表示できないバグがある？
+     - 2022-02-06
    * - mattn/vim-lsp-settings
      - using
      - | vim-lsp の設定をよしなにやってくれる
@@ -68,6 +78,12 @@ Vim plugins
          #. set ft=go の状態で :LspInstallServer を実行して gopls をインストール
 
      - 2020-02-18
+   * - mattn/vim-lsp-icons
+     - delete
+     - | sign をアイコン表示してくれる。
+       | アイコンの残骸が残ったりするので気持ち悪い。
+       | 別にいらんかな。
+     - 2020-03-13
    * - prabirshrestha/asyncomplete-lsp.vim
      - using
      -
@@ -76,6 +92,10 @@ Vim plugins
      - todo
      - 単語の補完
      - 2020-03-22
+   * - machakann/asyncomplete-ezfilter.vim
+     - todo
+     - 各ソースに大文字小文字の無視や fuzzymatching などが可能
+     - 2021-03-18
    * - thomasfaingnaert/vim-lsp-snippets
      - delete
      - LSP で snippet。動かせなかった。
@@ -240,6 +260,10 @@ Vim plugins
      - todo
      - Quickfix を別ウィンドウでプレビュー
      - 2020-05-31
+   * - yssl/QFEnter
+     - using
+     - QuickFixでジャンプするときに直前のWindowを使う
+     - 2021-08-24
    * - mattn/vim-qfnavigate
      - using
      - | 表示されている Quickfix または location-list の次の項目、前の項目を表示するマッピングを提供する。
@@ -355,6 +379,11 @@ Vim plugins
      - using
      - incremental search の現在のマッチ位置をポップアップで表示。
      - 2020-12-02
+   * - haya14busa/is.vim
+     - using
+     - | vim-hitspop のポップアップ表示を消去するために使用。
+       | 自動のマッピング設定が N にはマッピングされるのに、なぜか n にマッピングされなかったので個別に設定。
+     - 2020-12-25
    * - MattesGroeger/vim-bookmarks
      - delete
      - ファイルの位置をブックマークしてくれる
@@ -405,6 +434,20 @@ Vim plugins
      - using
      -
      -
+   * - itchyny/vim-highlighturl
+     - delete
+     - Changelog の URL がすべてハイライトされるとカーソル移動が重くなるので外した。
+     - 2021-05-29
+   * - thinca/vim-breadcrumbs
+     - delete
+     - | どの関数配下にいるかをタブバーに表示してくれるみたい。
+       | とりあえず使わなくていいかな。
+     - 2021-07-24
+   * - thinca/vim-qfhl
+     - delete
+     - | quickfix , locationlist の位置をハイライト表示してくれる。
+       | 自分の用途で嬉しいところは LSP の表示が良くなるかもくらい？
+     - 2021-08-01
 
 .. list-table:: Edit
    :header-rows: 1
@@ -426,14 +469,46 @@ Vim plugins
      - 選択してペーストができるようになると思っていたけど、標準でもできていた。
        レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。
      - 2020-04-01
+   * - yuki-yano/vim-operator-replace
+     - delete
+     - | "hoge" とかを vibp で置換していたものを <Space>rib でできるように導入してみた。
+       | kana/vim-operator-replace では使えないらしい yankround も使える。
+       | vibp しか使わないので消した。 [2021-05-05]
+     - 2021-02-20
+   * - monaqa/dps-dial.vim
+     - del
+     - | denops.vim で vim-clurin と同じようなことをしてくれる
+       | 初回動作は重いかと思ったけどそんなこともなかった。
+       | dein で E670: 1つの言語のヘルプファイルに複数のエンコードが混在しています: C:\Users\hokorobi\_vim\dein\.cache\vimrc\.dein\doc\dps-dial.jax となる。なんでだろう？
+       | '' と "" の切り替えはできなさそうだし、特に頻繁に使う機能ではないので clurin のままでいいか。
+     -
    * - uplus/vim-clurin
      - using
-     -
+     - | 増加、減少、循環などをいい感じにやってくれる。
+       | '' と "" の切り替えが一番使用頻度が高いかも。
+       | それもsandwichで代用できるので、いったん消してみる。
+       | true<->false, yes<->no などは必要だ。復活。
      -
    * - tpope/vim-speeddating
+     - del
+     - | vim-clurin と併用。
+       | 日付だけはこちらの機能を使えるようにしている。
+       | 使わないので削除。
+     -
+   * - AndrewRadev/tagalong.vim
+     - delete
+     - | タグの片方を変更すると、もう片方も変更してくれる。
+       | 2021-02-14 時点では i, a の動作が何か変（？）。
+     - 2021-02-14
+   * - tyru/caw.vim
      - using
-     -
-     -
+     - | 便利にコメントアウト
+     - ancient
+   * - matze/vim-move
+     - using
+     - | 複数行をまとめて上下に移動できる。
+       | インデントも考慮してくれる。
+     - 2020-06-28
 
 .. list-table:: Motion
    :header-rows: 1
@@ -496,6 +571,11 @@ Vim plugins
      - using
      - , 区切りの要素の入れ替え、ソート、textobj
      - 2020-05-17
+   * - christoomey/vim-sort-motion
+     - todo
+     - | textobj, motion に対してソートをする。
+       | vim-swap でいいかな？
+     - 2021-05-07
    * - kana/vim-niceblock
      - using
      - 選択した行すべてに対して I, A を反映させる。
@@ -518,6 +598,11 @@ Vim plugins
      - using
      -
      -
+   * - monkoose/vim9-stargate
+     - delete
+     - | モダンな easymotion 代替。
+       | 候補選択時の画面が暗すぎる。Migemo がないのがちょっと辛い。自分で定義できるみたい。同行だけの移動はないみたい。機能が拡充されたらまた使ってみてもいいかも。
+     - 2021-07-15
    * - haya14busa/vim-edgemotion
      - using
      - 縦方向の端に移動
@@ -551,6 +636,15 @@ Vim plugins
    * - osyo-manga/vim-milfeulle
      - using
      -
+     -
+   * - thinca/vim-poslist
+     - todo
+     - https://thinca.hatenablog.com/entry/20100124/1264343151
+       https://gist.github.com/thinca/259344
+     -
+   * - Bakudankun/BackAndForward.vim
+     - todo
+     - ファイル単位で <C-O> , <C-I> 
      -
    * - hokorobi/vim-smarthome
      - using
@@ -684,6 +778,21 @@ Vim plugins
      - | コマンドラインの履歴を CtrlP で使う。
        | 直接実行だけでなく <C-t> でコマンドラインに表示することができるので、ちょっと変更して再実行も可能。
      - 2020-06-07
+   * - kaneshin/ctrlp-git-log
+     - using
+     - | git log を CtrlP で表示
+       | バッファを閉じずに次々見たいな。
+     - 2021-09-26
+   * - tsuyoshicho/ctrlp-mr.vim
+     - delete
+     - | lambdalisue/mr.vim を使って MRU, MRW, MRR を開く。
+       | MRU は CtrlP のものを使うので不要。
+       | MRR は良さそうに思ったけれどホームディレクトリ配下のtempフォルダも出てきてしまうのでNG
+     - 2021-09-26
+   * - lambdalisue/mr.vim
+     - delete
+     - MRU, MRW, MRR を記録、一覧表示。
+     - 2021-09-26
    * - mattn/vim-fz
      - delete
      - gof を呼び出してファイルを開く
@@ -717,6 +826,12 @@ Vim plugins
      - フィルタリングプラグイン。
        vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があるみたい。
      - 2020-05-24
+   * - yegappan/fileselect
+     - todo
+     - フィルタリングプラグイン。
+       ポップアップでファイルの選択。
+     - 2021-05-24
+
 
 .. list-table:: Utility
    :header-rows: 1
@@ -738,9 +853,17 @@ Vim plugins
      -
      -
    * - tpope/vim-repeat
+     - del
+     - @@ や count@q などた効かなくなる原因のようなので削除。easyalign, caw などで使っているけれど削除。
+     - 2021-12-19
+   * - kana/vim-repeat
      - using
-     -
-     -
+     - caw はこちらでいいみたい。ほかは試してない。
+     - 2021-12-19
+   * - haya14busa/vim-metarepeat
+     - todo
+     - / で検索した値を元に繰り返し（選択範囲のすべての値なども）置換ができる？
+     - 2021-01-03
    * - sentriz/vim-print-debug
      - using
      - print debug 用のコードをそれぞれの言語の書式で挿入してくれる。
@@ -759,7 +882,7 @@ Vim plugins
      -
    * - tweekmonster/helpful.vim
      - using
-     -
+     - どの機能がVim のどのバージョンで増えたのか確認
      -
    * - lilydjwg/colorizer
      - using
@@ -799,6 +922,19 @@ Vim plugins
      - Split で表示するウィンドウ数を制限する。
        vim-unstack でどんどん開くときに使うみたい。
      - 2020-11-22
+   * - skanehira/code2img.vim
+     - using
+     - 選択したコードをクリップボードへ画像出力してくれる。
+     - 2021-02-14
+   * - gamoutatsumi/dps-ghosttext.vim
+     - del
+     - GhostText との接続がうまくできなかった。
+     - 2021-09-06
+   * - mattn/vim-notification
+     - del
+     - | dein で let g:dein#enable_notification = v:true として通知が表示されるのは確認。
+       | 更新差分のURLを後から開きたかったりもするので ``:messages`` にすべて出力されるほうが好みだな。
+     - 2022-04-21
 
 .. list-table:: Web Service
    :header-rows: 1
@@ -817,6 +953,36 @@ Vim plugins
        Qiita に書くことがほとんどなく、書く時も Web ブラウザを使うことが多いので削除。
      - 2019-09-28
 
+.. list-table:: Git
+   :header-rows: 1
+
+   * - lambdalisue/gina.vim
+     - using
+     -
+     -
+   * - kuuote/gina-preview.vim
+     - using
+     - Gina patch を使って Gina Status の状態をプレビュー
+     - 2021-05-19
+   * - rhysd/git-messenger.vim
+     - delete
+     - | git blame をポップアップで表示（Vim だと echo みたいに表示）。
+       | Vim では過去への移動ができないようなので、イマイチ使いどころがなかった。
+       | それをやるなら gina を使う。
+     - 2021-02-11
+   * - cohama/agit.vim
+     - using
+     - git log を 3 画面表示。
+     - 2021-02-20
+   * - hotwatermorning/auto-git-diff 
+     - using
+     - git rebase -i でコミットの差分をインタラクティブに表示。
+     - 2022-02-06
+   * - iberianpig/tig-explorer.vim
+     - delete
+     - シェルスクリプトを実行するみたいなので Windows では使えなかった。
+     - 2020-05-23
+
 .. list-table:: Others
    :header-rows: 1
 
@@ -829,17 +995,16 @@ Vim plugins
      -
      -
    * - thinca/vim-submode
-     - using
-     -
-     -
-   * - lambdalisue/gina.vim
-     - using
-     -
-     -
-   * - iberianpig/tig-explorer.vim
      - delete
-     - シェルスクリプトを実行するみたいなので Windows では使えなかった。
-     - 2020-05-23
+     - | kana/vim-submode の方が新しいようなので切り替えてみる。
+       | {lhs} の長さ制限緩和のコミットは取り込もうかどうしようか…。
+       | NG な設定が入るまではそのままにしよう。
+       | PR は送ってるけど閉じてるのか。
+     - 2021-05-06
+   * - kana/vim-submode
+     - using
+     - thinca/vim-submode から切り替え。
+     - 2021-05-06
    * - vim-jp/vital.vim
      - delete
      -
@@ -893,4 +1058,8 @@ Vim plugins
      - pt を使って grep を実行。
        grepprg に pt を設定した場合に比べての利点がわからないので一旦削除
      - 2020-02-11
+   * - voldikss/vim-floaterm
+     - using
+     - Terminal をポップアップウィンドウで表示。
+     - 2021-0r-28
 

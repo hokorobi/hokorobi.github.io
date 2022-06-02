@@ -5,15 +5,17 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Excel で調べこと色々 &#8212; hokorobi.github.io  ドキュメント</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -51,10 +53,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="excel">
-<h1>Excel で調べこと色々<a class="headerlink" href="#excel" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="id1">
-<h2>入力データの指定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+  <section id="excel">
+<h1>Excel で調べこと色々<a class="headerlink" href="#excel" title="Permalink to this heading">¶</a></h1>
+<section id="id1">
+<h2>入力データの指定<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>データが増減しても入力データを自動で指定。</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=OFFSET($E$2,0,0,COUNTA(E:E)-1)
 </pre></div>
@@ -63,9 +65,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">$E$2</span></code>: 開始セル。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">COUNTA(E:E)-1</span></code>: 入力データの行数。開始セルの行にあるデータとしない値の入ったセルの数（ここではヘッダだけを想定して 1）を引く</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
-<h2>範囲から指定した行、列の値を取得<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section>
+<section id="id2">
+<h2>範囲から指定した行、列の値を取得<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=INDEX(A1:D5, 3, 2)
 </pre></div>
 </div>
@@ -74,9 +76,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">3</span></code>: 行</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">2</span></code>: 列</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>セルに入力した値を数式に使う<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section>
+<section id="id3">
+<h2>セルに入力した値を数式に使う<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\filename.xlsx</span></code> の <code class="docutils literal notranslate"><span class="pre">sheetName</span></code> シートの <code class="docutils literal notranslate"><span class="pre">A:B</span></code> 行から A 列が <code class="docutils literal notranslate"><span class="pre">hoge</span></code> になる B 列の値を取得。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">A1</span></code>: <code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\</span></code></p></li>
@@ -87,9 +89,9 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=VLOOKUP(&quot;hoge&quot;, INDIRECT($A$4), 2, FALSE)
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>条件に合致した値を空白なしで取得<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section>
+<section id="id4">
+<h2>条件に合致した値を空白なしで取得<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">$A$47:$C$55</span></code> から C 列が 1 になる B 列の値を47行目のセルから空白なく下方向に並べる。</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{=IFERROR(INDEX($A$47:$C$55,SMALL(IF($C$47:$C$55=1,ROW($C$47:$C$55)),ROW()-ROW($A$47)+1)-ROW($A$47)+1,2),&quot;&quot;)}
 </pre></div>
@@ -99,16 +101,11 @@
 <li><p>セルを下方向にコピペ</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SMALL(IF($C$47:$C$55=1,ROW($C$47:$C$55)),ROW()-ROW($C$47)+1)</span></code>: C 列が 1 の行を求めて順番に取得している</p></li>
 </ul>
-</div>
-<div class="section" id="id5">
-<h2>条件に合致する複数の行から最大の値を取得する<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section>
+<section id="id5">
+<h2>条件に合致する複数の行から最大の値を取得する<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>以下のような表から 1 列目が <code class="docutils literal notranslate"><span class="pre">a01</span></code> になる行のうち 2 列目の値が最大となる 3列目の値（ <code class="docutils literal notranslate"><span class="pre">20</span></code> ）を取得したい。</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 44%" />
-<col style="width: 28%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>a01</p></td>
 <td><p>000000</p></td>
@@ -140,8 +137,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">G1</span></code>: <code class="docutils literal notranslate"><span class="pre">{=MAX(IF(A1:A5&amp;B1:B5=F1,C1:C5,0))}</span></code> 1 列目と 2 列目の結合した文字列が <code class="docutils literal notranslate"><span class="pre">a01190421</span></code> と同一の位置の値は 3 列目の値、それ以外は 0 の配列を取得して、その最大値を取得することで <code class="docutils literal notranslate"><span class="pre">25</span></code> が取得できる</p></li>
 <li><p>もっとスマートにできると思う</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -172,12 +169,12 @@
   <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="検索" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -200,7 +197,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, hokorobi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
   </body>
 </html>
