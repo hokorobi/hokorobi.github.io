@@ -16,6 +16,7 @@ Contents
    release_github.io
    ols
    excel
+   win11
    win10
    trello
    whiskey

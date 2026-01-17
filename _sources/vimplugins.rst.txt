@@ -1,20 +1,29 @@
 Vim plugins
 ===========
 
+.. role:: strike
+
 .. list-table:: Plugin Manager
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
-     - date
-   * - Shougo/dein.vim
+     - date install / delete
+   * - https://github.com/Shougo/dpp.vim
      - using
      - | プラグインマネージャ。高速。
        | 遅延読み込みが一番カスタマイズできる（はず）
+       | dein.vim に比べて個人的に良いところは…メンテンナンスが継続しているところ？
+     - 2024-02-03
+   * - https://github.com/Shougo/dein.vim
+     - using?
+     - | プラグインマネージャ。高速。
+       | 遅延読み込みが一番カスタマイズできる（はず）
        | 自動キャッシュ更新が無効にできるようになったので、最近は困ることがない。
+       | dpp.vim をメインにして dein.vim はサブにしている。
      - 2020-02-22
-   * - hokorobi/vim-templug
+   * - https://github.com/hokorobi/vim-templug
      - using
      - :Templug URL で git clone。packadd name で使用可になる。
      - 2020-10-04
@@ -22,128 +31,263 @@ Vim plugins
 .. list-table:: completion
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - prabirshrestha/asyncomplete.vim
-     - using
-     -
-     -
-   * - prabirshrestha/asyncomplete-buffer.vim
-     - using
-     -
-     -
-   * - prabirshrestha/asyncomplete-necosyntax.vim
-     - using
-     -
-     -
-   * - Shougo/neco-syntax
-     - using
-     -
-     -
-   * - prabirshrestha/asyncomplete-necovim.vim
-     - using
-     -
-     -
-   * - Shougo/neco-vim
-     - using
-     -
-     -
-   * - prabirshrestha/asyncomplete-neosnippet.vim
+   * - https://github.com/prabirshrestha/vim-lsp
      - delete
-     - neosnippet を asyncomplete で使う。
-       日本語の後ろで補完候補がずらっと出てきてしまうので削除。 [2020-05-23]
-     - 2020-05-23
-   * - hokorobi/asyncomplete-neosnippet.vim
-     - using
-     - ``let l:kw = matchstr(l:typed, '\w\+$')`` の ``\w`` を ``\k`` に変更してみた。大丈夫そう？
-     - 2020-05-23
-   * - prabirshrestha/vim-lsp
-     - using
+     - | 使用中ではないが ddc.vim, asyncomplete を使う用に設定を残している。
+       | yegappan/lsp を使うようになった。
      -
+   * - https://github.com/yegappan/lsp
+     - using
+     - 本体の自動補完でomnifuncから使用。
      -
-   * - matsui54/denops-signature_help
+   * - https://github.com/mattn/vim-lsp-settings
      - delete
-     - | denops を使った vim-lsp の関数表示。
-       | 自分の使い方だと vim-lsp に対しての利点がなさそう。
-       | Vim だと内容が途中までしか表示できないバグがある？
-     - 2022-02-06
-   * - mattn/vim-lsp-settings
-     - using
      - | vim-lsp の設定をよしなにやってくれる
+       | 使用中ではないが ddc.vim, asyncomplete を使う用に設定を残している。
        | install gopls:
 
-         #. パスの通ったディレクトリに gopls が入っていたら削除
-         #. set ft=go の状態で :LspInstallServer を実行して gopls をインストール
+       #. パスの通ったディレクトリに gopls が入っていたら削除
+       #. set ft=go の状態で :LspInstallServer を実行して gopls をインストール
 
-     - 2020-02-18
-   * - mattn/vim-lsp-icons
+       yegappan/lsp を使うようになったので削除。
+
+     - 2020-02-18 / 
+   * - https://github.com/mattn/vim-lsp-icons
      - delete
      - | sign をアイコン表示してくれる。
        | アイコンの残骸が残ったりするので気持ち悪い。
        | 別にいらんかな。
-     - 2020-03-13
-   * - prabirshrestha/asyncomplete-lsp.vim
-     - using
-     -
-     -
-   * - high-moctane/asyncomplete-nextword.vim
-     - todo
-     - 単語の補完
-     - 2020-03-22
-   * - machakann/asyncomplete-ezfilter.vim
-     - todo
-     - 各ソースに大文字小文字の無視や fuzzymatching などが可能
-     - 2021-03-18
-   * - thomasfaingnaert/vim-lsp-snippets
+     - / 2020-03-13
+   * - https://github.com/thomasfaingnaert/vim-lsp-snippets
      - delete
      - LSP で snippet。動かせなかった。
-     - 2020-01-19
-   * - thomasfaingnaert/vim-lsp-neosnippet
+     - / 2020-01-19
+   * - https://github.com/honza/vim-snippets
      - delete
-     - LSP で neosnippet。動かせなかった。
-     - 2020-01-19
-   * - Shougo/neosnippet.vim
+     - vsnip に変えたので削除。
+     -
+   * - https://github.com/hrsh7th/vim-vsnip
      - using
-     - golang の iferr 補完がほかでも使えるなら移行してもいいかな。
-     -
-   * - Shougo/neosnippet-snippets
+     - vscodeベースのsnippet。本体の自動補完から使用。
+     - 2021-08-18
+   * - https://github.com/rafamadriz/friendly-snippets
      - using
+     - vsnip で使える snippet 集。
      -
-     -
-   * - honza/vim-snippets
-     - using
-     -
-     -
-   * - neoclide/coc.nvim
+   * - https://github.com/neoclide/coc.nvim
      - delete
      - 補完速度が比較的遅いので asyncomplete.vim に移行。
      -
-   * - gelguy/wilder.nvim
-     - using
+   * - https://github.com/gelguy/wilder.nvim
+     - delete
      - コマンドラインモードでの補完。
        :, /, help, :s/ など
        statusline がたまに元に戻らないのが気になる。
        すごいけど、本当に便利なのかな？
-     - 2020-08-16
+       本体の補完でだいたい事足りているので削除。
+     - / 2020-08-16
+   * - https://github.com/girishji/vimsuggest
+     - delete
+     - | コマンドラインモードでの補完。
+       | ポップアップ時のキーマップが変更できない。
+       | ポップアップ時のキー操作が期待した通りに動かないことがある。
+     - 2025-08-26 / 2025-08-28
+
+.. list-table:: ddc
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/Shougo/ddc.vim
+     - using?
+     - | denops.vim を使った補完エンジン。
+       | 使用中ではないがサブとして設定を残している。
+     - 2021-07-04
+   * - https://github.com/Shougo/ddc-ui-pum.vim
+     - using?
+     - ddc.vimでpum.vimを使うためのインターフェース。
+     - 2022-10-22
+   * - https://github.com/Shougo/pum.vim
+     - using?
+     - 独自ポップアップ。ddc.vimで使用。
+     - 2021-10-04
+   * - https://github.com/tani/ddc-fuzzy
+     - using?
+     - ddc.vimでfuzzy matcher
+     - 2021-10-10
+   * - https://github.com/Shougo/ddc-source-around
+     - using?
+     - ddc.vimで近場の単語で補完
+     - 2021-11-09
+   * - https://github.com/matsui54/ddc-buffer
+     - using?
+     - ddc.vimでバッファ内の単語で補完
+     - 2021-12-08
+   * - https://github.com/uga-rosa/ddc-source-buffer
+     - todo
+     - ddc.vimでバッファ内の単語で補完
+       リファクタしたり Params の変更をしたもの。
+       設定の仕方がよくわからなかったのでいったん保留。
+     - 2024-01-19
+   * - https://github.com/LumaKernel/ddc-source-file
+     - using?
+     - ddc.vimでファイル名を補完
+     - 2021-11-09
+   * - https://github.com/Shougo/neco-syntax
+     - delete
+     - | hokorobi/ddc-source-neco-syntax を使って syntax を ddc.vim の補完候補として表示できるように導入している。
+       | hokorobi/ddc-source-filetype-candidates へ [2023-11-12]
+     -
+   * - https://github.com/hokorobi/ddc-source-filetype-candidates
+     - using?
+     - | neco-syntax だと小文字になってしまうので候補を単語リストのファイルから読み込む ddc-source をつくってみた。
+       | ddc.vim はサブとして使用中ではないが設定を残している。
+     - 2023-11-12
+   * - https://github.com/Shougo/neco-vim
+     - delete
+     - ddc.vim で Vim Script の補完機能に使用。
+       ddc-source-vim へ。 [2024-10-12]
+     - / 2024-10-12
+   * - https://github.com/Shougo/ddc-source-vim
+     - using?
+     - | vim の補完として使用。
+       | ddc.vim はサブとして使用中ではないが設定を残している。
+     - 2024-10-27
+   * - https://github.com/Shougo/ddc-source-vim
+     - using?
+     - | ddc.vim で Vim Script の補完機能に使用。
+       | ddc.vim はサブとして使用中ではないが設定を残している。
+     - 2024-10-12
+   * - https://github.com/shun/ddc-source-vim-lsp
+     - using?
+     - ddc.vimでvim-lspから補完
+     - 2021-12-08
+   * - https://github.com/Shougo/ddc-source-lsp
+     - todo
+     - ddc.vimでvim-lspから補完。
+       2023-12-16 に試したけど Vim が落ちる。
+     - 2023-12-16
+   * - https://github.com/hrsh7th/completion-snippet
+     - delete
+     - | vsnip用ソース。レジスタに入っている文字列を補完に反映する例。
+       | うまく反映してくれないみたい。
+     - / 2022-12-04
+   * - https://github.com/uga-rosa/ddc-source-vsnip
+     - using?
+     - vsnip 用 ddc.vim source。
+     - 2023-07-04
+   * - https://github.com/hrsh7th/vim-vsnip-integ
+     - using
+     - | ddc.vimからvsnipを使えるように。
+       | ddc は分離された。
+       | vimcomplete で使用中
+     - 2023-07-04
+   * - https://github.com/hokorobi/ddc-source-neco-syntax
+     - delete
+     - | neco-syntax用ddc.vim source。
+       | hokorobi/ddc-source-filetype-candidates へ [2023-11-12]
+     - 2023-02-05 / 2023-11-12
+   * - https://github.com/hokorobi/ddc-source-plantuml
+     - using?
+     - plantuml用ddc.vim source。
+     - 2023-02-05
+   * - https://github.com/matsui54/denops-signature_help
+     - using
+     - | denops を使った vim-lsp の関数表示。
+       | 自分の使い方だと vim-lsp に対しての利点がなさそう。
+       | Vim だと内容が途中までしか表示できないバグがある？
+       | 2022-12-19 もう一回使い始めた。
+     - 2022-12-19
+   * - https://github.com/matsui54/denops-popup-preview.vim
+     - delete
+     - | ddc.vimで表示する補完候補のプレビュー表示。
+       | うまく動かなかったのかな？　削除していた。 [2025-08-07]
+     - 2024-05-11 / 2025-08-07
+
+.. list-table:: asyncomplete
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/prabirshrestha/asyncomplete.vim
+     - using?
+     - | 自宅では使っていない。会社で ddc.vim に移行していないので使ってる。
+       | 会社でも vimcomplete に変更。
+     - 2024-11-06
+   * - https://github.com/prabirshrestha/asyncomplete-buffer.vim
+     - using?
+     -
+     -
+   * - https://github.com/prabirshrestha/asyncomplete-necosyntax.vim
+     - using?
+     -
+     -
+   * - https://github.com/prabirshrestha/asyncomplete-necovim.vim
+     - using?
+     -
+     -
+   * - https://github.com/prabirshrestha/asyncomplete-neosnippet.vim
+     - delete
+     - neosnippet を asyncomplete で使う。
+       日本語の後ろで補完候補がずらっと出てきてしまうので削除。 [2020-05-23]
+     - / 2020-05-23
+   * - https://github.com/hokorobi/asyncomplete-neosnippet.vim
+     - using?
+     - ``let l:kw = matchstr(l:typed, '\w\+$')`` の ``\w`` を ``\k`` に変更してみた。大丈夫そう？
+     - 2020-05-23
+   * - https://github.com/prabirshrestha/asyncomplete-lsp.vim
+     - using?
+     -
+     -
+   * - https://github.com/high-moctane/asyncomplete-nextword.vim
+     - todo
+     - 単語の補完
+     - 2020-03-22
+   * - https://github.com/machakann/asyncomplete-ezfilter.vim
+     - todo
+     - 各ソースに大文字小文字の無視や fuzzymatching などが可能
+     - 2021-03-18
+   * - https://github.com/thomasfaingnaert/vim-lsp-neosnippet
+     - delete
+     - LSP で neosnippet。動かせなかった。
+     - 2020-01-19 / 2020-01-19
+   * - https://github.com/Shougo/neosnippet.vim
+     - using
+     - golang の iferr 補完がほかでも使えるなら移行してもいいかな。
+     -
+   * - https://github.com/Shougo/neosnippet-snippets
+     - using
+     -
+     -
 
 .. list-table:: REPL?
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - thinca/vim-quickrun
+   * - https://github.com/thinca/vim-quickrun
      - using
      -
      -
-   * - osyo-manga/shabadou.vim
+   * - https://github.com/osyo-manga/shabadou.vim
      - using
      -
      -
-   * - rhysd/reply.vim
+   * - https://github.com/mityu/vim-quickrun-hook-auto_run_in_vim9
+     - delete
+     - うまく動かせなかった。
+     - / 2025-02-25
+   * - https://github.com/rhysd/reply.vim
      - using
      - REPL。ほとんど使っていない。
      - 2020-03-22
@@ -151,261 +295,414 @@ Vim plugins
 .. list-table:: Text Object
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - kana/vim-textobj-user
+   * - https://github.com/kana/vim-textobj-user
      - using
      -
      -
-   * - mattn/vim-textobj-url
+   * - https://github.com/mattn/vim-textobj-url
      - using
      -
      -
-   * - machakann/vim-sandwich
+   * - https://github.com/machakann/vim-sandwich
      - using
      -
      -
-   * - machakann/vim-textobj-delimited
+   * - https://github.com/machakann/vim-textobj-delimited
      - delete
      - , 区切りの文字の textobj として使っていたけど、vim-swap で代用できることがわかったので削除。
-     - 2020-05-17
-   * - tommcdo/vim-exchange
+     - / 2020-05-17
+   * - https://github.com/tommcdo/vim-exchange
      - using
      -
      -
-   * - kana/vim-textobj-indent
+   * - https://github.com/kana/vim-textobj-indent
      - using
      -
      -
-   * - glts/vim-textobj-comment
+   * - https://github.com/glts/vim-textobj-comment
      - using
      -
      -
-   * - kana/vim-textobj-line
+   * - https://github.com/kana/vim-textobj-line
      - using
      - 行の textobj。
      -
-   * - romgrk/equal.operator
+   * - https://github.com/romgrk/equal.operator
      - using
      - 左辺、右辺の textobj。
      - 2020-11-08
-   * - Julian/vim-textobj-variable-segment
+   * - https://github.com/Julian/vim-textobj-variable-segment
      - delete
      - vim-textobj-delimited が Camel case にも対応しているので、こちらはいらなそう。
-     - 2020-08-16
+     - / 2020-08-16
+   * - https://github.com/preservim/vim-textobj-sentence
+     - using
+     - | kawarimidoll/textra.vim を使う際に使用。
+       | 文章をまとめて Textra で翻訳するため。
+     - 2024-02-06
 
-.. list-table:: filetype
+.. list-table:: quickfix
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - AndrewRadev/linediff.vim
-     - using
-     -
-     -
-   * - lambdalisue/vim-diffa
-     - delete
-     - diff を賢くする＋自動アップデートなど。
-       Vim 本体だけでも diffopt+=algorithm:histogram,indent-heuristic で賢くなるらしい。
-       自動アップデートは使っていないので削除。
-     - 2020-03-31
-   * - hdima/python-syntax
-     - using
-     -
-     -
-   * - hynek/vim-python-pep8-indent
-     - using
-     -
-     -
-   * - previm/previm
-     - using
-     -
-     -
-   * - plasticboy/vim-markdown
-     - using
-     -
-     -
-   * - hokorobi/vim-restructuredtext
-     - using
-     - marshallward/vim-restructuredtext を Fork。
-       Syntax やコマンドを少し追加。
-     - 2020-01-18
-   * - hokorobi/riv.vim
-     - delete
-     - gu-fan/riv.vim を Fork。
-       restructuredtext を書くのに使っていたけど、色々と気に入らないところがあったので vim-restructuredtext へ移行。
-     - 2020-01-18
-   * - lambdalisue/qfloc.vim
+   * - https://github.com/lambdalisue/qfloc.vim
      - using
      - quickfix を少し便利にする。無効にしているマッピングもそれなりにある。
      - 2020-03-15
-   * - romainl/vim-qf
+   * - https://github.com/romainl/vim-qf
      - todo
      - quickfix を便利に使えるようになるみたい。qfloc.vim より多機能？
      - 2020-03-15
-   * - thinca/vim-qfreplace
+   * - https://github.com/thinca/vim-qfreplace
      - using
      - quickfix の内容を編集して実ファイルに反映できる。
        検索して、置換が見ながらできる。
      - 2020-06-15
-   * - AndrewRadev/quickpeek.vim
+   * - https://github.com/AndrewRadev/quickpeek.vim
      - using
-     - Quickfix をポップアップウィンドウでプレビュー
-     - 2020-03-22
-   * - ronakg/quickr-preview.vim
+     - | Quickfix をポップアップウィンドウでプレビュー
+       | 一時的に bfrg/vim-qf-preview を使っていたけど戻ってきた。
+     - 2025-08-24
+   * - https://github.com/ronakg/quickr-preview.vim
      - todo
      - Quickfix を別ウィンドウでプレビュー
      - 2020-05-31
-   * - yssl/QFEnter
+   * - https://github.com/bfrg/vim-qf-preview
+     - delete
+     - | Quickfix をポップアップウィンドウでプレビュー
+       | スクロールなどウィンドウに対する操作ができる。
+       | quickpeek.vim から乗り換えるかお試し中。
+       | vim9script 製。
+       | いつの間にか動かなくなっていたので quickpeek へ出戻り。 [2025-08-24]
+     - 2023-04-10 / 2025-08-24
+   * - https://github.com/yssl/QFEnter
      - using
      - QuickFixでジャンプするときに直前のWindowを使う
      - 2021-08-24
-   * - mattn/vim-qfnavigate
+   * - https://github.com/mattn/vim-qfnavigate
      - using
      - | 表示されている Quickfix または location-list の次の項目、前の項目を表示するマッピングを提供する。
-       | location-list をほとんど使わないので、cnext, cprevious をマッピングするだけで事足りている。
+       | location-list をほとんど使わないので、cnext, cprevious をマッピングするだけで事足りてはいるけれど。
      - 2020-12-15
-   * - vim-jp/syntax-vim-ex
+   * - https://github.com/bfrg/vim-qf-diagnostics
+     - todo
+     - | quickfix を virtual text で表示できたりする。
+       | vim-lsp でできるけど、それ以外は使えないのでこちらに寄せてしまっても良いのかも。
+     - 2023-04-16
+   * - https://github.com/bfrg/vim-qf-history
      - using
-     - Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。
+     - | quickfix を遡るポップアップを表示するコマンドの追加。
+       | 標準のコマンドより見やすい気がする。
+     - 2023-04-16
+   * - https://github.com/satler-git/qfsync.nvim
+     - todo
+     - | Vim で使えるように実装してみる？
+       | qfhl がすでにやってそう。
+     -
+   * - https://github.com/thinca/vim-qfhl
+     - using
+     - | quickfix , locationlist の位置をハイライト表示してくれる。
+       | 自分の用途で嬉しいところは LSP の表示が良くなるかもくらい？
+       | バッファを編集しても quickfix が追従してくれるみたい。良さそう。
+     - 2025-09-10
+
+.. list-table:: go
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/mattn/vim-godoc
+     - using
+     - vim-go の必要な機能だけを取り出したこちらを使用。
+     -
+   * - https://github.com/mattn/vim-goimports
+     - using
+     - vim-go の必要な機能だけを取り出したこちらを使用。
+     -
+   * - https://github.com/mattn/vim-gorun
+     - using
+     - vim-go の必要な機能だけを取り出したこちらを使用。
+     -
+   * - https://github.com/mattn/vim-goaddtags
+     - using
+     - vim-go の必要な機能だけを取り出したこちらを使用。
+     -
+
+.. list-table:: markdown
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/previm/previm
+     - using
+     -
+     -
+   * - https://github.com/plasticboy/vim-markdown
+     - using
+     -
+     -
+   * - https://github.com/tani/glance-vim
+     - delete
+     - markdown, asciidoc のブラウザプレビュー。とりあえず動かしてみたけど previm で十分なので一旦削除。
+     - / 2022-12-04
+
+.. list-table:: restructuredtext
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/hokorobi/vim-restructuredtext
+     - using
+     - marshallward/vim-restructuredtext を Fork。
+       Syntax やコマンドを少し追加。
+     - 2020-01-18
+   * - https://github.com/habamax/vim-rst
+     - using
+     - | 新しく見つけたので vim-restructuredtext から一旦移行。
+       | インデントが expandtab になっていないので after/ftplugin/rst.vim で指定。
+     - 2022-07-24
+   * - https://github.com/hokorobi/vim-rst-util
+     - using
+     - habamax/vim-rst を補助する形で自作
+     - 2022-07-24
+   * - https://github.com/hokorobi/riv.vim
+     - delete
+     - gu-fan/riv.vim を Fork。
+       restructuredtext を書くのに使っていたけど、色々と気に入らないところがあったので vim-restructuredtext へ移行。
+     - / 2020-01-18
+
+.. list-table:: restructuredtext
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/vim-jp/syntax-vim-ex
+     - delete
+     - | Vim 本体の変更に追従して更新される Vim Script の Syntax ファイル。
+       | 本体に取り込まれたので削除。
+     - 2020-08-01 /
+   * - https://github.com/rbtnn/vim-vimscript_lasterror
+     - using
+     - | Vim script の最後に発生したエラーのか所を開く。
+     -
+   * - https://github.com/rbtnn/vim-vimscript_tagfunc
+     - using
+     - | tags ファイルなしでもジャンプできるようになる
+       | dein のキャッシュファイルに対してもジャンプ可能。
      - 2020-08-01
-   * - rbtnn/vim-vimscript_tagfunc
+   * - https://github.com/rbtnn/vim-vimscript_indentexpr
      - using
-     - tags ファイルなしでもジャンプできるようになる
-       dein のキャッシュファイルに対してもジャンプ可能。
-     - 2020-08-01
-   * - pangloss/vim-javascript
+     - Vim script のインデントがちょっと賢くなる？
+     -
+
+.. list-table:: other filetype
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/AndrewRadev/linediff.vim
      - using
      -
      -
-   * - PProvost/vim-ps1
+   * - https://github.com/rickhowe/spotdiff.vim
+     - delete
+     - | 良さそうに思ったけど、とりあえず diff の表示がなれなくて、現状は linediff でいいなと。
+     - 2025-10-25 / 2025-10-25
+   * - https://github.com/lambdalisue/vim-diffa
+     - delete
+     - diff を賢くする＋自動アップデートなど。
+       Vim 本体だけでも diffopt+=algorithm:histogram,indent-heuristic で賢くなるらしい。
+       自動アップデートは使っていないので削除。
+     - / 2020-03-31
+   * - https://github.com/hdima/python-syntax
      - using
      -
      -
-   * - hokorobi/plantuml-syntax
+   * - https://github.com/hynek/vim-python-pep8-indent
+     - using
+     -
+     -
+   * - https://github.com/pangloss/vim-javascript
+     - using
+     - ハイライトを改善。
+     -
+   * - https://github.com/PProvost/vim-ps1
+     - delete
+     - 本体に入ったので削除。
+     -
+   * - https://github.com/hokorobi/plantuml-syntax
      - using
      - | aklt/plantuml-syntax の fork。
        | 色々といじって PR を送っている。
      - 2020-05-23
-   * - tsuyoshicho/plantuml-previewer.vim
+   * - https://github.com/tsuyoshicho/plantuml-previewer.vim
      - using
+     - PlantUML のプレビュー。Previm でもプレビューはできるけど、画像の拡大ができるので使っている。
      -
-     -
-   * - cespare/vim-toml
-     - using
-     -
-     -
-   * - osyo-manga/vim-precious
-     -
-     -
-     -
-   * - Shougo/context_filetype.vim
-     -
-     -
-     -
-   * - hnamikaw/vim-autohotkey
-     -
-     -
-     -
-   * - mechatroner/rainbow_csv
-     -
-     -
-     -
-   * - mattn/emmet-vim
+   * - https://github.com/hnamikaw/vim-autohotkey
      - delete
-     - HTML の入力を便利にしてくれるけど覚えられない。
-       機会も少ないので削除。
-     - 2020-06-14
-   * - hokorobi/vim-changelog-alt
-     - delete
-     - 本体同梱の changelog プラグインを自分好みにしようとしたけど、大して帰るところがなかったので削除。
-     - 2020-05-11
-   * - hokorobi/vim-howm-syntax-mini
+     - Autohotkey は v2 を使うようになったので autohotkey2.vim に移行。
+     -
+   * - https://github.com/hokorobi/autohotkey2.vim
      - using
      -
      -
+   * - https://github.com/cespare/vim-toml
+     - delete
+     - 本体に取り込まれたので削除。
+     -
+   * - https://github.com/osyo-manga/vim-precious
+     - delete
+     - toml に Vim script を書かずに hooks_file を使うようになったので削除。
+     -
+   * - https://github.com/Shougo/context_filetype.vim
+     - delete
+     - toml に Vim script を書かずに hooks_file を使うようになったので削除。
+     -
+   * - https://github.com/mechatroner/rainbow_csv
+     - using
+     - csv の各フィールドを見やすく。
+     -
+   * - https://github.com/mattn/emmet-vim
+     - delete
+     - | HTML の入力を便利にしてくれるけど覚えられない。
+       | 機会も少ないので削除。
+     - 2020-06-14 / 2020-06-14
+   * - https://github.com/hokorobi/vim-changelog-alt
+     - delete
+     - 本体同梱の changelog プラグインを自分好みにしようとしたけど、大して変えるところがなかったので削除。
+     - / 2020-05-11
+   * - https://github.com/hokorobi/vim-howm-syntax-mini
+     - using
+     - howm のプラグインはあるけど、ちょっとしたハイライトだけ使おうと思ったので小さいものを作ってみた。
+     -
+   * - https://github.com/machakann/vim-vimhelplint
+     - using
+     - ヘルプファイルの Lint
+     -
+
 .. list-table:: Colorscheme
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - rhysd/vim-color-spring-night
+   * - https://github.com/rhysd/vim-color-spring-night
      - using
      - colorscheme. iceberg -> spring-night
        italic, bold は無効にしている。
      - 2020-05-11
-   * - yasukotelin/shirotelin
+   * - https://github.com/yasukotelin/shirotelin
      - delete
      - ネタとしては好きだけど、常用するにはちょっと辛く感じた。
-     - 2019-11-30
+     - / 2019-11-30
+   * - https://github.com/EdenEast/nightfox.nvim
+     - todo
+     - 色々なプラグインに対応している。
+     - 
+   * - https://github.com/catppuccin/nvim
+     - todo
+     - Vim 意外も同様のカラースキームをほかのアプリでも使えるとか
+     - 
+
 
 .. list-table:: Look
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - itchyny/lightline.vim
+   * - https://github.com/itchyny/lightline.vim
      - using
-     - statusline に色々表示。
-       tabline は非表示にしている。
+     - | statusline に色々表示。
+       | tabline は非表示にしている。
      - 2020-05-11
-   * - taohexxx/lightline-buffer
+   * - https://github.com/taohexxx/lightline-buffer
      - delete
      - 必要な時だけ :. 相当の表示になるのが好みなので buftabline を使うように戻した。
-     - 2019-10-26
-   * - mengelbrecht/lightline-bufferline
+     - / 2019-10-26
+   * - https://github.com/mengelbrecht/lightline-bufferline
      - delete
      - こちらも buftabline の方が好みだった。
-     - 2019-10-24
-   * - pacha/vem-tabline
+     - / 2019-10-24
+   * - https://github.com/pacha/vem-tabline
      - delete
-     - バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。
-       もともとそういう機能なのか設定か環境が悪いのか…
-     - 2020-07-01
-   * - osyo-manga/vim-anzu
+     - | バッファが増えたら tabline に表示されるかと思ったら、そんなことなかった。
+       | もともとそういう機能なのか設定か環境が悪いのか…
+     - / 2020-07-01
+   * - https://github.com/osyo-manga/vim-anzu
      - delete
      - | incremental search の現在のマッチ位置を表示。
        | vim-hitspop へ移行。 [2020-12-02]
-     - 2020-05-11
-   * - obcat/vim-hitspop
+     - 2020-05-11 / 2020-12-02
+   * - https://github.com/obcat/vim-hitspop
      - using
      - incremental search の現在のマッチ位置をポップアップで表示。
      - 2020-12-02
-   * - haya14busa/is.vim
-     - using
+   * - https://github.com/haya14busa/is.vim
+     - delete
      - | vim-hitspop のポップアップ表示を消去するために使用。
        | 自動のマッピング設定が N にはマッピングされるのに、なぜか n にマッピングされなかったので個別に設定。
+       | searchx を使っていれば不要になったので削除
      - 2020-12-25
-   * - MattesGroeger/vim-bookmarks
-     - delete
-     - ファイルの位置をブックマークしてくれる
-       vim-signature へ移行。 [2019-08-04]
-       やっぱり使い始めた。 [2020-05-31]
-     - 2020-05-31
-   * - hokorobi/vim-bookmarks
+   * - https://github.com/itchyny/vim-cursorword
      - using
-     - MattesGroeger/vim-bookmarks を Fork.
-       CtrlP でファイル名を表示できるように変更。 [2020-05-24]
-     - 2020-05-24
-   * - Yilin-Yang/vim-markbar
+     - カーソル位置にある単語を目立たせる
+     -
+   * - https://github.com/t9md/vim-quickhl
+     - using
+     - 文字列に継続的に色を付ける
+     -
+   * - https://github.com/markonm/traces.vim
+     - using
+     - :substitute などの結果をプレビューしてくれる。
+     -
+   * - https://github.com/liuchengxu/vista.vim
+     - using
+     - 変数とか関数とかいろいろと表示して便利に。
+     -
+   * - https://github.com/lambdalisue/vim-readablefold
+     - using
+     - fold 表示をよさげにしてくれる
+     -
+   * - https://github.com/BourgeoisBear/clrzr
+     - using
+     - #rrggbb や #rgb の色を視覚化
+     -
+   * - https://github.com/rbtnn/vim-ambiwidth
+     - using
+     - 表などがずれるので ambiwidth を single にしている場合でも絵文字などは全角幅で表示してくれる。
+     -
+   * - https://github.com/Yilin-Yang/vim-markbar
      - delete
-     - mark を sidebar で表示。
-       フィルタリングで絞り込めないとちょっと辛いかな。
-     - 2020-07-14
-   * - junegunn/vim-peekaboo
+     - | mark を sidebar で表示。
+       | フィルタリングで絞り込めないとちょっと辛いかな。
+     - / 2020-07-14
+   * - https://github.com/junegunn/vim-peekaboo
      - delete
-     - レジスタをサイドバーで表示。
-       レジスタをそんなに活用できていないので使わない。
-     - 2020-07-14
-   * - kshenoy/vim-signature
+     - | レジスタをサイドバーで表示。
+       | レジスタをそんなに活用できていないので使わない。
+     - / 2020-07-14
+   * - https://github.com/kshenoy/vim-signature
      - delete
      - | ファイルの位置を Vim の mark に追加してくれる
        | mark を使ってくれるのが良さそうに思えたので vim-bookmarks から移行。 [2019-08-04]
@@ -413,285 +710,377 @@ Vim plugins
        | やはり使いたくなった。
        | :SignatureListGlobalMarks でマークの復元がうまくいかないみたい。
        | vim-bookmarks へ戻る。 [2020-05-24]
-     - 2020-05-24
-   * - itchyny/vim-cursorword
+     - / 2020-05-24
+   * - https://github.com/itchyny/vim-highlighturl
      - using
-     -
-     -
-   * - andymass/vim-matchup
-     - using
-     -
-     -
-   * - t9md/vim-quickhl
-     - using
-     -
-     -
-   * - markonm/traces.vim
-     - using
-     -
-     -
-   * - liuchengxu/vista.vim
-     - using
-     -
-     -
-   * - itchyny/vim-highlighturl
-     - delete
-     - Changelog の URL がすべてハイライトされるとカーソル移動が重くなるので外した。
-     - 2021-05-29
-   * - thinca/vim-breadcrumbs
+     - | Changelog の URL がすべてハイライトされるとカーソル移動が重くなるので外した。
+       | Changelog でそんなにカーソル移動することないはずなので再導入。
+       | 検索のハイライトが URL に反映されないな…どうしよ。
+       | やっぱりイマイチなのでやめる。
+       | URL はそこまで気にしなくていいもののはずだけど、ちょっと主張が強くなってしまうので。
+     - 2025-08-24 / 2021-05-29
+   * - https://github.com/thinca/vim-breadcrumbs
      - delete
      - | どの関数配下にいるかをタブバーに表示してくれるみたい。
        | とりあえず使わなくていいかな。
-     - 2021-07-24
-   * - thinca/vim-qfhl
+     - / 2021-07-24
+   * - https://github.com/wellle/context.vim
+     - using
+     - | バッファの現在の表示内容がどの関数の配下などにあるかなどをバッファの画面上部に表示してくれる。
+       | コードリーディングに良さそう。
+     - 2023-04-13
+   * - https://github.com/rickhowe/wrapwidth
+     - todo
+     - ウィンドウの端でない任意の位置で折り返し表示をしてくれる。
+     - 2023-10-29
+   * - https://github.com/utubo/vim-anypanel
+     - todo
+     - | tabpanel に色々と表示してくれる。
+       | 導入してみたらカレントのタブの色がバックグラウンドの色になってしまったので一旦削除。
+     - 2025-08-07
+   * - https://github.com/machakann/vim-highlightedyank
      - delete
-     - | quickfix , locationlist の位置をハイライト表示してくれる。
-       | 自分の用途で嬉しいところは LSP の表示が良くなるかもくらい？
-     - 2021-08-01
+     - :help 52.6 highlight-yank plugin を使うように変更したので削除。
+     -
 
 .. list-table:: Edit
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - cohama/lexima.vim
+   * - https://github.com/cohama/lexima.vim
      - using
+     - 入力を色々とカスタマイズ。
      -
-     -
-   * - machakann/vim-highlightedyank
+   * - https://github.com/yuki-yano/lexima-alter-command.vim
      - using
+     - lexima を使ってコマンドモードで短縮入力などを可能にする
      -
+   * - https://github.com/thinca/vim-ambicmd
+     - using
+     - <Space> で短縮入力を展開させる
      -
-   * - kana/vim-operator-replace
-     - delete
-     - 選択してペーストができるようになると思っていたけど、標準でもできていた。
-       レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。
-     - 2020-04-01
-   * - yuki-yano/vim-operator-replace
-     - delete
-     - | "hoge" とかを vibp で置換していたものを <Space>rib でできるように導入してみた。
-       | kana/vim-operator-replace では使えないらしい yankround も使える。
-       | vibp しか使わないので消した。 [2021-05-05]
-     - 2021-02-20
-   * - monaqa/dps-dial.vim
-     - del
-     - | denops.vim で vim-clurin と同じようなことをしてくれる
-       | 初回動作は重いかと思ったけどそんなこともなかった。
-       | dein で E670: 1つの言語のヘルプファイルに複数のエンコードが混在しています: C:\Users\hokorobi\_vim\dein\.cache\vimrc\.dein\doc\dps-dial.jax となる。なんでだろう？
-       | '' と "" の切り替えはできなさそうだし、特に頻繁に使う機能ではないので clurin のままでいいか。
-     -
-   * - uplus/vim-clurin
+   * - https://github.com/uplus/vim-clurin
      - using
      - | 増加、減少、循環などをいい感じにやってくれる。
        | '' と "" の切り替えが一番使用頻度が高いかも。
        | それもsandwichで代用できるので、いったん消してみる。
        | true<->false, yes<->no などは必要だ。復活。
      -
-   * - tpope/vim-speeddating
-     - del
+   * - https://github.com/tpope/vim-speeddating
+     - delete
      - | vim-clurin と併用。
        | 日付だけはこちらの機能を使えるようにしている。
        | 使わないので削除。
      -
-   * - AndrewRadev/tagalong.vim
+   * - https://github.com/kana/vim-operator-replace
+     - delete
+     - | 選択してペーストができるようになると思っていたけど、標準でもできていた。
+       | レジスタが変わらないのでドットリピートできるけど、そのような使い方はしないかな。
+     - / 2020-04-01
+   * - https://github.com/yuki-yano/vim-operator-replace
+     - delete
+     - | "hoge" とかを vibp で置換していたものを <Space>rib でできるように導入してみた。
+       | kana/vim-operator-replace では使えないらしい yankround も使える。
+       | vibp しか使わないので消した。 [2021-05-05]
+     - 2021-02-20 / 2021-05-05
+   * - https://github.com/monaqa/dps-dial.vim
+     - delete
+     - | denops.vim で vim-clurin と同じようなことをしてくれる
+       | 初回動作は重いかと思ったけどそんなこともなかった。
+       | dein で E670: 1つの言語のヘルプファイルに複数のエンコードが混在しています: C:\Users\hokorobi\_vim\dein\.cache\vimrc\.dein\doc\dps-dial.jax となる。なんでだろう？
+       | '' と "" の切り替えはできなさそうだし、特に頻繁に使う機能ではないので clurin のままでいいか。
+     -
+   * - https://github.com/AndrewRadev/tagalong.vim
      - delete
      - | タグの片方を変更すると、もう片方も変更してくれる。
        | 2021-02-14 時点では i, a の動作が何か変（？）。
-     - 2021-02-14
-   * - tyru/caw.vim
+     - / 2021-02-14
+   * - https://github.com/junegunn/vim-easy-align
+     - delete
+     - 毎回調べながら使っていたので simple-align へ変更。
+     - / 2023-10-15
+   * - https://github.com/kg8m/vim-simple-align
      - using
-     - | 便利にコメントアウト
-     - ancient
-   * - matze/vim-move
+     - 直感的な align かなと思ったけど、やっぱり調べながら使っている。
+     - 2023-10-15
+   * - https://github.com/mbbill/undotree
      - using
-     - | 複数行をまとめて上下に移動できる。
-       | インデントも考慮してくれる。
-     - 2020-06-28
-
-.. list-table:: Motion
-   :header-rows: 1
-
-   * - repogitory
-     - status
-     - comment
-     - date
-   * - junegunn/vim-easy-align
+     - undotree 表示
+     -
+   * - https://github.com/osyo-manga/vim-jplus
      - using
+     - 行結合を便利に
      -
-     -
-   * - mbbill/undotree
+   * - https://github.com/hokorobi/yankround.vim
+     - delete
+     - | <Space>fp で CtrlP から履歴を yank
+       | ctrlp-yankround へ移った。
+     - / 2025-03-01
+   * - https://github.com/hokorobi/ctrlp-yankround
      - using
-     -
-     -
-   * - osyo-manga/vim-jplus
-     - using
-     -
-     -
-   * - hokorobi/yankround.vim
-     - using
-     - vim-submode を使って p, P を連続して押して次々過去のレジスタうから貼り付けできるようにしている。
-     - 2020-04-02
-   * - svermeulen/vim-yoink
+     - | <Space>fp で CtrlP から履歴を yank
+       | CtrlP で使う機能だけを抽出。
+     - 2025-03-01
+   * - https://github.com/https://github.com/kyoh86/vim-quotem
      - todo
-     - xmap では使えない？　試していないからわからないけれど yankroud.vim で満足している。
-       yankround.vim + sub-mode で実現していることが単体でできそう。
-     - 2020-04-02
-   * - deris/vim-rengbang
-     - using
-     -
-     -
-   * - ntpeters/vim-better-whitespace
-     - using
-     - 末尾スペースを探すときに実行。
-     - 2020-05-17
-   * - thinca/vim-template
-     - using
-     -
-     -
-   * - mattn/vim-sonictemplate
-     - using
-     - ファイルの新規作成時にテンプレートを挿入。
-       snippet のようにテンプレートを展開。
+     - codeblock を markdown に書く用に register へ登録してくれる。
      - 
-   * - deris/vim-pasta
+   * - https://github.com/svermeulen/vim-yoink
+     - todo
+     - | xmap では使えない？　試していないからわからないけれど yankroud.vim で満足している。
+       | yankround.vim + sub-mode で実現していることが単体でできそう。
+     - 2020-04-02
+   * - https://github.com/deris/vim-rengbang
      - using
+     - | 同行の選択範囲の数字を 1 からの連番にするのに使用。
+       | 同一列は g<C-a> を使うので、そこまで出番がない。
      -
-     -
-   * - nocd5/ExpandSerialNumber.vim
+   * - https://github.com/ntpeters/vim-better-whitespace
      - using
+     - 末尾スペースを消すときに実行。
+     - 2020-05-17
+   * - https://github.com/thinca/vim-template
+     - delete
+     - mattn/vim-sonictemplate へ移行。
      -
+   * - https://github.com/mattn/vim-sonictemplate
+     - using
+     - | ファイルの新規作成時にテンプレートを挿入。
+       | snippet のようにテンプレートを展開。
      -
-   * - lambdalisue/vim-findent
+   * - https://github.com/deris/vim-pasta
+     - using
+     - インデントを反映して貼り付け。
+     -
+   * - https://github.com/nocd5/ExpandSerialNumber.vim
+     - using
+     - 数字をどんどん増やして挿入。全然使ってない。
+     -
+   * - https://github.com/lambdalisue/vim-findent
      - using
      - 開いたファイルのインデントに従って Vim のインデントを設定する
      - 2020-04-18
-   * - machakann/vim-swap
+   * - https://github.com/machakann/vim-swap
      - using
      - , 区切りの要素の入れ替え、ソート、textobj
      - 2020-05-17
-   * - christoomey/vim-sort-motion
+   * - https://github.com/christoomey/vim-sort-motion
      - todo
      - | textobj, motion に対してソートをする。
        | vim-swap でいいかな？
      - 2021-05-07
-   * - kana/vim-niceblock
+   * - https://github.com/kana/vim-niceblock
      - using
      - 選択した行すべてに対して I, A を反映させる。
      - 2020-04-18
-   * - da-x/name-assign.vim
+   * - https://github.com/da-x/name-assign.vim
      - todo
      - 選択した範囲を変数に変えて、その変数の定義を追加する。
      - 2020-05-23
-   * - chrisbra/NrrwRgn
+   * - https://github.com/chrisbra/NrrwRgn
      - delete
-     - 選択した範囲だけ編集対象とする。
-       Vim だと標準で同じようなことができるのでいらなさそう。
-       便利な場合もあるんだろうな。
-     - 2020-04-18
-   * - unblevable/quick-scope
+     - | 選択した範囲だけ編集対象とする。
+       | Vim だと標準で同じようなことができるのでいらなさそう。
+       | 便利な場合もあるんだろうな。
+     - / 2020-04-18
+   * - https://github.com/tyru/caw.vim
+     - using
+     - | 便利にコメントアウト
+     - ancient
+   * - https://github.com/matze/vim-move
+     - using
+     - | 複数行をまとめて上下に移動できる。
+       | インデントも考慮してくれる。
+     - 2020-06-28
+   * - https://github.com/alvan/vim-closetag
+     - delete
+     - | 閉じタグを簡単に入力できるように。
+       | lexima.vim で代替できそうだったので設定して削除。
+     - / 2023-05-28
+   * - https://github.com/sentriz/vim-print-debug
+     - using
+     - print debug 用のコードをそれぞれの言語の書式で挿入してくれる。
+     - 2020-08-25
+   * - https://github.com/tani/dmacro.vim
+     - using
+     - | マクロを動的に定義してくれる。
+       | 同じ操作を二回実施したら <C-t> で三回目も可能に。
+     - 2024-07-21
+   * - https://github.com/Coacher/vim9-cutlass
+     - delete
+     - | 削除の操作でデフォルトレジスタを更新しないように。
+       | g:vim9cutlass_registers でレジスタを指定するとデフォルトレジスタも更新されてします。
+       | 特に d が慣れなかった。
+     - 2025-09-20 / 2025-09-20
+
+.. list-table:: Motion
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/unblevable/quick-scope
      - delete
      - f, F, t, T でハイライトしてくれる。ルールがよくわからなくて、まともに使っていない。
-     - 2020-02-20
-   * - easymotion/vim-easymotion
+     - / 2020-02-20
+   * - https://github.com/easymotion/vim-easymotion
      - using
      -
      -
-   * - monkoose/vim9-stargate
+   * - https://github.com/rhysd/clever-f.vim
+     - delete
+     - | easymotion は同じ行の移動にしか使っていなかったのでこちらにしてみようかと思ったけど慣れなかった。
+       | もう少し使ってれば違うのかも。
+       | easymotion の . で > も候補に含めてくれるのが嬉しかったんだな。
+     - / 2025-02-09
+   * - https://github.com/yuki-yano/fuzzy-motion.vim
+     - delete
+     - | Migemo が使えるようになったので。
+       | 候補が一つになったら自動確定する機能は良さそう。
+       | easymotion に比べて文字を見つけられないことがあるような？
+       | 速さは特に変化がなさそうかな。
+     - 2023-01-21
+   * - https://github.com/monkoose/vim9-stargate
      - delete
      - | モダンな easymotion 代替。
        | 候補選択時の画面が暗すぎる。Migemo がないのがちょっと辛い。自分で定義できるみたい。同行だけの移動はないみたい。機能が拡充されたらまた使ってみてもいいかも。
-     - 2021-07-15
-   * - haya14busa/vim-edgemotion
+     - / 2021-07-15
+   * - https://github.com/haya14busa/vim-edgemotion
      - using
-     - 縦方向の端に移動
+     - | 縦方向の端に移動
+       | 先頭行、最終行に飛べないのがちょっと不便に感じている。
      - 2020-04-18
-   * - tyru/columnskip.vim
+   * - https://github.com/tyru/columnskip.vim
      - delete
-     - edgemotion に近いけど、空白に対してだけスキップ。
-       インデントの途中なら、インデントの区切りの位置に移動するのかと思ったけど、違うみたい。
-       Vim の設定のせい？
-       これなら edgemotion の方が好み。
-     - 2020-04-18
-   * - machakann/vim-columnmove
+     - | edgemotion に近いけど、空白に対してだけスキップ。
+       | インデントの途中なら、インデントの区切りの位置に移動するのかと思ったけど、違うみたい。
+       | Vim の設定のせい？
+       | これなら edgemotion の方が好み。
+     - / 2020-04-18
+   * - https://github.com/machakann/vim-columnmove
      - delete
-     - f t F T ; , w b e ge W B E gE を縦方向に使える。
-       使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。
-     - 2020-06-08
-   * - pechorin/any-jump.vim
+     - | f t F T ; , w b e ge W B E gE を縦方向に使える。
+       | 使わなかった。縦方向の位置を確認するのも大変なので必要なら easymotion を使う。
+     - / 2020-06-08
+   * - https://github.com/pechorin/any-jump.vim
      - todo
-     - 定義にジャンプできるらしい。
-       Windows では動かない？　 **:AnyJump** でこんなエラーが出る。::
+     - | 定義にジャンプできるらしい。
+       | Windows では動かない？　 **:AnyJump** でこんなエラーが出る。::
 
          function <SNR>17_Jump[35]..search#SearchUsages[4]..<SNR>144_RunRgUsagesSearch の処理中にエラーが検出されました:
          行   14:
          E484: ファイル "C:\Users\hokorobi\AppData\Local\Temp\VIo33AC.tmp" を開けません
 
      - 2020-04-07
-   * - haya14busa/vim-asterisk
+   * - https://github.com/haya14busa/vim-asterisk
      - using
      -
      -
-   * - osyo-manga/vim-milfeulle
+   * - https://github.com/hrsh7th/vim-searchx
      - using
+     - インクリメンタルサーチの候補に対して hit a hint。
      -
+   * - https://github.com/osyo-manga/vim-milfeulle
+     - using
+     - カーソル位置の履歴移動
      -
-   * - thinca/vim-poslist
+   * - https://github.com/Bakudankun/BackAndForward.vim
+     - using
+     - | <C-o>, <C-i> をファイル内での移動をすっ飛ばして前後のファイルに移動する。
+       | :GinStatus で <C-o> すると一回エラーになっていたのを回避できるようになった。
+       | help ではキーワードジャンプしたいので <C-o>, <C-i> と入れ替えだと駄目だな。
+     - 2025-11-03
+   * - https://github.com/thinca/vim-poslist
      - todo
-     - https://thinca.hatenablog.com/entry/20100124/1264343151
-       https://gist.github.com/thinca/259344
+     - | https://thinca.hatenablog.com/entry/20100124/1264343151
+       | https://gist.github.com/thinca/259344
      -
-   * - Bakudankun/BackAndForward.vim
+   * - https://github.com/Bakudankun/BackAndForward.vim
      - todo
-     - ファイル単位で <C-O> , <C-I> 
+     - ファイル単位で <C-O> , <C-I>
      -
-   * - hokorobi/vim-smarthome
+   * - https://github.com/hokorobi/vim-smarthome
      - using
+     - 先頭、末尾への移動を自分好みに変更
      -
-     -
-   * - osyo-manga/vim-operator-stay-cursor
+   * - https://github.com/andymass/vim-matchup
      - using
-     - yank でカーソル移動をさせない。
-       ``nnoremap y y`>`` だと不十分なことがあったので。
-     - 2020-04-14
-   * - AlphaMycelium/pathfinder.vim
+     - matchit の改善版
+     -
+   * - https://github.com/MattesGroeger/vim-bookmarks
      - delete
-     - カーソル移動の改善を提案してくれるみたい。
-       試してみたけどエラーが出る。
-       調べてもいない。
-     - 2020-06-10
+     - | ファイルの位置をブックマークしてくれる
+       | vim-signature へ移行。 [2019-08-04]
+       | やっぱり使い始めた。 [2020-05-31]
+     - 2020-05-31
+   * - https://github.com/hokorobi/vim-bookmarks
+     - using
+     - | MattesGroeger/vim-bookmarks を Fork.
+       | CtrlP でファイル名を表示できるように変更。 [2020-05-24]
+       | [2024-02-12]
+       | ブックマークが保存されるタイミングが謎なので、ブックマークを追加、削除の前後に読み込みと保存をするコミットを拝借 https://github.com/hokorobi/vim-bookmarks/commit/923288832e2ed6e0f049a877e1840884ab18e2bb
+       | PR169 を取り込むとサインの表示がずれた。バッファ切り替えしたときにサインが消えても気にしないからいらないかな。 https://github.com/MattesGroeger/vim-bookmarks/pull/169
+       | 最近更新が活発なFork。 https://github.com/ysl2/vim-bookmarks
+     - 2020-05-24
+   * - https://github.com/osyo-manga/vim-operator-stay-cursor
+     - delete
+     - | yank でカーソル移動をさせない。
+       | ``nnoremap y y`>`` だと不十分なことがあったので。
+       | ``xnoremap y myy`y`` で代替してみるので削除。 [2025-08-08]
+     - 2020-04-14 / 2025-08-08
+   * - https://github.com/AlphaMycelium/pathfinder.vim
+     - delete
+     - | カーソル移動の改善を提案してくれるみたい。
+       | 試してみたけどエラーが出る。
+       | 調べてもいない。
+     - / 2020-06-10
+   * - https://github.com/Allianaab2m/jumpout.vim
+     - using
+     - 画面左端のウィンドウで <C-h> とすると分割するように。j, k, l も同様。
+     - 2023-01-11
 
 .. list-table:: Buffer
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - mhinz/vim-sayonara
+   * - https://github.com/mhinz/vim-sayonara
+     - delete
+     - | いい感じにバッファを閉じてくれる。
+       | filetype に応じた閉じるコマンドの指定もできる。
+       | 直前のバッファも一緒に閉じる場合がある。自分の誤操作が原因か？
+       | すべてのバッファを閉じると CtrlP で開いたバッファが vsplit される。CtrlP の問題か？
+     - 2020-06-07
+   * - https://github.com/hokorobi/vim-sayonara
      - using
      - | いい感じにバッファを閉じてくれる。
        | filetype に応じた閉じるコマンドの指定もできる。
        | 直前のバッファも一緒に閉じる場合がある。自分の誤操作が原因か？
        | すべてのバッファを閉じると CtrlP で開いたバッファが vsplit される。CtrlP の問題か？
      - 2020-06-07
-   * - tyru/capture.vim
-     - delete
-     - コマンドの実行結果などをバッファに取り込んでくれる。
-       [nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。
-       簡単なコマンドで代用できそうなのでそちらへ移行。
-     - 2020-06-20
-   * - ap/vim-buftabline
+   * - https://github.com/tyru/capture.vim
      - using
-     - tabline にバッファを羅列する。タブがある場合はタブを表示。
-       同名のバッファがある場合は親ディレクトリも表示。
+     - | コマンドの実行結果などをバッファに取り込んでくれる。
+       | [nvxstoilc]?map, scriptnames, messages には個別のコマンドを定義して使っている。
+       | 簡単なコマンドで代用できそうなのでそちらへ移行。
+       | 何かとうまくいかないことがあったので復活。
+     - 2020-06-20
+   * - https://github.com/ap/vim-buftabline
+     - using
+     - | tabline にバッファを羅列する。タブがある場合はタブを表示。
+       | 同名のバッファがある場合は親ディレクトリも表示。
      - 2020-05-02
-   * - mg979/vim-xtabline
+   * - https://github.com/mg979/vim-xtabline
      - delete
      - タブを扱えるのは良いけれど、それ以外は buftabline の方がよさそう。機能過剰。
-     - 2019-12-02
-   * - tyru/closesubwin.vim
+     - / 2019-12-02
+   * - https://github.com/tyru/closesubwin.vim
      - using
      -
      -
@@ -699,134 +1088,264 @@ Vim plugins
 .. list-table:: File
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - kana/vim-gf-user
+   * - https://github.com/kana/vim-gf-user
      - using
+     - C:\WINDOWS\System32\drivers\etc\hosts:4 なども gf で開けるように。
      -
+   * - https://github.com/kana/vim-gf-diff
+     - delete
+     - 使うことがなかったので削除。
      -
-   * - kana/vim-gf-diff
+   * - https://github.com/justinmk/vim-dirvish
+     - delete
+     - ファイルの操作はOSのファイラを使うので削除
+     -
+   * - https://github.com/lambdalisue/vim-protocol
      - using
+     - :e <url> でバッファに読み込み。
      -
-     -
-   * - justinmk/vim-dirvish
+   * - https://github.com/mattn/vim-findroot
      - using
-     -
-     -
-   * - lambdalisue/vim-protocol
-     - using
-     -
-     -
-   * - mattn/vim-findroot
-     - using
-     -
+     - .git があるディレクトリなどを root とする。
      -
 
-.. list-table:: Selector
+.. list-table:: CtrlP
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - itchyny/vim-gof
-     - delete
-     - mattn/gof を呼び出してファイル表示など。
-       tapi を使っていたので Windows では NG
-     - 2020-02-05
-   * - ctrlpvim/ctrlp.vim
+   * - https://github.com/ctrlpvim/ctrlp.vim
      - using
      -
      -
-   * - hokorobi/ctrlp-sessions
+   * - https://github.com/hokorobi/ctrlp-sessions
      - using
      -
      -
-   * - mattn/ctrlp-launcher
+   * - https://github.com/mattn/ctrlp-launcher
      - using
      -
      -
-   * - zeero/vim-ctrlp-help
+   * - https://github.com/zeero/vim-ctrlp-help
      - using
      -
      -
-   * - ivalkeen/vim-ctrlp-tjump
+   * - https://github.com/ivalkeen/vim-ctrlp-tjump
      - delete
      - タグジャンプ先が複数ある場合に CtrlP で選択できるようになる。
        そういった場合がほとんどなかったので削除
-     - 2020-08-01
-   * - ompugao/ctrlp-locate
-     - using
+     - / 2020-08-01
+   * - https://github.com/ompugao/ctrlp-locate
+     - delete
      -
-     -
-   * - tacahiroy/ctrlp-funky
-     - using
-     -
-     -
-   * - printesoi/ctrlp-filetype.vim
+     - / 2020-04-27
+   * - https://github.com/tacahiroy/ctrlp-funky
+     - delete
+     - カレントのバッファしか対象にできなかったので vimgrep で検索するように変更。
+     - / 2022-04-27
+   * - https://github.com/printesoi/ctrlp-filetype.vim
      - using
      - CtrlP で filetype を指定
      - 2020-06-07
-   * - christoomey/ctrlp-generic
+   * - https://github.com/christoomey/ctrlp-generic
      - using
      - 外部コマンドの結果を CtrlP で選択して入力する CtrlPCmdPaste を作成。使っていない…
      - 2020-06-07
-   * - suy/vim-ctrlp-commandline
+   * - https://github.com/suy/vim-ctrlp-commandline
      - using
      - | コマンドラインの履歴を CtrlP で使う。
        | 直接実行だけでなく <C-t> でコマンドラインに表示することができるので、ちょっと変更して再実行も可能。
      - 2020-06-07
-   * - kaneshin/ctrlp-git-log
-     - using
+   * - https://github.com/kaneshin/ctrlp-git-log
+     - delete
      - | git log を CtrlP で表示
        | バッファを閉じずに次々見たいな。
-     - 2021-09-26
-   * - tsuyoshicho/ctrlp-mr.vim
+       | diff の表示のハイライトとかもほしい。
+       | 現状だとイマイチな気がするので削除。
+     - 2021-09-26 / 2023-01-03
+   * - https://github.com/tsuyoshicho/ctrlp-mr.vim
      - delete
      - | lambdalisue/mr.vim を使って MRU, MRW, MRR を開く。
        | MRU は CtrlP のものを使うので不要。
        | MRR は良さそうに思ったけれどホームディレクトリ配下のtempフォルダも出てきてしまうのでNG
-     - 2021-09-26
-   * - lambdalisue/mr.vim
+     - / 2021-09-26
+   * - https://github.com/lambdalisue/mr.vim
      - delete
-     - MRU, MRW, MRR を記録、一覧表示。
-     - 2021-09-26
-   * - mattn/vim-fz
+     - | MRU, MRW, MRR を記録、一覧表示。
+       | CtrlP の MRU で大体良さそうなので、こちらは使わない。
+     - / 2021-09-26
+   * - https://github.com/lucerion/ctrlp-grep
+     - using
+     - | grep の結果を CtrlP で使う。
+       | Zenn の article をタイトルで検索してみる。
+     - 2023-08-27
+   * - https://github.com/mattn/ctrlp-matchfuzzy
+     - using
+     - CtrlP を fuzzymatch してくれる matcher
+     - 2022-09-22
+   * - https://github.com/hokorobi/ctrlp-filter
+     - using
+     - CtrlP コマンドの結果を加工して挿入や実行。
+     - 2023-01-21
+   * - https://github.com/ompugao/ctrlp-kensaku
+     - using
+     - CtrlP で Migemo を使えるようにする matcher
+     - 2023-01-21
+   * - https://github.com/lambdalisue/kensaku.vim
+     - using
+     - ctrlp-kensaku で使用するライブラリ。Migemo を使えるようにする核。
+     - 2023-01-21
+   * - https://github.com/tsuyoshicho/ctrlp-mr.vim
+     - todo
+     - | lambdalisue/mr.vim を使った MR[URW]
+       | CtrlP 自信の MRU が止められるようなら使ってみたい。
+     - 2023-07-01
+
+.. list-table:: ddu
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/Shougo/ddu.vim
+     - using
+     -
+     - 2023-06-19
+   * - https://github.com/Shougo/ddu-commands.vim
+     - using
+     -
+     - 2023-06-19
+   * - https://github.com/matsui54/ddu-source-file_external
+     - using
+     - | 外部コマンドの結果を候補とする。
+       | `まだ使えていない。`:strike:
+       | ファイルパスが返って来ないと使えない。
+     - 2023-06-19
+   * - https://github.com/Shougo/ddu-source-file_rec
+     - using
+     - 再帰的にファイルを表示
+     - 2023-06-19
+   * - https://github.com/kuuote/ddu-source-git_status
+     - read
+     - | git status で diff を候補にする。
+       | 使う必要はなさそう。
+     - 2023-07-17
+   * - https://github.com/Shougo/ddu-source-input_history
+     - delete
+     - | 使いどころがわからなかった。
+     - 2025-08-11
+   * - https://github.com/kamecha/ddu-source-jumplist
+     - delete
+     - | jumplist を候補とする。
+       | ソースを読む機会が増えたら役に立つのかも。
+     - 2023-07-01
+   * - https://github.com/Shougo/ddu-source-line
+     - using
+     - バッファの行を候補とする
+     - 2023-06-19
+   * - https://github.com/kamecha/ddu-source-window
+     - using
+     - | タブごとのウィンドウを候補とする。
+       | なんか遅い？
+     - 2023-06-19
+   * - https://github.com/shun/ddu-source-buffer
+     - using
+     - バッファを候補とする。
+     - 2023-06-19
+   * - https://github.com/uga-rosa/ddu-source-lsp
+     - delete
+     - | LSP の各リクエストの内容を候補とする。
+       | 適当に設定して使おうとしたら Vim が落ちた。
+     - 2023-06-19
+   * - https://github.com/Milly/windows-clipboard-history.vim
+     - todo
+     - Windowsのクリップボード履歴機能を使ったddc/ddu source。
+     - 2023-07-23
+   * - https://github.com/Milly/Milly/dps-yank-history
+     - todo
+     - Yank履歴のddc/ddu source。
+       yankround から切り替えようか。ちょっと重いかもと思ったり。
+     - 2023-07-23
+   * - https://github.com/Shougo/ddu-filter-matcher_ignore_current_buffer
+     - delelte
+     - ddu-source-buffer で使いたかったけど無視できなかった。
+       まぁ、でも他の source でも有用か。
+       削除されて汎用的な ddu-filter-matcher_ignores へ。
+     - 2023-08-19
+   * - https://github.com/Shougo/ddu-filter-matcher_ignores
+     - delelte
+     - うまく動作していないっぽい。
+     - 2023-08-19
+   * - https://github.com/Shougo/ddu-filter-matcher_substring
+     - using
+     -
+     - 2023-06-19
+   * - https://github.com/Shougo/ddu-kind-file
+     - using
+     -
+     - 2023-06-19
+   * - https://github.com/Shougo/ddu-kind-word
+     - using
+     - まだ使えていない。
+     - 2023-06-19
+   * - https://github.com/Shougo/ddu-ui-ff
+     - using
+     - fuzzy finder UI
+     - 2023-06-19
+
+.. list-table:: Selector
+   :header-rows: 1
+
+   * - repository
+     - status
+     - comment
+     - date
+   * - https://github.com/itchyny/vim-gof
+     - delete
+     - mattn/gof を呼び出してファイル表示など。
+       tapi を使っていたので Windows では NG
+     - 2020-02-05
+   * - https://github.com/mattn/vim-fz
      - delete
      - gof を呼び出してファイルを開く
        Gvim が固まることがあったので、ひとまず使うのをやめた。
      - 2020-04-16
-   * - liuchengxu/vim-clap
+   * - https://github.com/liuchengxu/vim-clap
      - delete
      - 更新すると、まだよく動かなくなることがあるので CtrlP へ戻った。
        CtrlP より若干起動が遅い。
      - 2020-01-03
-   * - hokorobi/vim-clap-sessions
+   * - https://github.com/hokorobi/vim-clap-sessions
      - delete
      - vim-clap を削除したので一緒に削除。
      - 2020-01-03
-   * - hokorobi/vim-clap-launcher
+   * - https://github.com/hokorobi/vim-clap-launcher
      - delete
      - vim-clap を削除したので一緒に削除。
      - 2020-01-03
-   * - hokorobi/vim-clap-filelist
+   * - https://github.com/hokorobi/vim-clap-filelist
      - delete
      - vim-clap でファイル一覧を含んだファイルを候補に使用する provider。
        ``g:clap_provider_mru`` などを定義して source にファイルを読み込めばよいと分かったので使わなくなった。
      - 2019-11-13
-   * - Yggdroot/LeaderF
+   * - https://github.com/Yggdroot/LeaderF
      - todo
      - フィルタリングプラグイン。
        Python を使用しているため、 Windows では起動がちょっと遅そうでまだ試していない。
      - 2020-04-12
-   * - prabirshrestha/quickpick.vim
+   * - https://github.com/prabirshrestha/quickpick.vim
      - todo
      - フィルタリングプラグイン。
        vim-lsp と連携するプラグイン prabirshrestha/quickpick-lsp.vim があるみたい。
      - 2020-05-24
-   * - yegappan/fileselect
+   * - https://github.com/yegappan/fileselect
      - todo
      - フィルタリングプラグイン。
        ポップアップでファイルの選択。
@@ -836,230 +1355,265 @@ Vim plugins
 .. list-table:: Utility
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - tyru/vim-altercmd
+   * - https://github.com/tyru/vim-altercmd
      - using
      -
      -
-   * - kana/vim-altr
+   * - https://github.com/kana/vim-altr
+     - delete
+     - Vim 導入初期に使っていたけど、最近は CtrlP を使っているので削除。
+     - 2022-12-24
+   * - https://github.com/thinca/vim-prettyprint
      - using
      -
      -
-   * - thinca/vim-prettyprint
-     - using
-     -
-     -
-   * - tpope/vim-repeat
-     - del
+   * - https://github.com/tpope/vim-repeat
+     - delete
      - @@ や count@q などた効かなくなる原因のようなので削除。easyalign, caw などで使っているけれど削除。
      - 2021-12-19
-   * - kana/vim-repeat
+   * - https://github.com/kana/vim-repeat
      - using
      - caw はこちらでいいみたい。ほかは試してない。
      - 2021-12-19
-   * - haya14busa/vim-metarepeat
+   * - https://github.com/haya14busa/vim-metarepeat
      - todo
      - / で検索した値を元に繰り返し（選択範囲のすべての値なども）置換ができる？
      - 2021-01-03
-   * - sentriz/vim-print-debug
-     - using
-     - print debug 用のコードをそれぞれの言語の書式で挿入してくれる。
-     - 2020-08-25
-   * - mattn/webapi-vim
+   * - https://github.com/mattn/webapi-vim
      - using
      -
      -
-   * - ynkdir/vim-vimlparser
+   * - https://github.com/ynkdir/vim-vimlparser
      - using
      -
      -
-   * - kana/vim-operator-user
+   * - https://github.com/kana/vim-operator-user
      - using
      -
      -
-   * - tweekmonster/helpful.vim
+   * - https://github.com/tweekmonster/helpful.vim
      - using
      - どの機能がVim のどのバージョンで増えたのか確認
      -
-   * - lilydjwg/colorizer
+   * - https://github.com/lilydjwg/colorizer
      - using
      -
      -
-   * - RRethy/vim-hexokinase
+   * - https://github.com/RRethy/vim-hexokinase
      - todo
      - colorizer が推奨している。
        別途 CLI の hexokinase が必要みたい。
      - 2020-07-24
-   * - tyru/open-browser.vim
+   * - https://github.com/tyru/open-browser.vim
      - using
      - URL を Web ブラウザで開く。
-       'username/repogitory' を Github で開くコマンドを定義している。
+       'username/repository' を Github で開くコマンドを定義している。
      - 2020-02-09
-   * - rhysd/wandbox-vim
+   * - https://github.com/rhysd/wandbox-vim
      - delete
      - wandbox を Vim から使う。
        使うことがなかったので削除。
      - 2019-09-28
-   * - tyru/open-browser-unicode.vim
-     - using
-     -
-     -
-   * - mhinz/vim-grepper
+   * - https://github.com/tyru/open-browser-unicode.vim
      - delete
-     - 各 grep 系ツールをよしなに使えるみたい。
-       pt で使おうとしたけどエラーが出て動かなかった。
-       そんなに便利な感じもなさそうなので措いておこう。
+     - ユニコード文字を調べるのに便利そうだったけど使うことはなかった。
+     - 2023-08-20
+   * - https://github.com/mhinz/vim-grepper
+     - delete
+     - | 各 grep 系ツールをよしなに使えるみたい。
+       | pt で使おうとしたけどエラーが出て動かなかった。
+       | そんなに便利な感じもなさそうなので措いておこう。
      - 2020-07-09
-   * - mattboehm/vim-unstack
+   * - https://github.com/kyoh86/vim-ripgrep
+     - delete
+     - | Windows だとうまく動かなそう。
+       | call ripgrep#search('-w --ignroe-case foo') を実行したら failed to find と表示されるだけ。
+     - 2020-07-09
+   * - https://github.com/mattboehm/vim-unstack
      - todo
      - スタックトレースを追いかける
      - 2020-11-22
-   * - mattboehm/vim-accordion
+   * - https://github.com/mattboehm/vim-accordion
      - todo
-     - Split で表示するウィンドウ数を制限する。
-       vim-unstack でどんどん開くときに使うみたい。
+     - | Split で表示するウィンドウ数を制限する。
+       | vim-unstack でどんどん開くときに使うみたい。
      - 2020-11-22
-   * - skanehira/code2img.vim
+   * - https://github.com/skanehira/code2img.vim
      - using
      - 選択したコードをクリップボードへ画像出力してくれる。
      - 2021-02-14
-   * - gamoutatsumi/dps-ghosttext.vim
-     - del
+   * - https://github.com/gamoutatsumi/dps-ghosttext.vim
+     - delete
      - GhostText との接続がうまくできなかった。
      - 2021-09-06
-   * - mattn/vim-notification
-     - del
+   * - https://github.com/mattn/vim-notification
+     - delete
      - | dein で let g:dein#enable_notification = v:true として通知が表示されるのは確認。
        | 更新差分のURLを後から開きたかったりもするので ``:messages`` にすべて出力されるほうが好みだな。
      - 2022-04-21
+   * - https://github.com/bfrg/vim-jqplay
+     - todo
+     - jq の結果をインタラクティブに見られるらしい。
+     - 2023-04-16
+   * - https://github.com/y0za/vim-reading-vimrc
+     - using
+     - Vimrc読書会で読むファイルを読み込む。
+     - 2024-10-20
+   * - https://github.com/itchyny/calendar.vim
+     - using
+     - | Googleカレンダーとの連携がうまくいかなかったので一度は削除。
+       | api キーほかの設定はできたつもりだが、localhost:8080 のアクセスがうまくいかない。
+       | https://github.com/itchyny/calendar.vim/issues/226 ここらへん関連だろうか？　ちょっと違いそう。
+       | localhost:8080 アクセス時の URL から引数 code の値をVimに貼り付けたら使えた。
+       | Googleカレンダーの内容をVimから参照、編集のに使用。
+       | Googleの認証ができなくなって起動時にエラーが出るようになったみたい。キャッシュを消して、最初からやり直したら動くようになった。再発するなら使うのやめようかな。
+     - 2025-08-17
 
 .. list-table:: Web Service
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - lambdalisue/vim-gista
+   * - https://github.com/lambdalisue/vim-gista
      - using
      -
      -
-   * - mattn/qiita-vim
+   * - https://github.com/mattn/qiita-vim
      - delete
-     - Qiita に記事を書く。
-       Qiita に書くことがほとんどなく、書く時も Web ブラウザを使うことが多いので削除。
+     - | Qiita に記事を書く。
+       | Qiita に書くことがほとんどなく、書く時も Web ブラウザを使うことが多いので削除。
      - 2019-09-28
+   * - https://github.com/yoshio15/vim-trello
+     - delete
+     - | description しか書けないのでちょっと不便。チェックリストが使いたい。
+       | 使わなそう。
+       | 移動の操作をしても反映されなかった。 [2024-10-01]
+     - 2023-10-14
 
 .. list-table:: Git
    :header-rows: 1
 
-   * - lambdalisue/gina.vim
+   * - https://github.com/lambdalisue/gina.vim
      - using
      -
      -
-   * - kuuote/gina-preview.vim
+   * - https://github.com/kuuote/gina-preview.vim
      - using
      - Gina patch を使って Gina Status の状態をプレビュー
      - 2021-05-19
-   * - rhysd/git-messenger.vim
+   * - https://github.com/rhysd/git-messenger.vim
      - delete
      - | git blame をポップアップで表示（Vim だと echo みたいに表示）。
        | Vim では過去への移動ができないようなので、イマイチ使いどころがなかった。
        | それをやるなら gina を使う。
      - 2021-02-11
-   * - cohama/agit.vim
+   * - https://github.com/cohama/agit.vim
      - using
      - git log を 3 画面表示。
      - 2021-02-20
-   * - hotwatermorning/auto-git-diff 
+   * - https://github.com/hotwatermorning/auto-git-diff
      - using
      - git rebase -i でコミットの差分をインタラクティブに表示。
      - 2022-02-06
-   * - iberianpig/tig-explorer.vim
+   * - https://github.com/iberianpig/tig-explorer.vim
      - delete
      - シェルスクリプトを実行するみたいなので Windows では使えなかった。
      - 2020-05-23
+   * - https://github.com/kana/vim-g
+     - delete
+     - | 試していなくてドキュメントを読んだだけ。
+       | 現状に追加する必要はなさそう。
+     - 2024-10-02
 
 .. list-table:: Others
    :header-rows: 1
 
-   * - repogitory
+   * - repository
      - status
      - comment
      - date
-   * - fedorenchik/VimCalc3
+   * - https://github.com/fedorenchik/VimCalc3
      - using
      -
      -
-   * - thinca/vim-submode
+   * - https://github.com/thinca/vim-submode
      - delete
      - | kana/vim-submode の方が新しいようなので切り替えてみる。
        | {lhs} の長さ制限緩和のコミットは取り込もうかどうしようか…。
        | NG な設定が入るまではそのままにしよう。
        | PR は送ってるけど閉じてるのか。
      - 2021-05-06
-   * - kana/vim-submode
-     - using
-     - thinca/vim-submode から切り替え。
+   * - https://github.com/kana/vim-submode
+     - delete
+     - | thinca/vim-submode から切り替え。
+       | https://blog.atusy.net/2024/05/29/vim-hl-enhanced/ で代替するようにしたので削除。
+       | 代替だと submode 操作の直後に操作が発生するようなキーにすると体験が良くない。timeout まで待たないといけないとか。
      - 2021-05-06
-   * - vim-jp/vital.vim
+   * - https://github.com/vim-jp/vital.vim
      - delete
      -
      -
-   * - lambdalisue/vital-Whisky
+   * - https://github.com/lambdalisue/vital-Whisky
      - delete
      -
      -
-   * - vim-jp/vimdoc-ja
+   * - https://github.com/vim-jp/vimdoc-ja
      - using
      -
      -
-   * - tyru/empty-prompt.vim
+   * - https://github.com/tyru/empty-prompt.vim
      - using
      -
      -
-   * - LeafCage/vimhelpgenerator
+   * - https://github.com/voldikss/vim-floaterm
+     - using
+     - Terminal をポップアップウィンドウで表示。
+     - 2021-04-28
+   * - https://github.com/LeafCage/vimhelpgenerator
      - todo
      - ヘルプのひな型を生成
      - 2020-02-08
-   * - rbtnn/vim-mrw
+   * - https://github.com/rbtnn/vim-mrw
      - todo
      - MRU の書き込み版。出来上がるファイルを vim-fz から開いてみたい。
      - 2020-02-08
-   * - tamago324/LeaderF-filer
+   * - https://github.com/tamago324/LeaderF-filer
      - todo
      - CtrlP 的なもの
      - 2020-02-08
-   * - dhruvasagar/vim-table-mode
+   * - https://github.com/dhruvasagar/vim-table-mode
      - delete
      - restructuredtext のテーブルが手軽に書けるはず。
        やはり list-table が便利なので使わなかった。
      - 2020-02-08
-   * - vim-voom/VOoM
+   * - https://github.com/vim-voom/VOoM
      - delete
      - restructuredtext のアウトライン表示に使っていた。
        hokorobi/vim-restructuredtext の fold で良さそうなので削除。
      - 2020-02-01
-   * - w0rp/ale
+   * - https://github.com/w0rp/ale
      - delete
      - Linter として使っていたけど coc.nvim に移行。
      - 2019-12-08
-   * - hokorobi/cmdlineplus.vim
+   * - https://github.com/hokorobi/cmdlineplus.vim
      - delete
      - LeafCage/cmdlineplus.vim を Fork。
        バグ修正の PR がマージされなかったので Fork して使っていた。
        コマンドラインウィンドウを使うことにしたので削除。
      - 2019-12-08
-   * - tsuyoshicho/vim-fg
+   * - https://github.com/tsuyoshicho/vim-fg
      - delete
      - pt を使って grep を実行。
        grepprg に pt を設定した場合に比べての利点がわからないので一旦削除
      - 2020-02-11
-   * - voldikss/vim-floaterm
-     - using
-     - Terminal をポップアップウィンドウで表示。
-     - 2021-0r-28
+   * - https://github.com/c000/rapidfire.vim
+     - todo
+     - EX コマンドを覚えさせて後から編集して実行できるっぽい
+     - 2022-08-09
 

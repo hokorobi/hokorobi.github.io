@@ -1,44 +1,41 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="ja">
+<html lang="ja" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Excel で調べこと色々 &#8212; hokorobi.github.io  ドキュメント</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=5283bb3d" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/translations.js"></script>
-    <script src="_static/tiny_segmenter.js"></script>
+    <script src="_static/documentation_options.js?v=c033477b"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/translations.js?v=4755f45a"></script>
+    <script src="_static/tiny_segmenter.js?v=47e790aa"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="Windows10 もろもろ" href="win10.html" />
+    <link rel="next" title="Windows11 もろもろ" href="win11.html" />
     <link rel="prev" title="Vim plugins" href="vimplugins.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="win10.html" title="Windows10 もろもろ"
+          <a href="win11.html" title="Windows11 もろもろ"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
           <a href="vimplugins.html" title="Vim plugins"
@@ -54,9 +51,9 @@
           <div class="body" role="main">
             
   <section id="excel">
-<h1>Excel で調べこと色々<a class="headerlink" href="#excel" title="Permalink to this heading">¶</a></h1>
+<h1>Excel で調べこと色々<a class="headerlink" href="#excel" title="Link to this heading">¶</a></h1>
 <section id="id1">
-<h2>入力データの指定<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>入力データの指定<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p>データが増減しても入力データを自動で指定。</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=OFFSET($E$2,0,0,COUNTA(E:E)-1)
 </pre></div>
@@ -67,7 +64,7 @@
 </ul>
 </section>
 <section id="id2">
-<h2>範囲から指定した行、列の値を取得<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>範囲から指定した行、列の値を取得<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=INDEX(A1:D5, 3, 2)
 </pre></div>
 </div>
@@ -78,7 +75,7 @@
 </ul>
 </section>
 <section id="id3">
-<h2>セルに入力した値を数式に使う<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>セルに入力した値を数式に使う<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\filename.xlsx</span></code> の <code class="docutils literal notranslate"><span class="pre">sheetName</span></code> シートの <code class="docutils literal notranslate"><span class="pre">A:B</span></code> 行から A 列が <code class="docutils literal notranslate"><span class="pre">hoge</span></code> になる B 列の値を取得。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">A1</span></code>: <code class="docutils literal notranslate"><span class="pre">C:\path\to\fileFolder\</span></code></p></li>
@@ -91,7 +88,7 @@
 </div>
 </section>
 <section id="id4">
-<h2>条件に合致した値を空白なしで取得<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>条件に合致した値を空白なしで取得<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">$A$47:$C$55</span></code> から C 列が 1 になる B 列の値を47行目のセルから空白なく下方向に並べる。</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{=IFERROR(INDEX($A$47:$C$55,SMALL(IF($C$47:$C$55=1,ROW($C$47:$C$55)),ROW()-ROW($A$47)+1)-ROW($A$47)+1,2),&quot;&quot;)}
 </pre></div>
@@ -103,7 +100,7 @@
 </ul>
 </section>
 <section id="id5">
-<h2>条件に合致する複数の行から最大の値を取得する<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h2>条件に合致する複数の行から最大の値を取得する<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>以下のような表から 1 列目が <code class="docutils literal notranslate"><span class="pre">a01</span></code> になる行のうち 2 列目の値が最大となる 3列目の値（ <code class="docutils literal notranslate"><span class="pre">20</span></code> ）を取得したい。</p>
 <table class="docutils align-default">
 <tbody>
@@ -145,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h3><a href="index.html">目次</a></h3>
 <ul class="current">
@@ -159,13 +156,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#id5">条件に合致する複数の行から最大の値を取得する</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="win11.html">Windows11 もろもろ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="win10.html">Windows10 もろもろ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trello.html">Trello</a></li>
 <li class="toctree-l1"><a class="reference internal" href="whiskey.html">Whiskey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="old.html">古の記録</a></li>
 </ul>
 
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">クイック検索</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -173,20 +171,20 @@
       <input type="submit" value="検索" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="総合索引"
              >索引</a></li>
         <li class="right" >
-          <a href="win10.html" title="Windows10 もろもろ"
+          <a href="win11.html" title="Windows11 もろもろ"
              >次へ</a> |</li>
         <li class="right" >
           <a href="vimplugins.html" title="Vim plugins"
@@ -196,8 +194,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, hokorobi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
+    &#169; 著作権 2019, hokorobi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     </div>
   </body>
 </html>
